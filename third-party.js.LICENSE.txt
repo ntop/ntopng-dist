@@ -1,5 +1,5 @@
 /* @preserve
- * Leaflet 1.6.0, a JS library for interactive maps. http://leafletjs.com
+ * Leaflet 1.7.1, a JS library for interactive maps. http://leafletjs.com
  * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
@@ -29,7 +29,7 @@
  */
 
 /*!
- * ApexCharts v3.33.1
+ * ApexCharts v3.34.0
  * (c) 2018-2022 ApexCharts
  * Released under the MIT License.
  */
@@ -333,6 +333,16 @@ PERFORMANCE OF THIS SOFTWARE.
  * Licensed under MIT (https://github.com/tempusdominus/bootstrap-3/blob/master/LICENSE)
  */
 
+//! Copyright (c) JS Foundation and other contributors
+
+//! github.com/moment/moment-timezone
+
+//! license : MIT
+
+//! moment-timezone.js
+
 //! moment.js
 
 //! moment.js locale configuration
+
+//! version : 0.5.34
