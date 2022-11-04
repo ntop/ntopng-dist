@@ -22979,6 +22979,7 @@
 
 	const ui_types = {
 	    select: "select",
+	    // input: "input",
 	    select_and_input: "select_and_input",
 	};
 
@@ -22989,17 +22990,33 @@
 		value: "ifid",
 		ui_type: ui_types.select,
 		table_value: "interface",
+		query: "ifid",
 	    },
 	    {
 		label: "Host",
 		disable_url: true,
 		//sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
 		value: "host",
+		regex_type: "ip",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
 		sub_value: "ifid",
 		sub_label: "Interface",
 		ui_type: ui_types.select_and_input,
 		table_value: "host",
+		query: "host",
+	    },
+	    {
+		label: "Mac",
+		disable_url: true,
+		//sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		value_url: "host",
+		value: "mac",
+		regex_type: "macAddress",
+		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		sub_value: "ifid",
+		sub_label: "Interface",
+		ui_type: ui_types.select_and_input,
+		query: "mac",
 	    },
 	];
 
@@ -23085,17 +23102,19 @@
 	    if (source_type == null) {
 		source_type = get_current_page_source_type();
 	    }
-	    return ntopng_url_manager$1.get_url_entry(source_type.value);
+	    let source_type_value_url = source_type.value_url;
+	    if (source_type_value_url == null) {
+		source_type_value_url = source_type.value;
+	    }
+	    return ntopng_url_manager$1.get_url_entry(source_type_value_url);
 	};
 
 	function get_metrics_url(http_prefix, source_type, source_value, source_sub_value) {
-	    let params;
-	    if (source_type.value == "ifid") {
-		params = `ifid=${source_value}`;
-	    } else if (source_type.value == "host") {
-		params = `ifid=${source_sub_value}&host=${source_value}`;	
+	    let params = `${source_type.value}=${source_value}`;
+	    if (source_type.sub_value != null && source_sub_value != null) {
+		params = `${params}&${source_type.sub_value}=${source_sub_value}`;
 	    }
-	    let url = `${http_prefix}/lua/rest/v2/get/timeseries/type/consts.lua?query=${source_type.value}&${params}`;
+	    let url = `${http_prefix}/lua/rest/v2/get/timeseries/type/consts.lua?query=${source_type.query}&${params}`;
 	    return url;
 	}
 
@@ -23139,6 +23158,8 @@
 		return sources_types[0];
 	    } else if (/lua\/host_details/.test(pathname) == true) {
 		return sources_types[1];
+	    } else if (/lua\/mac_details/.test(pathname) == true) {
+		return sources_types[2];
 	    }
 	    throw `source_type not found for ${pathname}`;
 	};
@@ -23201,7 +23222,7 @@
 		let r_ipv6_vlan = r_ipv6.replaceAll("$", "@[0-9]{0,5}$");
 		return `(${r_ipv4})|(${r_ipv4_vlan})|(${r_ipv6})|(${r_ipv6_vlan})`;
 	    }
-	    return Utils.REGEXES[value_type];
+	    return Utils.REGEXES[type];
 	}
 
 	const regexValidation = function() {
@@ -23268,7 +23289,8 @@
 	const sub_sources = ref([]);
 	const selected_sub_source = ref({});
 	const source_text = ref("");
-	const source_text_validation = ref(regexValidation.get_data_pattern("ip"));
+	const regex_source = selected_source_type.value?.regex_type;
+	const source_text_validation = ref(regexValidation.get_data_pattern(regex_source));
 	const is_source_text_valid = computed$1(() => {
 	    let regex = new RegExp(source_text_validation.value);
 	    return regex.test(source_text.value);
@@ -23325,6 +23347,9 @@
 	}
 
 	async function change_source_type() {
+	    let regex_source = selected_source_type.value?.regex_type;
+	    source_text_validation.value = regexValidation.get_data_pattern(regex_source);
+
 	    await set_sources();
 	    await set_metrics();
 	}
@@ -23531,7 +23556,20 @@
 	                  ])
 	                ]))
 	              : createCommentVNode("v-if", true),
-	            createCommentVNode(" Host "),
+	            createCommentVNode(" "),
+	            createCommentVNode(" <template v-if=\"selected_source_type.ui_type == ui_types.input\"> "),
+	            createCommentVNode(" \t<div class=\"form-group ms-2 me-2 mt-3\"> "),
+	            createCommentVNode(" \t  <div class=\"form-group row ms-1 me-1 mb-2\"> "),
+	            createCommentVNode(" \t    <label class=\"col-form-label col-sm-4\" > "),
+	            createCommentVNode("         <b>{{_i18n(\"modal_timeseries.source\")}}</b> "),
+	            createCommentVNode(" \t    </label> "),
+	            createCommentVNode(" \t    <div class=\"col-sm-8\" > "),
+	            createCommentVNode(" \t      <input class=\"form-control\" v-model=\"source_text\"  :pattern=\"source_text_validation\" required type=\"text\" placeholder=\"192.168.1.1\"> "),
+	            createCommentVNode(" \t    </div> "),
+	            createCommentVNode(" \t  </div> "),
+	            createCommentVNode(" \t</div> "),
+	            createCommentVNode(" </template> "),
+	            createCommentVNode(" Host, Mac "),
 	            (selected_source_type.value.ui_type == unref(ui_types).select_and_input)
 	              ? (openBlock(), createElementBlock("div", _hoisted_8$j, [
 	                  createBaseVNode("div", _hoisted_9$i, [
@@ -23576,7 +23614,7 @@
 	                        pattern: source_text_validation.value,
 	                        required: "",
 	                        type: "text",
-	                        placeholder: "192.168.1.1"
+	                        placeholder: ""
 	                      }, null, 8 /* PROPS */, _hoisted_18$7), [
 	                        [vModelText, source_text.value]
 	                      ])
@@ -24369,8 +24407,9 @@
 	    if (extendSeriesName == false) {
 		return name;
 	    }
+	    let prefix = `${tsGroup.source.label}`;
 	    let yaxisName = getYaxisName(tsGroup.metric.measure_unit, tsGroup.metric.scale);
-	    return `${tsGroup.source.label} ${name} (${yaxisName})`;
+	    return `${prefix} ${name} (${yaxisName})`;
 	}
 
 	function getAddSeriesNameSource(tsGrpupsArray) {
@@ -24387,13 +24426,15 @@
 	    let seriesApex = [];
 
 	    let seriesKeys = Object.keys(tsGroup.metric.timeseries);
-	    if (tsOptions.series?.length != seriesKeys.length) {
-		tsOptions.series = seriesKeys.map((sk) => {
+	    if (tsOptions.series?.length != seriesKeys.length) {	
+		tsOptions.series = seriesKeys.map((sk, i) => {
+		    let serie = tsOptions.series.find((s) => getSerieId(s) == sk);
+		    if (serie != null) { return serie; }
 		    return {
 			label: sk,
 			data: [null],
-		    }
-		});	
+		    };
+		});
 	    }
 	    tsOptions.series.forEach((s, i) => {
 		// extract id
@@ -24786,12 +24827,14 @@
 	    return tsQuery;
 	}
 
-	async function getTsChartOptions(httpPrefix, epochStatus, tsCompare, timeseriesGroups, isPro) {
-	    let chartDataUrl = `${httpPrefix}/lua/rest/v2/get/timeseries/ts.lua`;
-	    let paramsUrlRequest = `ts_compare=${tsCompare}&version=4&zoom=${tsCompare}&initial_point=true&limit=180`;
+	async function getTsChartsOptions(httpPrefix, epochStatus, tsCompare, timeseriesGroups, isPro) {
 	    let paramsEpochObj = { epoch_begin: epochStatus.epoch_begin, epoch_end: epochStatus.epoch_end };
-	    
-	    let tsResponsesPromises = timeseriesGroups.map((tsGroup) => {
+
+	    let tsChartsOptions;
+	    if (!isPro) {
+		let tsDataUrl = `${httpPrefix}/lua/rest/v2/get/timeseries/ts.lua`;
+		let paramsUrlRequest = `ts_compare=${tsCompare}&version=4&zoom=${tsCompare}&initial_point=true&limit=180`;
+		let tsGroup = timeseriesGroups[0];
 		let tsQuery = getTsQuery(tsGroup);
 		let pObj = {
 		    ...paramsEpochObj,
@@ -24799,13 +24842,37 @@
 		    tskey: tsGroup.source.value,
 		    ts_schema: `${tsGroup.metric.schema}`,
 		};
-		
 		let pUrlRequest =  ntopng_url_manager$1.add_obj_to_url(pObj, paramsUrlRequest);
-		let url = `${chartDataUrl}?${pUrlRequest}`;
-		return ntopng_utility$1.http_request(url);
-	    });
-	    let tsChartOptions = await Promise.all(tsResponsesPromises);
-	    return tsChartOptions;
+		let url = `${tsDataUrl}?${pUrlRequest}`;
+		let tsChartOption = await ntopng_utility$1.http_request(url);
+		tsChartsOptions = [tsChartOption];
+	    } else {
+		let paramsChart = {
+			zoom: tsCompare,
+			initial_point: true,
+			limit: 180,
+			version: 4,
+			ts_compare: tsCompare,
+		};
+		let tsRequests = timeseriesGroups.map((tsGroup) => {
+		    let tsQuery = getTsQuery(tsGroup);
+		    let pObj = {
+			...paramsEpochObj,
+			...paramsChart,
+			ts_query: tsQuery,
+			tskey: tsGroup.source.value,
+			ts_schema: `${tsGroup.metric.schema}`,
+		    };
+		    return pObj;
+		});
+		let tsDataUrlMulti = `${httpPrefix}/lua/pro/rest/v2/get/timeseries/ts_multi.lua`;
+		let req = { ts_requests: tsRequests };
+		let headers = {
+	            'Content-Type': 'application/json'
+		};
+		tsChartsOptions = await ntopng_utility$1.http_request(tsDataUrlMulti, { method: 'post', headers, body: JSON.stringify(req)});
+	    }
+	    return tsChartsOptions;
 	}
 
 	const timeseriesUtils = function() {
@@ -24817,7 +24884,7 @@
 		getGroupOptionMode,
 		getSerieId,
 		getSerieName,
-		getTsChartOptions,
+		getTsChartsOptions,
 		getTsQuery,
 	    };
 	}();
@@ -24859,7 +24926,7 @@
 	    is_ntop_pro: Boolean,
 	    default_ifid: String,
 	    enable_snapshots: Boolean,
-	    is_clickhouse_enabled: Boolean,
+	    is_history_enabled: Boolean,
 	    traffic_extraction_permitted: Boolean,
 	},
 	  setup(__props) {
@@ -24887,13 +24954,8 @@
 	const selected_metric = ref({});
 
 	const enable_table = function() {
-	    let source_type = metricsManager.get_current_page_source_type();
-	    if (source_type.value != "ifid" && 
-	        source_type.value != "host") { 
-		return false; 
-	    }
-	    
-	    return true;
+	    let source_type = metricsManager.get_current_page_source_type();    
+	    return source_type.table_value != null;
 	}();
 
 	/**
@@ -24981,7 +25043,6 @@
 	      let snapshots_metrics = cache_snapshots;
 	      snapshots_metrics.forEach((sm) => metrics.push(sm));
 	    }
-
 	    /* Order Metrics */
 	    metrics.sort(NtopUtils$1.sortAlphabetically);
 	    
@@ -25102,20 +25163,23 @@
 	    load_charts_data(last_timeseries_groups_loaded, true);
 	}
 
-	let ts_chart_options;
+	let ts_charts_options;
 	async function load_charts_data(timeseries_groups, not_reload) {
 	    let status = ntopng_status_manager$1.get_status();
 	    let ts_compare = get_ts_compare(status);
-	    if (!not_reload) {	
-		ts_chart_options = await timeseriesUtils.getTsChartOptions(http_prefix, status, ts_compare, timeseries_groups, props.is_ntop_pro);
+	    if (!not_reload) {
+		ts_charts_options = await timeseriesUtils.getTsChartsOptions(http_prefix, status, ts_compare, timeseries_groups, props.is_ntop_pro);
 	    }
-	    console.log(ts_chart_options);
+	    console.log(ts_charts_options);
 	    console.log(timeseries_groups);
+
+	    // update timeseries_groups source label
+	    set_timeseries_groups_source_label(timeseries_groups, ts_charts_options);
 	    
-	    let charts_options = timeseriesUtils.tsArrayToApexOptionsArray(ts_chart_options, timeseries_groups, current_groups_options_mode.value, ts_compare);
-	    
+	    let charts_options = timeseriesUtils.tsArrayToApexOptionsArray(ts_charts_options, timeseries_groups, current_groups_options_mode.value, ts_compare);
+
 	    set_charts_options_items(charts_options);
-	    set_stats_rows(ts_chart_options, timeseries_groups, status);
+	    set_stats_rows(ts_charts_options, timeseries_groups, status);
 	    
 	    // set last_timeseries_groupd_loaded
 	    last_timeseries_groups_loaded = timeseries_groups;
@@ -25123,6 +25187,16 @@
 	    console.log(last_timeseries_groups_loaded);
 	    // update url params
 	    update_url_params();
+	}
+
+	function set_timeseries_groups_source_label(timeseries_groups, ts_charts_options) {    
+	    timeseries_groups.forEach((ts_group, i) => {
+		let ts_options = ts_charts_options[i];
+		let label = ts_options?.query?.label;
+		if (label != null) {
+		    ts_group.source.label = label;
+		}
+	    });
 	}
 
 	function update_url_params() {
@@ -25191,7 +25265,7 @@
 
 	async function reload_table_data() {
 	    // NtopUtils.showOverlays();
-	    if (enable_table == false) { return; }
+	    if (enable_table == false || !is_ntop_pro) { return; }
 	    const url = await get_datatable_url();
 	    top_applications_table.value.update_url(url);
 	    top_applications_table.value.reload();
@@ -25199,6 +25273,7 @@
 	}
 
 	async function load_datatable_data() {
+	    if (enable_table == false || !props.is_ntop_pro) { return; } 
 	    const url = await get_datatable_url();
 	    set_table_configuration(url);
 	}
@@ -25230,8 +25305,8 @@
 		}
 	    ];  
 	    
-	    /* If ClickHouse is enabled, then add an href to Historical Flows */
-	    {
+	    /* If history is enabled, then add an href to Historical Flows */
+	    if(props.is_history_enabled) {
 		let handlerIdJumpHistorical = "page-stats-action-jump-historical";
 		columns.push({
 		    columnName: i18n("actions"),
@@ -25293,14 +25368,14 @@
 
 	const stats_rows = ref([]);
 
-	function set_stats_rows(ts_chart_options, timeseries_groups, status) {
+	function set_stats_rows(ts_charts_options, timeseries_groups, status) {
 	    let extend_serie_name = true;
 	    const f_get_total_formatter_type = (type) => {
 		if (type == "bps") { return "bytes_network"; }
 		return type;
 	    };    
 	    stats_rows.value = [];
-	    ts_chart_options.forEach((options, i) => {
+	    ts_charts_options.forEach((options, i) => {
 		let ts_group = timeseries_groups[i];
 		options.series.forEach((s, j) => {
 		    let ts_id = timeseriesUtils.getSerieId(s);
@@ -25399,12 +25474,15 @@
 	              onSelect_option: change_groups_options_mode
 	            }, null, 8 /* PROPS */, ["selected_option", "options"])
 	          ]),
-	          createBaseVNode("button", {
-	            type: "button",
-	            onClick: show_manage_timeseries,
-	            class: "btn btn-sm btn-primary inline",
-	            style: {"vertical-align":"super"}
-	          }, " Manage Timeseries ")
+	          (__props.is_ntop_pro)
+	            ? (openBlock(), createElementBlock("button", {
+	                key: 0,
+	                type: "button",
+	                onClick: show_manage_timeseries,
+	                class: "btn btn-sm btn-primary inline",
+	                style: {"vertical-align":"super"}
+	              }, " Manage Timeseries "))
+	            : createCommentVNode("v-if", true)
 	        ], 512 /* NEED_PATCH */), [
 	          [vShow, ts_menu_ready.value]
 	        ]),
@@ -25438,7 +25516,7 @@
 	          }, null, 8 /* PROPS */, ["columns", "rows", "print_html_column", "print_html_row"])
 	        ])
 	      ]),
-	      (unref(enable_table) == true)
+	      (unref(enable_table) == true && __props.is_ntop_pro)
 	        ? (openBlock(), createElementBlock("div", _hoisted_14$8, [
 	            createBaseVNode("div", _hoisted_15$7, [
 	              createBaseVNode("div", _hoisted_16$6, [
@@ -25473,11 +25551,14 @@
 	          onDeleted_all_snapshots: refresh_snapshots
 	        }, null, 8 /* PROPS */, ["csrf"]))
 	      : createCommentVNode("v-if", true),
-	    createVNode(script$u, {
-	      ref_key: "modal_timeseries",
-	      ref: modal_timeseries,
-	      onApply: apply_modal_timeseries
-	    }, null, 512 /* NEED_PATCH */),
+	    (__props.is_ntop_pro)
+	      ? (openBlock(), createBlock(script$u, {
+	          key: 1,
+	          ref_key: "modal_timeseries",
+	          ref: modal_timeseries,
+	          onApply: apply_modal_timeseries
+	        }, null, 512 /* NEED_PATCH */))
+	      : createCommentVNode("v-if", true),
 	    createVNode(script$t, {
 	      id: "page_stats_modal_traffic_extraction",
 	      ref_key: "modal_traffic_extraction",
@@ -28902,7 +28983,6 @@
 	    /* Method used to switch active table tab */
 	    reload_table: function() {
 	      let table = this.get_active_table();
-	      debugger;
 	      table.reload();
 	    },
 	    get_active_table: function() {
@@ -30053,7 +30133,6 @@
 	      value_label: value_label,
 	    };
 	    this.$emit("apply", params);
-	    debugger;
 	    ntopng_events_manager.emit_custom_event(ntopng_custom_events.MODAL_FILTERS_APPLY, params);
 	    this.close();
 		},
@@ -30430,7 +30509,6 @@
 		    this.last_filters = filters;
 		},
 		apply_modal: function(params) {
-	    debugger;
 		    let status = ntopng_status_manager.get_status();
 		    let filters = status.filters;
 		    if (filters == null) { filters = []; }
