@@ -337,24 +337,12 @@ PERFORMANCE OF THIS SOFTWARE.
  * limitations under the License.
  * ========================================================= */
 
-/*! Bootstrap integration for DataTables' Buttons
- * ©2016 SpryMedia Ltd - datatables.net/license
- */
-
-/*! Bootstrap integration for DataTables' Responsive
- * ©2015-2016 SpryMedia Ltd - datatables.net/license
- */
-
 /*! Buttons for DataTables 2.2.2
  * ©2016-2022 SpryMedia Ltd - datatables.net/license
  */
 
 /*! DataTables 1.11.5
  * ©2008-2021 SpryMedia Ltd - datatables.net/license
- */
-
-/*! DataTables Bootstrap 3 integration
- * ©2011-2015 SpryMedia Ltd - datatables.net/license
  */
 
 /*! DataTables styling integration
