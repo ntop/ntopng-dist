@@ -21548,10 +21548,11 @@
 	    return value;
 	}
 
-	function find_option_from_value(value) {
+	function find_option_2_from_value(value) {
 	    if (value == null) {
 		value = get_value_from_selected_option();
 	    }
+	    // let option = options_2.value.find((o) => o.value == value);
 	    let option = options_2.value.find((o) => o.value == value);
 	    if (option != null) { return option; }
 	    for (let i = 0; i < groups_options_2.value.length; i += 1) {
@@ -21585,6 +21586,9 @@
 	    let groups_dict = {};
 	    props.options.forEach((option) => {
 		let opt_2 = { ...option };
+		if (opt_2.value == 0 || opt_2.value == "0") {
+		    opt_2.value = null;
+		}
 		if (opt_2.value == null) {
 		    opt_2.value = opt_2.label;
 		}
@@ -21626,7 +21630,8 @@
 		$(select2Div).on('select2:select', function (e) {
 		    let data = e.params.data;
 		    let value = data.element._value;
-		    let option = find_option_from_value(value);
+		    let option_2 = find_option_2_from_value(value);
+		    let option = props.options.find((o) => o.label == option_2.label);
 		    if (value != props.selected_option) {
 			// emit('update:selected_option', value);
 			// emit('select_option', value);
@@ -22077,23 +22082,23 @@
 	];
 	const _hoisted_22$4 = ["title"];
 	const _hoisted_23$4 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-search-plus" }, null, -1 /* HOISTED */));
-	const _hoisted_24$3 = [
+	const _hoisted_24$4 = [
 	  _hoisted_23$4
 	];
-	const _hoisted_25$2 = ["title"];
-	const _hoisted_26$2 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-search-minus" }, null, -1 /* HOISTED */));
-	const _hoisted_27$2 = [
-	  _hoisted_26$2
+	const _hoisted_25$3 = ["title"];
+	const _hoisted_26$3 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-search-minus" }, null, -1 /* HOISTED */));
+	const _hoisted_27$3 = [
+	  _hoisted_26$3
 	];
-	const _hoisted_28$1 = ["disabled", "title"];
-	const _hoisted_29$1 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-undo" }, null, -1 /* HOISTED */));
-	const _hoisted_30$1 = [
-	  _hoisted_29$1
+	const _hoisted_28$2 = ["disabled", "title"];
+	const _hoisted_29$2 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-undo" }, null, -1 /* HOISTED */));
+	const _hoisted_30$2 = [
+	  _hoisted_29$2
 	];
-	const _hoisted_31$1 = ["disabled", "title"];
-	const _hoisted_32$1 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-sync" }, null, -1 /* HOISTED */));
-	const _hoisted_33$1 = [
-	  _hoisted_32$1
+	const _hoisted_31$2 = ["disabled", "title"];
+	const _hoisted_32$2 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-sync" }, null, -1 /* HOISTED */));
+	const _hoisted_33$2 = [
+	  _hoisted_32$2
 	];
 
 	function render$j(_ctx, _cache, $props, $setup, $data, $options) {
@@ -22151,25 +22156,25 @@
 	                class: "btn btn-sm btn-link",
 	                ref: "btn-zoom-in",
 	                title: $data.i18n('date_time_range_picker.btn_zoom_in')
-	              }, _hoisted_24$3, 8 /* PROPS */, _hoisted_22$4),
+	              }, _hoisted_24$4, 8 /* PROPS */, _hoisted_22$4),
 	              createBaseVNode("button", {
 	                onClick: _cache[5] || (_cache[5] = $event => ($options.zoom(0.5))),
 	                class: "btn btn-sm btn-link",
 	                ref: "btn-zoom-out",
 	                title: $data.i18n('date_time_range_picker.btn_zoom_out')
-	              }, _hoisted_27$2, 8 /* PROPS */, _hoisted_25$2),
+	              }, _hoisted_27$3, 8 /* PROPS */, _hoisted_25$3),
 	              createBaseVNode("button", {
 	                disabled: $data.history_last_status == null,
 	                onClick: _cache[6] || (_cache[6] = $event => ($options.apply_status_by_history())),
 	                class: "btn btn-sm btn-link",
 	                title: $data.i18n('date_time_range_picker.btn_undo')
-	              }, _hoisted_30$1, 8 /* PROPS */, _hoisted_28$1),
+	              }, _hoisted_30$2, 8 /* PROPS */, _hoisted_28$2),
 	              createBaseVNode("button", {
 	                disabled: $data.select_time_value == 'custom',
 	                onClick: _cache[7] || (_cache[7] = $event => ($options.change_select_time())),
 	                class: "btn btn-sm btn-link",
 	                title: $data.i18n('date_time_range_picker.btn_refresh')
-	              }, _hoisted_33$1, 8 /* PROPS */, _hoisted_31$1),
+	              }, _hoisted_33$2, 8 /* PROPS */, _hoisted_31$2),
 	              renderSlot(_ctx.$slots, "extra_buttons")
 	            ])
 	          ])
@@ -22348,7 +22353,7 @@
 	const _hoisted_21$3 = { class: "custom-control-label ms-1 form-check-label" };
 	const _hoisted_22$3 = ["disabled"];
 	const _hoisted_23$3 = ["disabled"];
-	const _hoisted_24$2 = ["disabled"];
+	const _hoisted_24$3 = ["disabled"];
 
 
 	var script$w = {
@@ -22695,7 +22700,7 @@
 	            onClick: select_snapshot,
 	            disabled: unref(disable_select),
 	            class: "btn btn-primary"
-	          }, toDisplayString(_i18n("snapshots.apply")), 9 /* TEXT, PROPS */, _hoisted_24$2))
+	          }, toDisplayString(_i18n("snapshots.apply")), 9 /* TEXT, PROPS */, _hoisted_24$3))
 	        : createCommentVNode("v-if", true)
 	    ]),
 	    _: 1 /* STABLE */
@@ -22986,8 +22991,30 @@
 
 	const ui_types = {
 	    select: "select",
-	    // input: "input",
+	    select_and_select: "select_and_select",
 	    select_and_input: "select_and_input",
+	};
+
+	// dictionary of functions to convert an element of source_url rest result to a source ({label, value })
+	const sources_url_el_to_source = {
+	    ifid: (s) => {
+		let label = s.ifname;
+		if (s.name != null) {
+		    label = s.name;
+		}
+	        return {
+		    label,
+		    value: s.ifid,
+	        };
+	    },
+	    pool: (p) => {
+		let label = p.pool_id;
+		if (p.name != null) { label = p.name; }
+		return {
+		    label,
+		    value: p.pool_id,
+		};
+	    },
 	};
 
 	const sources_types = [
@@ -23003,7 +23030,7 @@
 	    {
 		regex_page_url: "lua\/host_details",
 		label: "Host",
-		disable_url: true,
+		disable_sources_url: true,
 		value: "host",
 		regex_type: "ip",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23016,7 +23043,7 @@
 	    {
 		regex_page_url: "lua\/mac_details",
 		label: "Mac",
-		disable_url: true,
+		disable_sources_url: true,
 		value_url: "host",
 		value: "mac",
 		regex_type: "macAddress",
@@ -23029,7 +23056,7 @@
 	    {
 		regex_page_url: "lua\/network_details",
 		label: "Network",
-		disable_url: true,
+		disable_sources_url: true,
 		// value_url: "subnet",
 		value: "subnet",
 		regex_type: "text",
@@ -23042,7 +23069,7 @@
 	    {
 		regex_page_url: "lua\/as_details",
 		label: "ASN",
-		disable_url: true,
+		disable_sources_url: true,
 		value: "asn",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23054,7 +23081,7 @@
 	    {
 		regex_page_url: "lua\/country_details",
 		label: "Country",
-		disable_url: true,
+		disable_sources_url: true,
 		value: "country",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23066,7 +23093,7 @@
 	    {
 		regex_page_url: "lua\/os_details",
 		label: "OS",
-		disable_url: true,
+		disable_sources_url: true,
 		value: "os",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23078,7 +23105,7 @@
 	    {
 		regex_page_url: "lua\/vlan_details",
 		label: "VLAN",
-		disable_url: true,
+		disable_sources_url: true,
 		value: "vlan",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23090,13 +23117,14 @@
 	    {
 		regex_page_url: "lua\/pool_details",
 		label: "Host Pool",
-		disable_url: true,
+		// get sources_url() { return `lua/rest/v2/get/host/pools.lua?_=${Date.now()}` },
+		sources_url: `lua/rest/v2/get/host/pools.lua`,
 		value: "pool",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
 		sub_value: "ifid",
 		sub_label: "Interface",
-		ui_type: ui_types.select_and_input,
+		ui_type: ui_types.select_and_select,
 		query: "host_pool",
 	    },
 	];
@@ -23112,7 +23140,11 @@
 
 	const get_default_source = async (http_prefix, source_type) => {
 	    let source_value = get_default_source_value(source_type);
-	    let source = await get_source_from_value(http_prefix, source_type, source_value);
+	    let source_sub_value;
+	    if (source_type.sub_value) {
+		source_sub_value = get_default_source_value({ value: source_type.sub_value });
+	    }
+	    let source = await get_source_from_value(http_prefix, source_type, source_value, source_sub_value);
 	    return source;
 	};
 
@@ -23128,9 +23160,13 @@
 	    if (source_type == null) {
 		source_type = get_current_page_source_type();
 	    }
-	    if (!source_type.disable_url) {
+	    if (!source_type.disable_sources_url) {
 		let sources = await get_sources(http_prefix, source_type);
-		return sources.find((s) => s.value == source_value);
+		let source = sources.find((s) => s.value == source_value);
+		if (source != null && source_sub_value != null) {
+		    source.sub_value = source_sub_value;
+		}
+		return source;
 	    } else {
 		if (source_sub_value == null) {
 		    source_sub_value = get_default_source_value({ value: source_type.sub_value });
@@ -23157,7 +23193,7 @@
 	    }
 	    let key = source_type.value;    
 	    if (cache_sources[key] == null) {
-		if (!source_type.disable_url) {
+		if (!source_type.disable_sources_url) {
 		    let url = `${http_prefix}/${source_type.sources_url}`;
 		    cache_sources[key] = ntopng_utility$1.http_request(url);
 		}
@@ -23166,16 +23202,21 @@
 		}
 	    }
 	    let res = await cache_sources[key];
-	    const sources = res.map((s) => {
-		let label = s.ifname;
-		if (s.name != null) {
-		    label = s.name;
-		}
-	        return {
-		    label,
-		    value: s.ifid,
-	        };
-	    });	
+	    let f_map_source_element = sources_url_el_to_source[source_type.value];
+	    if (f_map_source_element == null) {
+		throw `:Error: metrics-manager.js, missing sources_url_to_source ${source_type.value} key`;
+	    }
+	    const sources = res.map((s) => f_map_source_element(s));
+	    // const sources = res.map((s) => {
+	    // 	let label = s.ifname;
+	    // 	if (s.name != null) {
+	    // 	    label = s.name;
+	    // 	}
+	    //     return {
+	    // 	    label,
+	    // 	    value: s.ifid,
+	    //     };
+	    // });	
 	    return sources.sort(NtopUtils$1.sortAlphabetically)    
 	};
 
@@ -23341,28 +23382,43 @@
 	};
 	const _hoisted_6$l = { class: "col-form-label col-sm-4" };
 	const _hoisted_7$k = { class: "col-sm-8" };
-	const _hoisted_8$j = {
-	  key: 1,
-	  class: "form-group ms-2 me-2 mt-3"
-	};
-	const _hoisted_9$i = { class: "form-group row ms-1 me-1 mb-2" };
+	const _hoisted_8$j = { class: "form-group ms-2 me-2 mt-3 ms-1 me-1" };
+	const _hoisted_9$i = { class: "form-group row mb-2" };
 	const _hoisted_10$f = { class: "col-form-label col-sm-4" };
 	const _hoisted_11$f = { class: "col-sm-8" };
-	const _hoisted_12$e = { class: "form-group row ms-3 me-1" };
+	const _hoisted_12$e = { class: "form-group ms-2 me-2 mt-3 ms-3 me-1 row" };
 	const _hoisted_13$d = { class: "col-form-label col-sm-4" };
 	const _hoisted_14$a = { class: "col-sm-8" };
-	const _hoisted_15$9 = { class: "form-group row ms-3 me-1" };
+	const _hoisted_15$9 = { class: "form-group ms-2 me-2 mt-3 ms-3 me-1 row" };
 	const _hoisted_16$8 = { class: "col-form-label col-sm-4" };
 	const _hoisted_17$8 = { class: "col-sm-6" };
-	const _hoisted_18$7 = ["pattern"];
-	const _hoisted_19$7 = {
+	const _hoisted_18$7 = {
 	  class: "col-sm-2",
 	  style: {"text-align":"end !important"}
 	};
-	const _hoisted_20$6 = ["disabled"];
-	const _hoisted_21$2 = { class: "form-group ms-2 me-2 mt-3 row" };
+	const _hoisted_19$7 = ["disabled"];
+	const _hoisted_20$6 = {
+	  key: 2,
+	  class: "form-group ms-2 me-2 mt-3"
+	};
+	const _hoisted_21$2 = { class: "form-group row ms-1 me-1 mb-2" };
 	const _hoisted_22$2 = { class: "col-form-label col-sm-4" };
 	const _hoisted_23$2 = { class: "col-sm-8" };
+	const _hoisted_24$2 = { class: "form-group row ms-3 me-1" };
+	const _hoisted_25$2 = { class: "col-form-label col-sm-4" };
+	const _hoisted_26$2 = { class: "col-sm-8" };
+	const _hoisted_27$2 = { class: "form-group row ms-3 me-1" };
+	const _hoisted_28$1 = { class: "col-form-label col-sm-4" };
+	const _hoisted_29$1 = { class: "col-sm-6" };
+	const _hoisted_30$1 = ["pattern"];
+	const _hoisted_31$1 = {
+	  class: "col-sm-2",
+	  style: {"text-align":"end !important"}
+	};
+	const _hoisted_32$1 = ["disabled"];
+	const _hoisted_33$1 = { class: "form-group ms-2 me-2 mt-3 row" };
+	const _hoisted_34$1 = { class: "col-form-label col-sm-4" };
+	const _hoisted_35$1 = { class: "col-sm-8" };
 
 
 	var script$u = {
@@ -23440,8 +23496,10 @@
 	    action.value = a;
 	}
 
-	async function apply_source_text() {
-	    selected_source.value = await metricsManager.get_source_from_value(http_prefix, selected_source_type.value, source_text.value, selected_sub_source.value.value);
+	async function apply_source_text(set_selected_source) {
+	    if (set_selected_source == true) {
+		selected_source.value = await metricsManager.get_source_from_value(http_prefix, selected_source_type.value, source_text.value, selected_sub_source.value.value);
+	    }
 	    set_selected_source_text();
 	    await set_metrics();
 	}
@@ -23479,10 +23537,10 @@
 	    }
 	    let default_source = await metricsManager.get_default_source(http_prefix, selected_source_type.value);
 	    selected_source.value = default_source;
-	    if (selected_source_type.value.ui_type == ui_types.select_and_input) {
+	    // if (selected_source_type.value.ui_type == ui_types.select_and_input) {
 		source_text.value = selected_source.value.value;
 		set_selected_source_text();
-	    }
+	    // }
 	}
 
 	async function set_metrics() {
@@ -23591,7 +23649,7 @@
 
 	return (_ctx, _cache) => {
 	  return (openBlock(), createBlock(script$x, {
-	    onShowed: _cache[12] || (_cache[12] = $event => (showed())),
+	    onShowed: _cache[17] || (_cache[17] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
 	  }, {
@@ -23643,9 +23701,6 @@
 	                  createBaseVNode("label", _hoisted_6$l, [
 	                    createBaseVNode("b", null, toDisplayString(_i18n("modal_timeseries.source")), 1 /* TEXT */)
 	                  ]),
-	                  createCommentVNode(" <label class=\"col-form-label col-sm-4\" > "),
-	                  createCommentVNode("   <b>{{selected_source_type.label}}</b> "),
-	                  createCommentVNode(" </label> "),
 	                  createBaseVNode("div", _hoisted_7$k, [
 	                    createVNode(script$z, {
 	                      selected_option: selected_source.value,
@@ -23656,39 +23711,24 @@
 	                  ])
 	                ]))
 	              : createCommentVNode("v-if", true),
-	            createCommentVNode(" "),
-	            createCommentVNode(" <template v-if=\"selected_source_type.ui_type == ui_types.input\"> "),
-	            createCommentVNode(" \t<div class=\"form-group ms-2 me-2 mt-3\"> "),
-	            createCommentVNode(" \t  <div class=\"form-group row ms-1 me-1 mb-2\"> "),
-	            createCommentVNode(" \t    <label class=\"col-form-label col-sm-4\" > "),
-	            createCommentVNode("         <b>{{_i18n(\"modal_timeseries.source\")}}</b> "),
-	            createCommentVNode(" \t    </label> "),
-	            createCommentVNode(" \t    <div class=\"col-sm-8\" > "),
-	            createCommentVNode(" \t      <input class=\"form-control\" v-model=\"source_text\"  :pattern=\"source_text_validation\" required type=\"text\" placeholder=\"192.168.1.1\"> "),
-	            createCommentVNode(" \t    </div> "),
-	            createCommentVNode(" \t  </div> "),
-	            createCommentVNode(" \t</div> "),
-	            createCommentVNode(" </template> "),
-	            createCommentVNode(" Host, Mac "),
-	            (selected_source_type.value.ui_type == unref(ui_types).select_and_input)
-	              ? (openBlock(), createElementBlock("div", _hoisted_8$j, [
-	                  createBaseVNode("div", _hoisted_9$i, [
-	                    createBaseVNode("label", _hoisted_10$f, [
-	                      createBaseVNode("b", null, toDisplayString(_i18n("modal_timeseries.source")), 1 /* TEXT */)
-	                    ]),
-	                    createBaseVNode("div", _hoisted_11$f, [
-	                      withDirectives(createBaseVNode("input", {
-	                        class: "form-control",
-	                        "onUpdate:modelValue": _cache[6] || (_cache[6] = $event => ((selected_source_text).value = $event)),
-	                        type: "text",
-	                        disabled: ""
-	                      }, null, 512 /* NEED_PATCH */), [
-	                        [vModelText, selected_source_text.value]
+	            createCommentVNode(" Host Pool "),
+	            (selected_source_type.value.ui_type == unref(ui_types).select_and_select)
+	              ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
+	                  createBaseVNode("div", _hoisted_8$j, [
+	                    createBaseVNode("div", _hoisted_9$i, [
+	                      createBaseVNode("label", _hoisted_10$f, [
+	                        createBaseVNode("b", null, toDisplayString(_i18n("modal_timeseries.source")), 1 /* TEXT */)
 	                      ]),
-	                      createCommentVNode(" <input class=\"form-control\" :class=\"{ 'alert alert-warning': selected_source_text_warn() }\" v-model=\"selected_source_text\" type=\"text\" disabled> "),
-	                      createCommentVNode(" <label> "),
-	                      createCommentVNode(" \t<b>{{selected_source_text}}</b> "),
-	                      createCommentVNode(" </label> ")
+	                      createBaseVNode("div", _hoisted_11$f, [
+	                        withDirectives(createBaseVNode("input", {
+	                          class: "form-control",
+	                          "onUpdate:modelValue": _cache[6] || (_cache[6] = $event => ((selected_source_text).value = $event)),
+	                          type: "text",
+	                          disabled: ""
+	                        }, null, 512 /* NEED_PATCH */), [
+	                          [vModelText, selected_source_text.value]
+	                        ])
+	                      ])
 	                    ])
 	                  ]),
 	                  createBaseVNode("div", _hoisted_12$e, [
@@ -23708,43 +23748,95 @@
 	                      createBaseVNode("b", null, toDisplayString(selected_source_type.value.label), 1 /* TEXT */)
 	                    ]),
 	                    createBaseVNode("div", _hoisted_17$8, [
+	                      createVNode(script$z, {
+	                        selected_option: selected_source.value,
+	                        "onUpdate:selected_option": _cache[8] || (_cache[8] = $event => ((selected_source).value = $event)),
+	                        options: sources.value
+	                      }, null, 8 /* PROPS */, ["selected_option", "options"])
+	                    ]),
+	                    createBaseVNode("div", _hoisted_18$7, [
+	                      createBaseVNode("button", {
+	                        type: "button",
+	                        disabled: !unref(is_source_text_valid),
+	                        onClick: _cache[9] || (_cache[9] = $event => (apply_source_text(false))),
+	                        class: "btn btn-primary"
+	                      }, toDisplayString(_i18n("modal_timeseries.apply")), 9 /* TEXT, PROPS */, _hoisted_19$7)
+	                    ])
+	                  ])
+	                ], 64 /* STABLE_FRAGMENT */))
+	              : createCommentVNode("v-if", true),
+	            createCommentVNode(" Host, Mac "),
+	            (selected_source_type.value.ui_type == unref(ui_types).select_and_input)
+	              ? (openBlock(), createElementBlock("div", _hoisted_20$6, [
+	                  createBaseVNode("div", _hoisted_21$2, [
+	                    createBaseVNode("label", _hoisted_22$2, [
+	                      createBaseVNode("b", null, toDisplayString(_i18n("modal_timeseries.source")), 1 /* TEXT */)
+	                    ]),
+	                    createBaseVNode("div", _hoisted_23$2, [
 	                      withDirectives(createBaseVNode("input", {
 	                        class: "form-control",
-	                        "onUpdate:modelValue": _cache[8] || (_cache[8] = $event => ((source_text).value = $event)),
+	                        "onUpdate:modelValue": _cache[10] || (_cache[10] = $event => ((selected_source_text).value = $event)),
+	                        type: "text",
+	                        disabled: ""
+	                      }, null, 512 /* NEED_PATCH */), [
+	                        [vModelText, selected_source_text.value]
+	                      ])
+	                    ])
+	                  ]),
+	                  createBaseVNode("div", _hoisted_24$2, [
+	                    createBaseVNode("label", _hoisted_25$2, [
+	                      createBaseVNode("b", null, toDisplayString(selected_source_type.value.sub_label), 1 /* TEXT */)
+	                    ]),
+	                    createBaseVNode("div", _hoisted_26$2, [
+	                      createVNode(script$z, {
+	                        selected_option: selected_sub_source.value,
+	                        "onUpdate:selected_option": _cache[11] || (_cache[11] = $event => ((selected_sub_source).value = $event)),
+	                        options: sub_sources.value
+	                      }, null, 8 /* PROPS */, ["selected_option", "options"])
+	                    ])
+	                  ]),
+	                  createBaseVNode("div", _hoisted_27$2, [
+	                    createBaseVNode("label", _hoisted_28$1, [
+	                      createBaseVNode("b", null, toDisplayString(selected_source_type.value.label), 1 /* TEXT */)
+	                    ]),
+	                    createBaseVNode("div", _hoisted_29$1, [
+	                      withDirectives(createBaseVNode("input", {
+	                        class: "form-control",
+	                        "onUpdate:modelValue": _cache[12] || (_cache[12] = $event => ((source_text).value = $event)),
 	                        pattern: source_text_validation.value,
 	                        required: "",
 	                        type: "text",
 	                        placeholder: ""
-	                      }, null, 8 /* PROPS */, _hoisted_18$7), [
+	                      }, null, 8 /* PROPS */, _hoisted_30$1), [
 	                        [vModelText, source_text.value]
 	                      ])
 	                    ]),
-	                    createBaseVNode("div", _hoisted_19$7, [
+	                    createBaseVNode("div", _hoisted_31$1, [
 	                      createBaseVNode("button", {
 	                        type: "button",
 	                        disabled: !unref(is_source_text_valid),
-	                        onClick: apply_source_text,
+	                        onClick: _cache[13] || (_cache[13] = $event => (apply_source_text(true))),
 	                        class: "btn btn-primary"
-	                      }, toDisplayString(_i18n("modal_timeseries.apply")), 9 /* TEXT, PROPS */, _hoisted_20$6)
+	                      }, toDisplayString(_i18n("modal_timeseries.apply")), 9 /* TEXT, PROPS */, _hoisted_32$1)
 	                    ])
 	                  ])
 	                ]))
 	              : createCommentVNode("v-if", true),
 	            createCommentVNode(" Metrics "),
-	            createBaseVNode("div", _hoisted_21$2, [
-	              createBaseVNode("label", _hoisted_22$2, [
+	            createBaseVNode("div", _hoisted_33$1, [
+	              createBaseVNode("label", _hoisted_34$1, [
 	                createBaseVNode("b", null, toDisplayString(_i18n("modal_timeseries.metric")), 1 /* TEXT */)
 	              ]),
-	              createBaseVNode("div", _hoisted_23$2, [
+	              createBaseVNode("div", _hoisted_35$1, [
 	                createCommentVNode(" <select class=\"form-select\" @click=\"update_timeseries_to_add()\" v-model=\"selected_metric\"> "),
 	                createCommentVNode("   <option v-for=\"item in metrics\" :value=\"item\">{{item.label}}</option> "),
 	                createCommentVNode(" </select> "),
 	                createVNode(script$z, {
 	                  ref_key: "select_search_metrics",
 	                  ref: select_search_metrics,
-	                  onSelect_option: _cache[9] || (_cache[9] = $event => (update_timeseries_to_add())),
+	                  onSelect_option: _cache[14] || (_cache[14] = $event => (update_timeseries_to_add())),
 	                  selected_option: selected_metric.value,
-	                  "onUpdate:selected_option": _cache[10] || (_cache[10] = $event => ((selected_metric).value = $event)),
+	                  "onUpdate:selected_option": _cache[15] || (_cache[15] = $event => ((selected_metric).value = $event)),
 	                  options: metrics.value
 	                }, null, 8 /* PROPS */, ["selected_option", "options"])
 	              ])
@@ -23753,7 +23845,7 @@
 	              id: get_timeseries_group_id(),
 	              title: _i18n('modal_timeseries.timeseries_list'),
 	              timeseries: timeseries_to_add.value,
-	              "onUpdate:timeseries": _cache[11] || (_cache[11] = $event => ((timeseries_to_add).value = $event))
+	              "onUpdate:timeseries": _cache[16] || (_cache[16] = $event => ((timeseries_to_add).value = $event))
 	            }, null, 8 /* PROPS */, ["id", "title", "timeseries"])
 	          ], 64 /* STABLE_FRAGMENT */))
 	        : createCommentVNode("v-if", true),
