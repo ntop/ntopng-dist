@@ -29726,7 +29726,7 @@
 	const _hoisted_5$6 = { class: "card-body" };
 	const _hoisted_6$6 = { id: "host_details_applications" };
 	const _hoisted_7$6 = {
-	  class: "row",
+	  class: "row mb-4 mt-4",
 	  id: "host_details_applications"
 	};
 	const _hoisted_8$6 = { class: "col-6" };
@@ -29839,6 +29839,10 @@
 	const destroy = () => {
 	  traffic_table.value.destroy_table();
 	};
+
+	const reload_table = () => {
+	  traffic_table.value.reload();
+	};
 	    
 	onBeforeMount(async () => {
 	  start_datatable();
@@ -29882,13 +29886,13 @@
 	    text: '<i class="fas fa-sync"></i>',
 	    className: 'btn-link',
 	    action: function (e, dt, node, config) {
-	      traffic_table.value.reload_table();
+	      reload_table();
 	    }
 	  });
 	    
 	  let defaultDatatableConfig = {
 	    table_buttons: datatableButton,
-	    data_url: NtopUtils.buildURL(`${http_prefix}/lua/rest/v2/get/host/stats/l4_traffic.lua`, url_params),
+	    data_url: NtopUtils.buildURL(`${http_prefix}/lua/rest/v2/get/host/l4/data.lua`, url_params),
 	    enable_search: true,
 	    table_config: { 
 	      serverSide: false, 
