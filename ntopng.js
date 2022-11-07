@@ -22985,17 +22985,18 @@
 
 	const sources_types = [
 	    {
+		regex_page_url: "lua\/if_stats",
 		label: "Interface",
 		sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
 		value: "ifid",
 		ui_type: ui_types.select,
 		table_value: "interface",
-		query: "ifid",
+		query: "iface",
 	    },
 	    {
+		regex_page_url: "lua\/host_details",
 		label: "Host",
 		disable_url: true,
-		//sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
 		value: "host",
 		regex_type: "ip",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23006,9 +23007,9 @@
 		query: "host",
 	    },
 	    {
+		regex_page_url: "lua\/mac_details",
 		label: "Mac",
 		disable_url: true,
-		//sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
 		value_url: "host",
 		value: "mac",
 		regex_type: "macAddress",
@@ -23017,6 +23018,19 @@
 		sub_label: "Interface",
 		ui_type: ui_types.select_and_input,
 		query: "mac",
+	    },
+	    {
+		regex_page_url: "lua\/network_details",
+		label: "Network",
+		disable_url: true,
+		// value_url: "subnet",
+		value: "subnet",
+		regex_type: "text",
+		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		sub_value: "ifid",
+		sub_label: "Interface",
+		ui_type: ui_types.select_and_input,
+		query: "subnet",
 	    },
 	];
 
@@ -23098,6 +23112,16 @@
 	    return sources.sort(NtopUtils$1.sortAlphabetically)    
 	};
 
+	function get_source_type_key_value_url(source_type) {
+	    if (source_type.value_url != null) { return source_type.value_url; }
+	    return source_type.value;
+	}
+
+	function get_source_type_key_sub_value_url(source_type) {
+	    if (source_type.sub_value_url != null) { return source_type.sub_value_url; }
+	    return source_type.sub_value;
+	}
+
 	const get_default_source_value = (source_type) => {
 	    if (source_type == null) {
 		source_type = get_current_page_source_type();
@@ -23154,13 +23178,19 @@
 
 	const get_current_page_source_type = () => {
 	    let pathname = window.location.pathname;
-	    if (/lua\/if_stats/.test(pathname) == true) {
-		return sources_types[0];
-	    } else if (/lua\/host_details/.test(pathname) == true) {
-		return sources_types[1];
-	    } else if (/lua\/mac_details/.test(pathname) == true) {
-		return sources_types[2];
+	    for (let i = 0; i < sources_types.length; i += 1) {
+		let regExp = new RegExp(sources_types[i].regex_page_url);
+		if (regExp.test(pathname) == true) {
+		    return sources_types[i];
+		}
 	    }
+	    // if (/lua\/if_stats/.test(pathname) == true) {
+	    // 	return sources_types[0];
+	    // } else if (/lua\/host_details/.test(pathname) == true) {
+	    // 	return sources_types[1];
+	    // } else if (/lua\/mac_details/.test(pathname) == true) {
+	    // 	return sources_types[2];
+	    // }
 	    throw `source_type not found for ${pathname}`;
 	};
 
@@ -23206,6 +23236,9 @@
 		get_metrics,
 		get_metrics_from_schema,
 		get_default_metric,
+
+		get_source_type_key_value_url,
+		get_source_type_key_sub_value_url,
 
 		ui_types,
 	    };
@@ -24924,7 +24957,8 @@
 	  props: {
 	    csrf: String,
 	    is_ntop_pro: Boolean,
-	    default_ifid: String,
+	    source_value: String,
+	    source_sub_value: String,
 	    enable_snapshots: Boolean,
 	    is_history_enabled: Boolean,
 	    traffic_extraction_permitted: Boolean,
@@ -24989,12 +25023,20 @@
 	    return groups_options_modes[0];
 	}
 
-	function set_default_ifid() {
-	    ntopng_url_manager$1.set_key_to_url("ifid", props.default_ifid);
+	function set_default_source_in_url() {
+	    let source_type = metricsManager.get_current_page_source_type();
+	    if (props.source_value != null && props.source_value != "") {
+		let value_url = metricsManager.get_source_type_key_value_url(source_type);
+		ntopng_url_manager$1.set_key_to_url(value_url, props.source_value);
+	    }
+	    if (props.source_sub_value != null && props.source_sub_value != "") {
+		let sub_value_url = metricsManager.get_source_type_key_sub_value_url(source_type);
+		ntopng_url_manager$1.set_key_to_url(sub_value_url, props.source_sub_value);
+	    }
 	}
 
 	onBeforeMount(async () => {
-	    set_default_ifid();
+	    set_default_source_in_url();
 	    await load_datatable_data();
 	});
 
