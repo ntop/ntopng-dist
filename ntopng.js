@@ -23127,6 +23127,56 @@
 		ui_type: ui_types.select_and_select,
 		query: "host_pool",
 	    },
+	    {
+		regex_page_url: "lua\/pro\/enterprise\/observation_points",
+		label: "Observation",
+		disable_url: true,
+		value: "observation_point",
+		regex_type: "text",
+		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		sub_value: "ifid",
+		sub_label: "Interface",
+		ui_type: ui_types.select_and_input,
+		query: "obs_point",
+	  ts_query: "obs_point",
+	    },
+	    {
+		regex_page_url: "lua\/pod_details",
+		label: "Pod",
+		disable_url: true,
+		value: "pod",
+		regex_type: "text",
+		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		sub_value: "ifid",
+		sub_label: "Interface",
+		ui_type: ui_types.select_and_input,
+		query: "pod",
+	  ts_query: "pod",
+	    },
+	    {
+		regex_page_url: "lua\/container_details",
+		label: "Container",
+		disable_url: true,
+		value: "container",
+		regex_type: "text",
+		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		sub_value: "ifid",
+		sub_label: "Interface",
+		ui_type: ui_types.select_and_input,
+		query: "container",
+	    },
+	    {
+		regex_page_url: "lua\/hash_table_details",
+		label: "Hash Table",
+		disable_url: true,
+		value: "hash_table",
+		regex_type: "text",
+		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		sub_value: "ifid",
+		sub_label: "Interface",
+		ui_type: ui_types.select_and_input,
+		query: "ht",
+	    },
 	];
 
 	const get_source_type_from_value = (source_type_value) => {
@@ -25012,7 +25062,7 @@
 	    } else {
 		// let sub_value = ntopng_url_manager.get_url_entry(tsGroup.source_type.sub_value);
 		let sub_value = tsGroup.source.sub_value;
-		tsQuery = `${tsGroup.source_type.sub_value}:${sub_value},${tsGroup.source_type.value}:${tsGroup.source.value}`;
+	tsQuery = `${tsGroup.source_type.sub_value}:${sub_value},${(tsGroup.source_type.ts_query || tsGroup.source_type.value)}:${tsGroup.metric.ts_query || tsGroup.source.value}`;
 	    }
 
 	    if (tsGroup.metric.query != null) {
