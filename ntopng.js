@@ -23383,7 +23383,7 @@
 	const _hoisted_6$l = { class: "col-form-label col-sm-4" };
 	const _hoisted_7$k = { class: "col-sm-8" };
 	const _hoisted_8$j = { class: "form-group ms-2 me-2 mt-3 ms-1 me-1" };
-	const _hoisted_9$i = { class: "form-group row mb-2" };
+	const _hoisted_9$i = { class: "form-group row ms-1 mb-2" };
 	const _hoisted_10$f = { class: "col-form-label col-sm-4" };
 	const _hoisted_11$f = { class: "col-sm-8" };
 	const _hoisted_12$e = { class: "form-group ms-2 me-2 mt-3 ms-3 me-1 row" };
@@ -23499,6 +23499,8 @@
 	async function apply_source_text(set_selected_source) {
 	    if (set_selected_source == true) {
 		selected_source.value = await metricsManager.get_source_from_value(http_prefix, selected_source_type.value, source_text.value, selected_sub_source.value.value);
+	    } else {
+		selected_source.value.sub_value = selected_sub_source.value.value;
 	    }
 	    set_selected_source_text();
 	    await set_metrics();
@@ -23516,11 +23518,11 @@
 	    await set_metrics();
 	}
 
-	function get_selected_source_text(source_value) {
-	    if (source_value == null) {
-		source_value = selected_source.value.value;
+	function get_selected_source_text(source_label) {
+	    if (source_label == null) {
+		source_label = selected_source.value.label;
 	    }
-	    return `${selected_sub_source.value.label} - ${source_value}`;
+	    return `${selected_sub_source.value.label} - ${source_label}`;
 	}
 
 	function set_selected_source_text() {
@@ -23711,7 +23713,7 @@
 	                  ])
 	                ]))
 	              : createCommentVNode("v-if", true),
-	            createCommentVNode(" Host Pool "),
+	            createCommentVNode(" Pool "),
 	            (selected_source_type.value.ui_type == unref(ui_types).select_and_select)
 	              ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
 	                  createBaseVNode("div", _hoisted_8$j, [
