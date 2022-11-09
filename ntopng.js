@@ -22879,7 +22879,7 @@
 	    if (ts_group.source.sub_value != null) {
 		source_value_query = `${source_value_query}+${ts_group.source.sub_value}`;
 	    }
-	    let param = `${ts_group.source_type.value},${source_value_query},${metric_schema_query},${timeseries_param}`;
+	    let param = `${ts_group.source_type.id},${source_value_query},${metric_schema_query},${timeseries_param}`;
 	    return param;
 	}
 
@@ -22932,7 +22932,7 @@
 	async function get_url_param_from_ts_group(ts_group_url_param) {
 	    let g = ts_group_url_param;
 	    let info = g.split(",");
-	    let source_type_value = info[0];
+	    let source_type_id = info[0];
 	    let source_value_query = info[1];
 	    let source_value_query_array = source_value_query.split("+");
 	    if (source_value_query_array.lenght < 2) {
@@ -22945,7 +22945,7 @@
 	    }
 	    let timeseries_url = info[3];
 
-	    let source_type = get_source_type_from_value(source_type_value);
+	    let source_type = get_source_type_from_id(source_type_id);
 	    let source = await get_source_from_value(http_prefix, source_type, source_value_query_array[0], source_value_query_array[1]);
 	    let metric = await get_metrics_from_schema(http_prefix, source_type, source, metric_schema_query_array[0], metric_schema_query_array[1]);
 	    let timeseries = get_timeseries(timeseries_url, metric);
@@ -22990,6 +22990,7 @@
 	}
 
 	const ui_types = {
+	    hide: "hide",
 	    select: "select",
 	    select_and_select: "select_and_select",
 	    select_and_input: "select_and_input",
@@ -23019,6 +23020,7 @@
 
 	const sources_types = [
 	    {
+		id: "interface",
 		regex_page_url: "lua\/if_stats",
 		label: "Interface",
 		sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23028,9 +23030,9 @@
 		query: "iface",
 	    },
 	    {
+		id: "host",
 		regex_page_url: "lua\/host_details",
 		label: "Host",
-		disable_sources_url: true,
 		value: "host",
 		regex_type: "ip",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23041,9 +23043,9 @@
 		query: "host",
 	    },
 	    {
+		id: "mac",
 		regex_page_url: "lua\/mac_details",
 		label: "Mac",
-		disable_sources_url: true,
 		value_url: "host",
 		value: "mac",
 		regex_type: "macAddress",
@@ -23054,9 +23056,9 @@
 		query: "mac",
 	    },
 	    {
+		id: "network",
 		regex_page_url: "lua\/network_details",
 		label: "Network",
-		disable_sources_url: true,
 		// value_url: "subnet",
 		value: "subnet",
 		regex_type: "text",
@@ -23067,9 +23069,9 @@
 		query: "subnet",
 	    },
 	    {
+		id: "as",
 		regex_page_url: "lua\/as_details",
 		label: "ASN",
-		disable_sources_url: true,
 		value: "asn",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23079,9 +23081,9 @@
 		query: "asn",
 	    },
 	    {
+		id: "country",
 		regex_page_url: "lua\/country_details",
 		label: "Country",
-		disable_sources_url: true,
 		value: "country",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23091,9 +23093,9 @@
 		query: "country",
 	    },
 	    {
+		id: "os",
 		regex_page_url: "lua\/os_details",
 		label: "OS",
-		disable_sources_url: true,
 		value: "os",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23103,9 +23105,9 @@
 		query: "os",
 	    },
 	    {
+		id: "vlan",
 		regex_page_url: "lua\/vlan_details",
 		label: "VLAN",
-		disable_sources_url: true,
 		value: "vlan",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23115,6 +23117,7 @@
 		query: "vlan",
 	    },
 	    {
+		id: "pool",
 		regex_page_url: "lua\/pool_details",
 		label: "Host Pool",
 		// get sources_url() { return `lua/rest/v2/get/host/pools.lua?_=${Date.now()}` },
@@ -23128,9 +23131,9 @@
 		query: "host_pool",
 	    },
 	    {
+		id: "observation",
 		regex_page_url: "lua\/pro\/enterprise\/observation_points",
 		label: "Observation",
-		disable_sources_url: true,
 		value: "observation_point",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23141,9 +23144,9 @@
 	  ts_query: "obs_point",
 	    },
 	    {
+		id: "pod",
 		regex_page_url: "lua\/pod_details",
 		label: "Pod",
-		disable_sources_url: true,
 		value: "pod",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23154,9 +23157,9 @@
 	  ts_query: "pod",
 	    },
 	    {
+		id: "container",
 		regex_page_url: "lua\/container_details",
 		label: "Container",
-		disable_sources_url: true,
 		value: "container",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23166,9 +23169,9 @@
 		query: "container",
 	    },
 	    {
+		id: "hash",
 		regex_page_url: "lua\/hash_table_details",
 		label: "Hash Table",
-		disable_sources_url: true,
 		value: "hash_table",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23178,21 +23181,19 @@
 		query: "ht",
 	    },
 	    {
+		id: "system",
 		regex_page_url: "lua\/system_stats",
 		label: "System Stats",
-		disable_sources_url: true,
 		value: "ifid",
+		sources_function: () => { return [{ label: "", value: -1 }] },
 		regex_type: "text",
-		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
-		sub_value: null,
-		sub_label: null,
-		ui_type: ui_types.select_and_input,
+		ui_type: ui_types.hide,
 		query: "process",
 	    },
 	    {
+		id: "profile",	
 		regex_page_url: "lua\/profile_details",
 		label: "Profile",
-		disable_sources_url: true,
 		value: "profile",
 		regex_type: "text",
 		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
@@ -23202,36 +23203,36 @@
 		query: "profile",
 	    },
 	    {
+		id: "n_edge_interface",
 		regex_page_url: "lua\/pro\/nedge\/if_stats.lua",
 		label: "Profile",
-		disable_sources_url: true,
 		value: "ifid",
 		regex_type: "text",
 		ui_type: ui_types.select_and_input,
 		query: "iface:nedge",
 	    },
 	    {
+		id: "redis",
 		regex_page_url: "lua\/monitor\/redis_monitor.lua",
 		label: "Redis",
-		disable_sources_url: true,
 		value: "ifid",
 		regex_type: "text",
 		ui_type: ui_types.select_and_input,
 		query: "redis",
 	    },
 	    {
+		id: "influx",
 		regex_page_url: "lua\/monitor\/influxdb_monitor.lua",
 		label: "Influx DB",
-		disable_sources_url: true,
 		value: "ifid",
 		regex_type: "text",
 		ui_type: ui_types.select_and_input,
 		query: "influxdb",
 	    },
 	    {
+		id: "active_monitoring",
 		regex_page_url: "lua\/monitor\/active_monitoring_monitor.lua",
 		label: "Active Monitoring",
-		disable_sources_url: true,
 		value: "am_host",
 		regex_type: "text",
 		ui_type: ui_types.select_and_input,
@@ -23240,12 +23241,12 @@
 	    },
 	];
 
-	const get_source_type_from_value = (source_type_value) => {
-	    return sources_types.find((st) => st.value == source_type_value);
+	const get_source_type_from_id = (source_type_id) => {
+	    return sources_types.find((st) => st.id == source_type_id);
 	};
 
-	async function get_default_sub_source(http_prefix, sub_source_type_value) {
-	    let sub_source_type = get_source_type_from_value(sub_source_type_value);
+	async function get_default_sub_source(http_prefix, sub_source_type_id) {
+	    let sub_source_type = get_source_type_from_id(sub_source_type_id);
 	    return get_default_source(http_prefix, sub_source_type);    
 	}
 
@@ -23271,8 +23272,13 @@
 	    if (source_type == null) {
 		source_type = get_current_page_source_type();
 	    }
-	    if (!source_type.disable_sources_url) {
-		let sources = await get_sources(http_prefix, source_type);
+	    if (source_type.sources_url || source_type.sources_function) {
+		let sources;
+		if (source_type.sources_url) {
+		    sources = await get_sources(http_prefix, source_type);
+		} else {
+		    sources = source_type.sources_function();
+		}
 		let source = sources.find((s) => s.value == source_value);
 		if (source != null && source_sub_value != null) {
 		    source.sub_value = source_sub_value;
@@ -23304,30 +23310,23 @@
 	    }
 	    let key = source_type.value;    
 	    if (cache_sources[key] == null) {
-		if (!source_type.disable_sources_url) {
+		if (source_type.sources_url) {
 		    let url = `${http_prefix}/${source_type.sources_url}`;
 		    cache_sources[key] = ntopng_utility$1.http_request(url);
-		}
-		else {
-		    cache_sources[key] = [];
+		} else if (source_type.sources_function) {
+		    cache_sources[key] = source_type.sources_function();
+		} else {
+		    return [];
 		}
 	    }
-	    let res = await cache_sources[key];
-	    let f_map_source_element = sources_url_el_to_source[source_type.value];
-	    if (f_map_source_element == null) {
-		throw `:Error: metrics-manager.js, missing sources_url_to_source ${source_type.value} key`;
+	    let sources = await cache_sources[key];
+	    if (source_type.sources_url) {
+		let f_map_source_element = sources_url_el_to_source[source_type.value];
+		if (f_map_source_element == null) {
+		    throw `:Error: metrics-manager.js, missing sources_url_to_source ${source_type.value} key`;
+		}
+		sources = sources.map((s) => f_map_source_element(s));
 	    }
-	    const sources = res.map((s) => f_map_source_element(s));
-	    // const sources = res.map((s) => {
-	    // 	let label = s.ifname;
-	    // 	if (s.name != null) {
-	    // 	    label = s.name;
-	    // 	}
-	    //     return {
-	    // 	    label,
-	    // 	    value: s.ifid,
-	    //     };
-	    // });	
 	    return sources.sort(NtopUtils$1.sortAlphabetically)    
 	};
 
@@ -23441,7 +23440,7 @@
 		get_ts_group_id,
 
 		sources_types,
-		get_source_type_from_value,
+		get_source_type_from_id,
 		get_current_page_source_type,
 
 		get_sources,
@@ -25301,7 +25300,7 @@
 		let value_url = metricsManager.get_source_type_key_value_url(source_type);
 		ntopng_url_manager$1.set_key_to_url(value_url, props.source_value);
 	    }
-	    if (props.source_sub_value != null && props.source_sub_value != "") {
+	    if (source_type.sub_value && props.source_sub_value != null && props.source_sub_value != "") {
 		let sub_value_url = metricsManager.get_source_type_key_sub_value_url(source_type);
 		ntopng_url_manager$1.set_key_to_url(sub_value_url, props.source_sub_value);
 	    }
@@ -25914,6 +25913,10 @@
 	        tmp = tab;
 	      }
 	    });
+
+	    if(tmp == undefined)
+	      tmp = this.tab_list[0];
+
 	    this.old_tab = tmp.id || tmp.name;
 	    ntopng_sync.ready(this.$props["id"]);
 	  },
