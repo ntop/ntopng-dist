@@ -21361,7 +21361,7 @@
 		withScopeId: withScopeId
 	});
 
-	var script$A = {
+	var script$B = {
 	    components: {
 	    },
 	    props: {
@@ -21467,24 +21467,24 @@
 	    },
 	};
 
-	const _hoisted_1$x = {
+	const _hoisted_1$y = {
 	  style: {"width":"100%"},
 	  ref: "chart"
 	};
 
 	function render$k(_ctx, _cache, $props, $setup, $data, $options) {
-	  return (openBlock(), createElementBlock("div", _hoisted_1$x, null, 512 /* NEED_PATCH */))
+	  return (openBlock(), createElementBlock("div", _hoisted_1$y, null, 512 /* NEED_PATCH */))
 	}
 
-	script$A.render = render$k;
-	script$A.__file = "http_src/vue/chart.vue";
+	script$B.render = render$k;
+	script$B.__file = "http_src/vue/chart.vue";
 
-	const _hoisted_1$w = ["selected", "value", "disabled"];
-	const _hoisted_2$u = ["label"];
-	const _hoisted_3$s = ["selected", "value", "disabled"];
+	const _hoisted_1$x = ["selected", "value", "disabled"];
+	const _hoisted_2$v = ["label"];
+	const _hoisted_3$t = ["selected", "value", "disabled"];
 
 
-	var script$z = {
+	var script$A = {
 	  __name: 'select-search',
 	  props: {
 	    id: String,
@@ -21675,7 +21675,7 @@
 	        selected: (item.value == selected_option_2.value.value),
 	        value: item.value,
 	        disabled: item.disabled
-	      }, toDisplayString(item.label), 9 /* TEXT, PROPS */, _hoisted_1$w))
+	      }, toDisplayString(item.label), 9 /* TEXT, PROPS */, _hoisted_1$x))
 	    }), 256 /* UNKEYED_FRAGMENT */)),
 	    (openBlock(true), createElementBlock(Fragment, null, renderList(groups_options_2.value, (item, i) => {
 	      return (openBlock(), createElementBlock("optgroup", {
@@ -21686,9 +21686,9 @@
 	            selected: (item.value == selected_option_2.value.value),
 	            value: opt.value,
 	            disabled: opt.disabled
-	          }, toDisplayString(opt.label), 9 /* TEXT, PROPS */, _hoisted_3$s))
+	          }, toDisplayString(opt.label), 9 /* TEXT, PROPS */, _hoisted_3$t))
 	        }), 256 /* UNKEYED_FRAGMENT */))
-	      ], 8 /* PROPS */, _hoisted_2$u))
+	      ], 8 /* PROPS */, _hoisted_2$v))
 	    }), 256 /* UNKEYED_FRAGMENT */))
 	  ], 512 /* NEED_PATCH */))
 	}
@@ -21696,11 +21696,11 @@
 
 	};
 
-	script$z.__file = "http_src/vue/select-search.vue";
+	script$A.__file = "http_src/vue/select-search.vue";
 
-	var script$y = {
+	var script$z = {
 	    components: {
-		'select-search': script$z,
+		'select-search': script$A,
 	    },
 	    props: {
 		id: String,
@@ -22037,22 +22037,22 @@
 	};
 
 	const _withScopeId$8 = n => (pushScopeId("data-v-bc6f1430"),n=n(),popScopeId(),n);
-	const _hoisted_1$v = { class: "input-group" };
-	const _hoisted_2$t = { class: "form-group" };
-	const _hoisted_3$r = { class: "controls d-flex flex-wrap" };
-	const _hoisted_4$q = { class: "btn-group me-auto btn-group-sm" };
-	const _hoisted_5$p = { class: "btn-group ms-2" };
-	const _hoisted_6$p = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("span", { class: "input-group-text" }, [
+	const _hoisted_1$w = { class: "input-group" };
+	const _hoisted_2$u = { class: "form-group" };
+	const _hoisted_3$s = { class: "controls d-flex flex-wrap" };
+	const _hoisted_4$r = { class: "btn-group me-auto btn-group-sm" };
+	const _hoisted_5$q = { class: "btn-group ms-2" };
+	const _hoisted_6$q = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("span", { class: "input-group-text" }, [
 	  /*#__PURE__*/createBaseVNode("i", { class: "fas fa-calendar-alt" })
 	], -1 /* HOISTED */));
-	const _hoisted_7$o = {
+	const _hoisted_7$p = {
 	  class: "flatpickr flatpickr-input",
 	  type: "text",
 	  placeholder: "Choose a date..",
 	  "data-id": "datetime",
 	  ref: "begin-date"
 	};
-	const _hoisted_8$n = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("span", { class: "input-group-text" }, [
+	const _hoisted_8$o = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("span", { class: "input-group-text" }, [
 	  /*#__PURE__*/createBaseVNode("i", { class: "fas fa-long-arrow-alt-right" })
 	], -1 /* HOISTED */));
 	const _hoisted_9$m = {
@@ -22104,10 +22104,10 @@
 	function render$j(_ctx, _cache, $props, $setup, $data, $options) {
 	  const _component_select_search = resolveComponent("select-search");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$v, [
-	    createBaseVNode("div", _hoisted_2$t, [
-	      createBaseVNode("div", _hoisted_3$r, [
-	        createBaseVNode("div", _hoisted_4$q, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$w, [
+	    createBaseVNode("div", _hoisted_2$u, [
+	      createBaseVNode("div", _hoisted_3$s, [
+	        createBaseVNode("div", _hoisted_4$r, [
 	          renderSlot(_ctx.$slots, "begin"),
 	          createVNode(_component_select_search, {
 	            selected_option: $data.selected_time_option,
@@ -22116,12 +22116,12 @@
 	            options: $data.time_preset_list,
 	            onSelect_option: $options.change_select_time
 	          }, null, 8 /* PROPS */, ["selected_option", "options", "onSelect_option"]),
-	          createBaseVNode("div", _hoisted_5$p, [
-	            _hoisted_6$p,
-	            createBaseVNode("input", _hoisted_7$o, null, 512 /* NEED_PATCH */),
+	          createBaseVNode("div", _hoisted_5$q, [
+	            _hoisted_6$q,
+	            createBaseVNode("input", _hoisted_7$p, null, 512 /* NEED_PATCH */),
 	            createCommentVNode(" <input ref=\"begin-date\" @change=\"enable_apply=true\" @change=\"change_begin_date\" type=\"date\" class=\"date_time_input begin-timepicker form-control border-right-0 fix-safari-input\"> "),
 	            createCommentVNode(" <input ref=\"begin-time\" @change=\"enable_apply=true\" type=\"time\" class=\"date_time_input begin-timepicker form-control border-right-0 fix-safari-input\"> "),
-	            _hoisted_8$n,
+	            _hoisted_8$o,
 	            createBaseVNode("input", _hoisted_9$m, null, 512 /* NEED_PATCH */),
 	            createCommentVNode(" <input ref=\"end-date\" @change=\"enable_apply=true\" type=\"date\" class=\"date_time_input end-timepicker form-control border-left-0 fix-safari-input\" style=\"width: 2.5rem;\"> "),
 	            createCommentVNode(" <input ref=\"end-time\" @change=\"enable_apply=true\" type=\"time\" class=\"date_time_input end-timepicker form-control border-left-0 fix-safari-input\"> "),
@@ -22214,11 +22214,11 @@
 	var css_248z$a = "\n.date_time_input[data-v-bc6f1430] {\n  width: 10.5rem;\n  max-width: 10.5rem;\n  min-width: 10.5rem;\n}\n";
 	styleInject(css_248z$a);
 
-	script$y.render = render$j;
-	script$y.__scopeId = "data-v-bc6f1430";
-	script$y.__file = "http_src/vue/data-time-range-picker.vue";
+	script$z.render = render$j;
+	script$z.__scopeId = "data-v-bc6f1430";
+	script$z.__file = "http_src/vue/data-time-range-picker.vue";
 
-	var script$x = defineComponent({
+	var script$y = defineComponent({
 	    components: {
 	    },
 	    props: {
@@ -22256,14 +22256,14 @@
 	    },
 	});
 
-	const _hoisted_1$u = {
+	const _hoisted_1$v = {
 	  class: "modal-dialog modal-dialog-centered modal-lg",
 	  role: "document"
 	};
-	const _hoisted_2$s = { class: "modal-content" };
-	const _hoisted_3$q = { class: "modal-header" };
-	const _hoisted_4$p = { class: "modal-title" };
-	const _hoisted_5$o = /*#__PURE__*/createBaseVNode("div", { class: "modal-close" }, [
+	const _hoisted_2$t = { class: "modal-content" };
+	const _hoisted_3$r = { class: "modal-header" };
+	const _hoisted_4$q = { class: "modal-title" };
+	const _hoisted_5$p = /*#__PURE__*/createBaseVNode("div", { class: "modal-close" }, [
 	  /*#__PURE__*/createBaseVNode("button", {
 	    type: "button",
 	    class: "btn-close",
@@ -22271,9 +22271,9 @@
 	    "aria-label": "Close"
 	  })
 	], -1 /* HOISTED */);
-	const _hoisted_6$o = { class: "modal-body" };
-	const _hoisted_7$n = { class: "modal-footer" };
-	const _hoisted_8$m = /*#__PURE__*/createBaseVNode("div", { class: "mr-auto" }, null, -1 /* HOISTED */);
+	const _hoisted_6$p = { class: "modal-body" };
+	const _hoisted_7$o = { class: "modal-footer" };
+	const _hoisted_8$n = /*#__PURE__*/createBaseVNode("div", { class: "mr-auto" }, null, -1 /* HOISTED */);
 	const _hoisted_9$l = /*#__PURE__*/createBaseVNode("div", {
 	  class: "alert alert-info test-feedback w-100",
 	  style: {"display":"none"}
@@ -22289,19 +22289,19 @@
 	    "aria-labelledby": "dt-add-filter-modal-title",
 	    "aria-hidden": "true"
 	  }, [
-	    createBaseVNode("div", _hoisted_1$u, [
-	      createBaseVNode("div", _hoisted_2$s, [
-	        createBaseVNode("div", _hoisted_3$q, [
-	          createBaseVNode("h5", _hoisted_4$p, [
+	    createBaseVNode("div", _hoisted_1$v, [
+	      createBaseVNode("div", _hoisted_2$t, [
+	        createBaseVNode("div", _hoisted_3$r, [
+	          createBaseVNode("h5", _hoisted_4$q, [
 	            renderSlot(_ctx.$slots, "title")
 	          ]),
-	          _hoisted_5$o
+	          _hoisted_5$p
 	        ]),
-	        createBaseVNode("div", _hoisted_6$o, [
+	        createBaseVNode("div", _hoisted_6$p, [
 	          renderSlot(_ctx.$slots, "body")
 	        ]),
-	        createBaseVNode("div", _hoisted_7$n, [
-	          _hoisted_8$m,
+	        createBaseVNode("div", _hoisted_7$o, [
+	          _hoisted_8$n,
 	          renderSlot(_ctx.$slots, "footer"),
 	          _hoisted_9$l
 	        ])
@@ -22310,11 +22310,11 @@
 	  ], 544 /* HYDRATE_EVENTS, NEED_PATCH */))
 	}
 
-	script$x.render = render$i;
-	script$x.__file = "http_src/vue/modal.vue";
+	script$y.render = render$i;
+	script$y.__file = "http_src/vue/modal.vue";
 
 	const _withScopeId$7 = n => (pushScopeId("data-v-089b0491"),n=n(),popScopeId(),n);
-	const _hoisted_1$t = /*#__PURE__*/ _withScopeId$7(() => /*#__PURE__*/createBaseVNode("a", {
+	const _hoisted_1$u = /*#__PURE__*/ _withScopeId$7(() => /*#__PURE__*/createBaseVNode("a", {
 	  target: "_newtab",
 	  href: "#",
 	  style: {},
@@ -22325,16 +22325,16 @@
 	    style: {"margin-left":"28rem","padding-top":"0.8rem"}
 	  })
 	], -1 /* HOISTED */));
-	const _hoisted_2$r = { class: "nav nav-tabs" };
-	const _hoisted_3$p = ["disabled"];
-	const _hoisted_4$o = {
+	const _hoisted_2$s = { class: "nav nav-tabs" };
+	const _hoisted_3$q = ["disabled"];
+	const _hoisted_4$p = {
 	  key: 0,
 	  style: {"min-height":"8.5rem"}
 	};
-	const _hoisted_5$n = { class: "form-group ms-2 me-2 mt-3 row" };
-	const _hoisted_6$n = { class: "col-form-label col-sm-4" };
-	const _hoisted_7$m = { class: "col-sm-6" };
-	const _hoisted_8$l = ["pattern"];
+	const _hoisted_5$o = { class: "form-group ms-2 me-2 mt-3 row" };
+	const _hoisted_6$o = { class: "col-form-label col-sm-4" };
+	const _hoisted_7$n = { class: "col-sm-6" };
+	const _hoisted_8$m = ["pattern"];
 	const _hoisted_9$k = {
 	  key: 1,
 	  style: {"min-height":"8.5rem"}
@@ -22356,7 +22356,7 @@
 	const _hoisted_24$3 = ["disabled"];
 
 
-	var script$w = {
+	var script$x = {
 	  __name: 'modal-snapshot',
 	  props: {
 	    csrf: String,
@@ -22554,17 +22554,17 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createBlock(script$x, {
+	  return (openBlock(), createBlock(script$y, {
 	    onShowed: _cache[8] || (_cache[8] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
 	  }, {
 	    title: withCtx(() => [
 	      createTextVNode(toDisplayString(_i18n("snapshots.manage")) + " ", 1 /* TEXT */),
-	      _hoisted_1$t
+	      _hoisted_1$u
 	    ]),
 	    body: withCtx(() => [
-	      createBaseVNode("ul", _hoisted_2$r, [
+	      createBaseVNode("ul", _hoisted_2$s, [
 	        createBaseVNode("li", {
 	          class: "nav-item",
 	          onClick: _cache[0] || (_cache[0] = $event => (action.value='add'))
@@ -22582,16 +22582,16 @@
 	            disabled: snapshots.value.length == 0,
 	            class: normalizeClass(["nav-link", {'active': action.value == 'select', 'not-allowed': snapshots.value.length == 0 }]),
 	            href: "#"
-	          }, toDisplayString(_i18n("snapshots.manage")), 11 /* TEXT, CLASS, PROPS */, _hoisted_3$p)
+	          }, toDisplayString(_i18n("snapshots.manage")), 11 /* TEXT, CLASS, PROPS */, _hoisted_3$q)
 	        ])
 	      ]),
 	      (action.value == 'add')
-	        ? (openBlock(), createElementBlock("div", _hoisted_4$o, [
-	            createBaseVNode("div", _hoisted_5$n, [
-	              createBaseVNode("label", _hoisted_6$n, [
+	        ? (openBlock(), createElementBlock("div", _hoisted_4$p, [
+	            createBaseVNode("div", _hoisted_5$o, [
+	              createBaseVNode("label", _hoisted_6$o, [
 	                createBaseVNode("b", null, toDisplayString(_i18n("snapshots.name")) + ":", 1 /* TEXT */)
 	              ]),
-	              createBaseVNode("div", _hoisted_7$m, [
+	              createBaseVNode("div", _hoisted_7$n, [
 	                withDirectives(createBaseVNode("input", {
 	                  pattern: unref(pattern_singleword),
 	                  placeholder: "",
@@ -22599,7 +22599,7 @@
 	                  type: "text",
 	                  class: "form-control",
 	                  "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => ((snapshot_name).value = $event))
-	                }, null, 8 /* PROPS */, _hoisted_8$l), [
+	                }, null, 8 /* PROPS */, _hoisted_8$m), [
 	                  [vModelText, snapshot_name.value]
 	                ])
 	              ])
@@ -22713,14 +22713,14 @@
 	var css_248z$9 = "\ninput[data-v-089b0491]:invalid {\n  border-color: #ff0000;\n}\n.not-allowed[data-v-089b0491] {\n  cursor: not-allowed;\n}\n";
 	styleInject(css_248z$9);
 
-	script$w.__scopeId = "data-v-089b0491";
-	script$w.__file = "http_src/vue/modal-snapshot.vue";
+	script$x.__scopeId = "data-v-089b0491";
+	script$x.__file = "http_src/vue/modal-snapshot.vue";
 
 	const _withScopeId$6 = n => (pushScopeId("data-v-185590b6"),n=n(),popScopeId(),n);
-	const _hoisted_1$s = { class: "form-group ms-2 me-2 mt-3 row" };
-	const _hoisted_2$q = { class: "col-11" };
-	const _hoisted_3$o = { class: "col-form-label" };
-	const _hoisted_4$n = /*#__PURE__*/ _withScopeId$6(() => /*#__PURE__*/createBaseVNode("button", {
+	const _hoisted_1$t = { class: "form-group ms-2 me-2 mt-3 row" };
+	const _hoisted_2$r = { class: "col-11" };
+	const _hoisted_3$p = { class: "col-form-label" };
+	const _hoisted_4$o = /*#__PURE__*/ _withScopeId$6(() => /*#__PURE__*/createBaseVNode("button", {
 	  type: "button",
 	  class: "btn border"
 	}, [
@@ -22728,12 +22728,12 @@
 	    /*#__PURE__*/createBaseVNode("i", { class: "fas fa-trash" })
 	  ])
 	], -1 /* HOISTED */));
-	const _hoisted_5$m = [
-	  _hoisted_4$n
+	const _hoisted_5$n = [
+	  _hoisted_4$o
 	];
-	const _hoisted_6$m = { class: "container" };
-	const _hoisted_7$l = { class: "row custom-ms me-2 mt-1" };
-	const _hoisted_8$k = { class: "col-5" };
+	const _hoisted_6$n = { class: "container" };
+	const _hoisted_7$m = { class: "row custom-ms me-2 mt-1" };
+	const _hoisted_8$l = { class: "col-5" };
 	const _hoisted_9$j = ["onUpdate:modelValue"];
 	const _hoisted_10$g = { class: "custom-control-label ms-1 form-check-label" };
 	const _hoisted_11$g = { class: "col-2" };
@@ -22747,7 +22747,7 @@
 	const _hoisted_19$8 = /*#__PURE__*/ _withScopeId$6(() => /*#__PURE__*/createBaseVNode("label", { class: "custom-control-label ms-1 form-check-label" }, "95th Perc ", -1 /* HOISTED */));
 
 
-	var script$v = {
+	var script$w = {
 	  __name: 'list-timeseries',
 	  props: {
 	    id: String,
@@ -22775,9 +22775,9 @@
 
 	return (_ctx, _cache) => {
 	  return (openBlock(), createElementBlock("div", null, [
-	    createBaseVNode("div", _hoisted_1$s, [
-	      createBaseVNode("div", _hoisted_2$q, [
-	        createBaseVNode("label", _hoisted_3$o, [
+	    createBaseVNode("div", _hoisted_1$t, [
+	      createBaseVNode("div", _hoisted_2$r, [
+	        createBaseVNode("label", _hoisted_3$p, [
 	          createBaseVNode("b", null, toDisplayString(__props.title), 1 /* TEXT */)
 	        ])
 	      ]),
@@ -22786,13 +22786,13 @@
 	            key: 0,
 	            class: "col-1",
 	            onClick: delete_ts
-	          }, _hoisted_5$m))
+	          }, _hoisted_5$n))
 	        : createCommentVNode("v-if", true)
 	    ]),
-	    createBaseVNode("div", _hoisted_6$m, [
+	    createBaseVNode("div", _hoisted_6$n, [
 	      (openBlock(true), createElementBlock(Fragment, null, renderList(__props.timeseries, (item) => {
-	        return (openBlock(), createElementBlock("div", _hoisted_7$l, [
-	          createBaseVNode("div", _hoisted_8$k, [
+	        return (openBlock(), createElementBlock("div", _hoisted_7$m, [
+	          createBaseVNode("div", _hoisted_8$l, [
 	            withDirectives(createBaseVNode("input", {
 	              type: "checkbox",
 	              class: "custom-control-input whitespace form-check-input",
@@ -22848,8 +22848,8 @@
 	var css_248z$8 = "\n.custom-ms[data-v-185590b6] {\n  margin-left: 2rem !important;\n}\n.inline-block[data-v-185590b6] {\n    display: inline-block;\n    margin-right: 1rem;\n}\n.border[data-v-185590b6] {\n    border-style: solid !important;\n}\n";
 	styleInject(css_248z$8);
 
-	script$v.__scopeId = "data-v-185590b6";
-	script$v.__file = "http_src/vue/list-timeseries.vue";
+	script$w.__scopeId = "data-v-185590b6";
+	script$w.__file = "http_src/vue/list-timeseries.vue";
 
 	/**
 	    (C) 2022 - ntop.org
@@ -23482,17 +23482,17 @@
 	    };
 	}();
 
-	const _hoisted_1$r = { class: "nav nav-tabs" };
-	const _hoisted_2$p = { class: "form-group ms-2 me-2 mt-3 row" };
-	const _hoisted_3$n = { class: "col-form-label col-sm-4" };
-	const _hoisted_4$m = { class: "col-sm-8" };
-	const _hoisted_5$l = {
+	const _hoisted_1$s = { class: "nav nav-tabs" };
+	const _hoisted_2$q = { class: "form-group ms-2 me-2 mt-3 row" };
+	const _hoisted_3$o = { class: "col-form-label col-sm-4" };
+	const _hoisted_4$n = { class: "col-sm-8" };
+	const _hoisted_5$m = {
 	  key: 0,
 	  class: "form-group ms-2 me-2 mt-3 row"
 	};
-	const _hoisted_6$l = { class: "col-form-label col-sm-4" };
-	const _hoisted_7$k = { class: "col-sm-8" };
-	const _hoisted_8$j = { class: "form-group ms-2 me-2 mt-3 ms-1 me-1" };
+	const _hoisted_6$m = { class: "col-form-label col-sm-4" };
+	const _hoisted_7$l = { class: "col-sm-8" };
+	const _hoisted_8$k = { class: "form-group ms-2 me-2 mt-3 ms-1 me-1" };
 	const _hoisted_9$i = { class: "form-group row ms-1 mb-2" };
 	const _hoisted_10$f = { class: "col-form-label col-sm-4" };
 	const _hoisted_11$f = { class: "col-sm-8" };
@@ -23531,7 +23531,7 @@
 	const _hoisted_35$1 = { class: "col-sm-8" };
 
 
-	var script$u = {
+	var script$v = {
 	  __name: 'modal-timeseries',
 	  emits: ['apply'],
 	  setup(__props, { expose, emit }) {
@@ -23760,7 +23760,7 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createBlock(script$x, {
+	  return (openBlock(), createBlock(script$y, {
 	    onShowed: _cache[17] || (_cache[17] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
@@ -23769,7 +23769,7 @@
 	      createTextVNode(toDisplayString(_i18n("modal_timeseries.title")), 1 /* TEXT */)
 	    ]),
 	    body: withCtx(() => [
-	      createBaseVNode("ul", _hoisted_1$r, [
+	      createBaseVNode("ul", _hoisted_1$s, [
 	        createBaseVNode("li", {
 	          class: "nav-item",
 	          onClick: _cache[0] || (_cache[0] = $event => (change_action('add')))
@@ -23793,12 +23793,12 @@
 	      (action.value == 'add')
 	        ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
 	            createCommentVNode(" Sources Types "),
-	            createBaseVNode("div", _hoisted_2$p, [
-	              createBaseVNode("label", _hoisted_3$n, [
+	            createBaseVNode("div", _hoisted_2$q, [
+	              createBaseVNode("label", _hoisted_3$o, [
 	                createBaseVNode("b", null, toDisplayString(_i18n("modal_timeseries.source_type")), 1 /* TEXT */)
 	              ]),
-	              createBaseVNode("div", _hoisted_4$m, [
-	                createVNode(script$z, {
+	              createBaseVNode("div", _hoisted_4$n, [
+	                createVNode(script$A, {
 	                  selected_option: selected_source_type.value,
 	                  "onUpdate:selected_option": _cache[2] || (_cache[2] = $event => ((selected_source_type).value = $event)),
 	                  onSelect_option: _cache[3] || (_cache[3] = $event => (change_source_type())),
@@ -23809,12 +23809,12 @@
 	            createCommentVNode(" Sources "),
 	            createCommentVNode(" Interface "),
 	            (selected_source_type.value.ui_type == unref(ui_types).select)
-	              ? (openBlock(), createElementBlock("div", _hoisted_5$l, [
-	                  createBaseVNode("label", _hoisted_6$l, [
+	              ? (openBlock(), createElementBlock("div", _hoisted_5$m, [
+	                  createBaseVNode("label", _hoisted_6$m, [
 	                    createBaseVNode("b", null, toDisplayString(_i18n("modal_timeseries.source")), 1 /* TEXT */)
 	                  ]),
-	                  createBaseVNode("div", _hoisted_7$k, [
-	                    createVNode(script$z, {
+	                  createBaseVNode("div", _hoisted_7$l, [
+	                    createVNode(script$A, {
 	                      selected_option: selected_source.value,
 	                      "onUpdate:selected_option": _cache[4] || (_cache[4] = $event => ((selected_source).value = $event)),
 	                      onSelect_option: _cache[5] || (_cache[5] = $event => (change_source())),
@@ -23826,7 +23826,7 @@
 	            createCommentVNode(" Pool "),
 	            (selected_source_type.value.ui_type == unref(ui_types).select_and_select)
 	              ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-	                  createBaseVNode("div", _hoisted_8$j, [
+	                  createBaseVNode("div", _hoisted_8$k, [
 	                    createBaseVNode("div", _hoisted_9$i, [
 	                      createBaseVNode("label", _hoisted_10$f, [
 	                        createBaseVNode("b", null, toDisplayString(_i18n("modal_timeseries.source")), 1 /* TEXT */)
@@ -23848,7 +23848,7 @@
 	                      createBaseVNode("b", null, toDisplayString(selected_source_type.value.sub_label), 1 /* TEXT */)
 	                    ]),
 	                    createBaseVNode("div", _hoisted_14$a, [
-	                      createVNode(script$z, {
+	                      createVNode(script$A, {
 	                        selected_option: selected_sub_source.value,
 	                        "onUpdate:selected_option": _cache[7] || (_cache[7] = $event => ((selected_sub_source).value = $event)),
 	                        options: sub_sources.value
@@ -23860,7 +23860,7 @@
 	                      createBaseVNode("b", null, toDisplayString(selected_source_type.value.label), 1 /* TEXT */)
 	                    ]),
 	                    createBaseVNode("div", _hoisted_17$8, [
-	                      createVNode(script$z, {
+	                      createVNode(script$A, {
 	                        selected_option: selected_source.value,
 	                        "onUpdate:selected_option": _cache[8] || (_cache[8] = $event => ((selected_source).value = $event)),
 	                        options: sources.value
@@ -23900,7 +23900,7 @@
 	                      createBaseVNode("b", null, toDisplayString(selected_source_type.value.sub_label), 1 /* TEXT */)
 	                    ]),
 	                    createBaseVNode("div", _hoisted_26$2, [
-	                      createVNode(script$z, {
+	                      createVNode(script$A, {
 	                        selected_option: selected_sub_source.value,
 	                        "onUpdate:selected_option": _cache[11] || (_cache[11] = $event => ((selected_sub_source).value = $event)),
 	                        options: sub_sources.value
@@ -23943,7 +23943,7 @@
 	                createCommentVNode(" <select class=\"form-select\" @click=\"update_timeseries_to_add()\" v-model=\"selected_metric\"> "),
 	                createCommentVNode("   <option v-for=\"item in metrics\" :value=\"item\">{{item.label}}</option> "),
 	                createCommentVNode(" </select> "),
-	                createVNode(script$z, {
+	                createVNode(script$A, {
 	                  ref_key: "select_search_metrics",
 	                  ref: select_search_metrics,
 	                  onSelect_option: _cache[14] || (_cache[14] = $event => (update_timeseries_to_add())),
@@ -23953,7 +23953,7 @@
 	                }, null, 8 /* PROPS */, ["selected_option", "options"])
 	              ])
 	            ]),
-	            createVNode(script$v, {
+	            createVNode(script$w, {
 	              id: get_timeseries_group_id(),
 	              title: _i18n('modal_timeseries.timeseries_list'),
 	              timeseries: timeseries_to_add.value,
@@ -23966,7 +23966,7 @@
 	      (action.value == 'select')
 	        ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
 	            (openBlock(true), createElementBlock(Fragment, null, renderList(timeseries_groups_added.value, (item) => {
-	              return (openBlock(), createBlock(script$v, {
+	              return (openBlock(), createBlock(script$w, {
 	                id: get_timeseries_group_id(item),
 	                title: get_timeseries_group_name(item),
 	                timeseries: item.timeseries,
@@ -24006,12 +24006,12 @@
 	var css_248z$7 = "\ninput[data-v-103cd911]:invalid {\n  border-color: #ff0000;\n}\n.warn[data-v-103cd911] {\nborder-color: #ffd500;\nborder-style: solid;\n}\n";
 	styleInject(css_248z$7);
 
-	script$u.__scopeId = "data-v-103cd911";
-	script$u.__file = "http_src/vue/modal-timeseries.vue";
+	script$v.__scopeId = "data-v-103cd911";
+	script$v.__file = "http_src/vue/modal-timeseries.vue";
 
-	var script$t = defineComponent({
+	var script$u = defineComponent({
 	    components: {
-		'modal': script$x,
+		'modal': script$y,
 	    },
 	    props: {
 		id: String,
@@ -24121,20 +24121,20 @@
 	});
 
 	const _withScopeId$5 = n => (pushScopeId("data-v-0be978c4"),n=n(),popScopeId(),n);
-	const _hoisted_1$q = ["innerHTML"];
-	const _hoisted_2$o = { style: {"height":"95%"} };
-	const _hoisted_3$m = {
+	const _hoisted_1$r = ["innerHTML"];
+	const _hoisted_2$p = { style: {"height":"95%"} };
+	const _hoisted_3$n = {
 	  class: "tab-content",
 	  style: {"height":"100%"}
 	};
-	const _hoisted_4$l = { class: "row" };
-	const _hoisted_5$k = { class: "form-group mb-3 col-md-3 has-feedback" };
-	const _hoisted_6$k = { class: "form-group mb-3 col-md-9 text-right asd" };
-	const _hoisted_7$j = {
+	const _hoisted_4$m = { class: "row" };
+	const _hoisted_5$l = { class: "form-group mb-3 col-md-3 has-feedback" };
+	const _hoisted_6$l = { class: "form-group mb-3 col-md-9 text-right asd" };
+	const _hoisted_7$k = {
 	  class: "radio-inline",
 	  style: {"margin-left":"1rem"}
 	};
-	const _hoisted_8$i = { class: "radio-inline" };
+	const _hoisted_8$j = { class: "radio-inline" };
 	const _hoisted_9$h = {
 	  class: "row",
 	  id: "pcapDownloadModal_advanced",
@@ -24190,11 +24190,11 @@
 	      createBaseVNode("div", {
 	        class: "alert alert-info",
 	        innerHTML: _ctx.description
-	      }, null, 8 /* PROPS */, _hoisted_1$q),
-	      createBaseVNode("form", _hoisted_2$o, [
-	        createBaseVNode("div", _hoisted_3$m, [
-	          createBaseVNode("div", _hoisted_4$l, [
-	            createBaseVNode("div", _hoisted_5$k, [
+	      }, null, 8 /* PROPS */, _hoisted_1$r),
+	      createBaseVNode("form", _hoisted_2$p, [
+	        createBaseVNode("div", _hoisted_3$n, [
+	          createBaseVNode("div", _hoisted_4$m, [
+	            createBaseVNode("div", _hoisted_5$l, [
 	              createBaseVNode("button", {
 	                class: "btn btn-sm btn-secondary",
 	                type: "button",
@@ -24206,8 +24206,8 @@
 	                }, null, 2 /* CLASS */)
 	              ])
 	            ]),
-	            createBaseVNode("div", _hoisted_6$k, [
-	              createBaseVNode("label", _hoisted_7$j, [
+	            createBaseVNode("div", _hoisted_6$l, [
+	              createBaseVNode("label", _hoisted_7$k, [
 	                withDirectives(createBaseVNode("input", {
 	                  type: "radio",
 	                  name: "extract_now",
@@ -24219,7 +24219,7 @@
 	                ]),
 	                createTextVNode(" " + toDisplayString(_ctx.i18n('traffic_recording.extract_now')), 1 /* TEXT */)
 	              ]),
-	              createBaseVNode("label", _hoisted_8$i, [
+	              createBaseVNode("label", _hoisted_8$j, [
 	                withDirectives(createBaseVNode("input", {
 	                  type: "radio",
 	                  name: "extract_now",
@@ -24283,11 +24283,11 @@
 	var css_248z$6 = "\ninput ~ .alert[data-v-0be978c4] {\n  display: none;\n}\ninput:invalid ~ .alert[data-v-0be978c4] {\n  display: block;\n}\n";
 	styleInject(css_248z$6);
 
-	script$t.render = render$h;
-	script$t.__scopeId = "data-v-0be978c4";
-	script$t.__file = "http_src/vue/modal-traffic-extraction.vue";
+	script$u.render = render$h;
+	script$u.__scopeId = "data-v-0be978c4";
+	script$u.__file = "http_src/vue/modal-traffic-extraction.vue";
 
-	var script$s = defineComponent({
+	var script$t = defineComponent({
 	    components: {
 	    },
 	    props: {
@@ -24319,17 +24319,17 @@
 	    },
 	});
 
-	const _hoisted_1$p = {
+	const _hoisted_1$q = {
 	  key: 0,
 	  style: {"width":"100%"},
 	  class: "alert alert-success alert-dismissable"
 	};
-	const _hoisted_2$n = ["innerHTML"];
+	const _hoisted_2$o = ["innerHTML"];
 
 	function render$g(_ctx, _cache, $props, $setup, $data, $options) {
 	  return (_ctx.show_alert == true)
-	    ? (openBlock(), createElementBlock("div", _hoisted_1$p, [
-	        createBaseVNode("span", { innerHTML: _ctx.body }, null, 8 /* PROPS */, _hoisted_2$n),
+	    ? (openBlock(), createElementBlock("div", _hoisted_1$q, [
+	        createBaseVNode("span", { innerHTML: _ctx.body }, null, 8 /* PROPS */, _hoisted_2$o),
 	        createBaseVNode("button", {
 	          type: "button",
 	          onClick: _cache[0] || (_cache[0] = (...args) => (_ctx.close && _ctx.close(...args))),
@@ -24340,13 +24340,13 @@
 	    : createCommentVNode("v-if", true)
 	}
 
-	script$s.render = render$g;
-	script$s.__file = "http_src/vue/alert-info.vue";
+	script$t.render = render$g;
+	script$t.__file = "http_src/vue/alert-info.vue";
 
-	const _hoisted_1$o = /*#__PURE__*/createBaseVNode("tbody", null, null, -1 /* HOISTED */);
+	const _hoisted_1$p = /*#__PURE__*/createBaseVNode("tbody", null, null, -1 /* HOISTED */);
 
 
-	var script$r = {
+	var script$s = {
 	  __name: 'datatable',
 	  props: {
 	  table_buttons: Array,
@@ -24589,7 +24589,7 @@
 	          }), 256 /* UNKEYED_FRAGMENT */))
 	        ])
 	      ]),
-	      _hoisted_1$o
+	      _hoisted_1$p
 	    ], 512 /* NEED_PATCH */)
 	  ]))
 	}
@@ -24597,14 +24597,14 @@
 
 	};
 
-	script$r.__file = "http_src/vue/datatable.vue";
+	script$s.__file = "http_src/vue/datatable.vue";
 
-	const _hoisted_1$n = { class: "table table-hover table-borderless mb-0" };
-	const _hoisted_2$m = ["innerHTML"];
-	const _hoisted_3$l = ["innerHTML"];
+	const _hoisted_1$o = { class: "table table-hover table-borderless mb-0" };
+	const _hoisted_2$n = ["innerHTML"];
+	const _hoisted_3$m = ["innerHTML"];
 
 
-	var script$q = {
+	var script$r = {
 	  __name: 'bootstrap-table',
 	  props: {
 	    id: String,
@@ -24619,14 +24619,14 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createElementBlock("table", _hoisted_1$n, [
+	  return (openBlock(), createElementBlock("table", _hoisted_1$o, [
 	    createBaseVNode("thead", null, [
 	      createBaseVNode("tr", null, [
 	        (openBlock(true), createElementBlock(Fragment, null, renderList(__props.columns, (col) => {
 	          return (openBlock(), createElementBlock("th", {
 	            scope: "col",
 	            innerHTML: __props.print_html_column(col)
-	          }, null, 8 /* PROPS */, _hoisted_2$m))
+	          }, null, 8 /* PROPS */, _hoisted_2$n))
 	        }), 256 /* UNKEYED_FRAGMENT */))
 	      ])
 	    ]),
@@ -24637,7 +24637,7 @@
 	            return (openBlock(), createElementBlock("td", {
 	              scope: "col",
 	              innerHTML: __props.print_html_row(col, row)
-	            }, null, 8 /* PROPS */, _hoisted_3$l))
+	            }, null, 8 /* PROPS */, _hoisted_3$m))
 	          }), 256 /* UNKEYED_FRAGMENT */))
 	        ]))
 	      }), 256 /* UNKEYED_FRAGMENT */))
@@ -24648,7 +24648,7 @@
 
 	};
 
-	script$q.__file = "http_src/vue/bootstrap-table.vue";
+	script$r.__file = "http_src/vue/bootstrap-table.vue";
 
 	/**
 	    (C) 2022 - ntop.org
@@ -25194,17 +25194,17 @@
 	}();
 
 	const _withScopeId$4 = n => (pushScopeId("data-v-937058e4"),n=n(),popScopeId(),n);
-	const _hoisted_1$m = { class: "col-12 mb-2 mt-2" };
-	const _hoisted_2$l = { class: "card h-100 overflow-hidden" };
-	const _hoisted_3$k = ["title"];
-	const _hoisted_4$k = /*#__PURE__*/ _withScopeId$4(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-lg fa-camera-retro" }, null, -1 /* HOISTED */));
-	const _hoisted_5$j = [
-	  _hoisted_4$k
+	const _hoisted_1$n = { class: "col-12 mb-2 mt-2" };
+	const _hoisted_2$m = { class: "card h-100 overflow-hidden" };
+	const _hoisted_3$l = ["title"];
+	const _hoisted_4$l = /*#__PURE__*/ _withScopeId$4(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-lg fa-camera-retro" }, null, -1 /* HOISTED */));
+	const _hoisted_5$k = [
+	  _hoisted_4$l
 	];
-	const _hoisted_6$j = ["title"];
-	const _hoisted_7$i = /*#__PURE__*/ _withScopeId$4(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-lg fa-download" }, null, -1 /* HOISTED */));
-	const _hoisted_8$h = [
-	  _hoisted_7$i
+	const _hoisted_6$k = ["title"];
+	const _hoisted_7$j = /*#__PURE__*/ _withScopeId$4(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-lg fa-download" }, null, -1 /* HOISTED */));
+	const _hoisted_8$i = [
+	  _hoisted_7$j
 	];
 	const _hoisted_9$g = { class: "form-group ms-1 me-1 mt-1" };
 	const _hoisted_10$d = { class: "inline select2-size me-2 mt-2" };
@@ -25223,7 +25223,7 @@
 	const _hoisted_17$6 = /*#__PURE__*/ _withScopeId$4(() => /*#__PURE__*/createBaseVNode("i", { class: "fa-solid fa-chart-line" }, null, -1 /* HOISTED */));
 
 
-	var script$p = {
+	var script$q = {
 	  __name: 'page-stats',
 	  props: {
 	    csrf: String,
@@ -25737,10 +25737,10 @@
 
 	return (_ctx, _cache) => {
 	  return (openBlock(), createElementBlock(Fragment, null, [
-	    createBaseVNode("div", _hoisted_1$m, [
-	      createVNode(script$s),
-	      createBaseVNode("div", _hoisted_2$l, [
-	        createVNode(script$y, {
+	    createBaseVNode("div", _hoisted_1$n, [
+	      createVNode(script$t),
+	      createBaseVNode("div", _hoisted_2$m, [
+	        createVNode(script$z, {
 	          style: {"margin-top":"0.5rem"},
 	          id: unref(id_date_time_picker),
 	          enable_refresh: true,
@@ -25756,7 +25756,7 @@
 	                  class: "btn btn-link btn-sm",
 	                  onClick: show_modal_snapshot,
 	                  title: _i18n('page_stats.manage_snapshots_btn')
-	                }, _hoisted_5$j, 8 /* PROPS */, _hoisted_3$k))
+	                }, _hoisted_5$k, 8 /* PROPS */, _hoisted_3$l))
 	              : createCommentVNode("v-if", true),
 	            (__props.traffic_extraction_permitted)
 	              ? (openBlock(), createElementBlock("button", {
@@ -25764,7 +25764,7 @@
 	                  class: "btn btn-link btn-sm",
 	                  onClick: show_modal_traffic_extraction,
 	                  title: _i18n('traffic_recording.pcap_download')
-	                }, _hoisted_8$h, 8 /* PROPS */, _hoisted_6$j))
+	                }, _hoisted_8$i, 8 /* PROPS */, _hoisted_6$k))
 	              : createCommentVNode("v-if", true)
 	          ]),
 	          _: 1 /* STABLE */
@@ -25772,7 +25772,7 @@
 	        createCommentVNode(" select metric "),
 	        withDirectives(createBaseVNode("div", _hoisted_9$g, [
 	          createBaseVNode("div", _hoisted_10$d, [
-	            createVNode(script$z, {
+	            createVNode(script$A, {
 	              selected_option: selected_metric.value,
 	              "onUpdate:selected_option": _cache[0] || (_cache[0] = $event => ((selected_metric).value = $event)),
 	              options: metrics.value,
@@ -25780,7 +25780,7 @@
 	            }, null, 8 /* PROPS */, ["selected_option", "options"])
 	          ]),
 	          createBaseVNode("div", _hoisted_11$d, [
-	            createVNode(script$z, {
+	            createVNode(script$A, {
 	              selected_option: current_groups_options_mode.value,
 	              "onUpdate:selected_option": _cache[1] || (_cache[1] = $event => ((current_groups_options_mode).value = $event)),
 	              options: unref(groups_options_modes),
@@ -25805,7 +25805,7 @@
 	            class: "m-3",
 	            style: {"height":"300px"}
 	          }, [
-	            createVNode(script$A, {
+	            createVNode(script$B, {
 	              id: unref(id_chart) + i,
 	              ref_for: true,
 	              ref: el => { charts.value[i] = el; },
@@ -25820,7 +25820,7 @@
 	      ]),
 	      createBaseVNode("div", _hoisted_12$c, [
 	        createBaseVNode("div", _hoisted_13$b, [
-	          createVNode(script$q, {
+	          createVNode(script$r, {
 	            id: "page_stats_bootstrap_table",
 	            columns: unref(stats_columns),
 	            rows: stats_rows.value,
@@ -25837,7 +25837,7 @@
 	                createTextVNode(" " + toDisplayString(_i18n('page_stats.top_applications')), 1 /* TEXT */)
 	              ]),
 	              (init_config_table.value)
-	                ? (openBlock(), createBlock(script$r, {
+	                ? (openBlock(), createBlock(script$s, {
 	                    key: 0,
 	                    ref_key: "top_applications_table",
 	                    ref: top_applications_table,
@@ -25853,7 +25853,7 @@
 	        : createCommentVNode("v-if", true)
 	    ]),
 	    (__props.enable_snapshots)
-	      ? (openBlock(), createBlock(script$w, {
+	      ? (openBlock(), createBlock(script$x, {
 	          key: 0,
 	          ref_key: "modal_snapshot",
 	          ref: modal_snapshot,
@@ -25865,14 +25865,14 @@
 	        }, null, 8 /* PROPS */, ["csrf"]))
 	      : createCommentVNode("v-if", true),
 	    (__props.is_ntop_pro)
-	      ? (openBlock(), createBlock(script$u, {
+	      ? (openBlock(), createBlock(script$v, {
 	          key: 1,
 	          ref_key: "modal_timeseries",
 	          ref: modal_timeseries,
 	          onApply: apply_modal_timeseries
 	        }, null, 512 /* NEED_PATCH */))
 	      : createCommentVNode("v-if", true),
-	    createVNode(script$t, {
+	    createVNode(script$u, {
 	      id: "page_stats_modal_traffic_extraction",
 	      ref_key: "modal_traffic_extraction",
 	      ref: modal_traffic_extraction
@@ -25886,10 +25886,10 @@
 	var css_248z$5 = "\n.inline[data-v-937058e4] {\n    display: inline-block;\n}\n.select2-size[data-v-937058e4] {\n    min-width: 18rem;\n}\n";
 	styleInject(css_248z$5);
 
-	script$p.__scopeId = "data-v-937058e4";
-	script$p.__file = "http_src/vue/page-stats.vue";
+	script$q.__scopeId = "data-v-937058e4";
+	script$q.__file = "http_src/vue/page-stats.vue";
 
-	var script$o = defineComponent({
+	var script$p = defineComponent({
 	  components: {
 	  },
 	  props: {
@@ -25931,17 +25931,17 @@
 	  },
 	});
 
-	const _hoisted_1$l = { class: "card-header mb-2" };
-	const _hoisted_2$k = {
+	const _hoisted_1$m = { class: "card-header mb-2" };
+	const _hoisted_2$l = {
 	  class: "nav nav-tabs card-header-tabs",
 	  role: "tablist"
 	};
-	const _hoisted_3$j = ["onClick"];
-	const _hoisted_4$j = ["onClick"];
+	const _hoisted_3$k = ["onClick"];
+	const _hoisted_4$k = ["onClick"];
 
 	function render$f(_ctx, _cache, $props, $setup, $data, $options) {
-	  return (openBlock(), createElementBlock("div", _hoisted_1$l, [
-	    createBaseVNode("ul", _hoisted_2$k, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$m, [
+	    createBaseVNode("ul", _hoisted_2$l, [
 	      (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.tab_list, (tab) => {
 	        return (openBlock(), createElementBlock(Fragment, null, [
 	          (tab.active)
@@ -25949,23 +25949,23 @@
 	                key: 0,
 	                onClick: $event => (_ctx.change_tab(tab)),
 	                class: normalizeClass([{ 'active': tab.active }, "nav-item nav-link"])
-	              }, toDisplayString(tab.title), 11 /* TEXT, CLASS, PROPS */, _hoisted_3$j))
+	              }, toDisplayString(tab.title), 11 /* TEXT, CLASS, PROPS */, _hoisted_3$k))
 	            : (openBlock(), createElementBlock("a", {
 	                key: 1,
 	                onClick: $event => (_ctx.change_tab(tab)),
 	                href: "#",
 	                class: "nav-item nav-link"
-	              }, toDisplayString(tab.title), 9 /* TEXT, PROPS */, _hoisted_4$j))
+	              }, toDisplayString(tab.title), 9 /* TEXT, PROPS */, _hoisted_4$k))
 	        ], 64 /* STABLE_FRAGMENT */))
 	      }), 256 /* UNKEYED_FRAGMENT */))
 	    ])
 	  ]))
 	}
 
-	script$o.render = render$f;
-	script$o.__file = "http_src/vue/tab-list.vue";
+	script$p.render = render$f;
+	script$p.__file = "http_src/vue/tab-list.vue";
 
-	var script$n = {
+	var script$o = {
 	  __name: 'modal-delete-confirm',
 	  props: {
 	    body: String,
@@ -26004,7 +26004,7 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createBlock(script$x, {
+	  return (openBlock(), createBlock(script$y, {
 	    onShowed: _cache[0] || (_cache[0] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
@@ -26029,15 +26029,15 @@
 
 	};
 
-	script$n.__file = "http_src/vue/modal-delete-confirm.vue";
+	script$o.__file = "http_src/vue/modal-delete-confirm.vue";
 
 	const change_asset_table_tab_event = "change_asset_table_tab_event";
 
-	var script$m = {
+	var script$n = {
 	  components: {	  
-	    'datatable': script$r,
-	    'modal-delete-confirm': script$n,
-	    'tab-list': script$o,
+	    'datatable': script$s,
+	    'modal-delete-confirm': script$o,
+	    'tab-list': script$p,
 	  },
 	  props: {
 	    page_csrf: String,
@@ -26224,15 +26224,15 @@
 	  DatatableVue.config_devices_centrality = centralityConfigDevices;
 	}
 
-	const _hoisted_1$k = { class: "row" };
-	const _hoisted_2$j = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$i = /*#__PURE__*/createBaseVNode("div", {
+	const _hoisted_1$l = { class: "row" };
+	const _hoisted_2$k = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$j = /*#__PURE__*/createBaseVNode("div", {
 	  class: "alert alert-danger d-none",
 	  id: "alert-row-buttons",
 	  role: "alert"
 	}, null, -1 /* HOISTED */);
-	const _hoisted_4$i = { class: "card" };
-	const _hoisted_5$i = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
+	const _hoisted_4$j = { class: "card" };
+	const _hoisted_5$j = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
 	  /*#__PURE__*/createBaseVNode("div", { class: "text-center" }, [
 	    /*#__PURE__*/createBaseVNode("div", {
 	      class: "spinner-border text-primary mt-5",
@@ -26242,9 +26242,9 @@
 	    ])
 	  ])
 	], -1 /* HOISTED */);
-	const _hoisted_6$i = { class: "card-body" };
-	const _hoisted_7$h = { id: "table_asset" };
-	const _hoisted_8$g = /*#__PURE__*/createTextVNode(" :table_config=\"config_devices_standard.table_config\"> ");
+	const _hoisted_6$j = { class: "card-body" };
+	const _hoisted_7$i = { id: "table_asset" };
+	const _hoisted_8$h = /*#__PURE__*/createTextVNode(" :table_config=\"config_devices_standard.table_config\"> ");
 	const _hoisted_9$f = /*#__PURE__*/createTextVNode(" :table_config=\"config_devices_centrality.table_config\"> ");
 	const _hoisted_10$c = { class: "card-footer" };
 	const _hoisted_11$c = {
@@ -26264,13 +26264,13 @@
 	  const _component_tab_list = resolveComponent("tab-list");
 	  const _component_datatable = resolveComponent("datatable");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$k, [
-	    createBaseVNode("div", _hoisted_2$j, [
-	      _hoisted_3$i,
-	      createBaseVNode("div", _hoisted_4$i, [
-	        _hoisted_5$i,
-	        createBaseVNode("div", _hoisted_6$i, [
-	          createBaseVNode("div", _hoisted_7$h, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$l, [
+	    createBaseVNode("div", _hoisted_2$k, [
+	      _hoisted_3$j,
+	      createBaseVNode("div", _hoisted_4$j, [
+	        _hoisted_5$j,
+	        createBaseVNode("div", _hoisted_6$j, [
+	          createBaseVNode("div", _hoisted_7$i, [
 	            createVNode(_component_modal_delete_confirm, {
 	              ref: "modal_delete_all",
 	              title: $data.title_delete,
@@ -26294,7 +26294,7 @@
 	                  filter_buttons: $data.config_devices_standard.table_filters
 	                }, {
 	                  default: withCtx(() => [
-	                    _hoisted_8$g
+	                    _hoisted_8$h
 	                  ]),
 	                  _: 1 /* STABLE */
 	                }, 8 /* PROPS */, ["table_buttons", "columns_config", "data_url", "enable_search", "filter_buttons"]))
@@ -26336,13 +26336,13 @@
 	  ]))
 	}
 
-	script$m.render = render$e;
-	script$m.__file = "http_src/vue/page-asset-table.vue";
+	script$n.render = render$e;
+	script$n.__file = "http_src/vue/page-asset-table.vue";
 
-	var script$l = {
+	var script$m = {
 	  components: {	  
-	    'datatable': script$r,
-	    'modal-delete-confirm': script$n,
+	    'datatable': script$s,
+	    'modal-delete-confirm': script$o,
 	  },
 	  props: {
 	    page_csrf: String,
@@ -26493,15 +26493,15 @@
 	  DatatableVue.config_devices_standard = configDevices;
 	}
 
-	const _hoisted_1$j = { class: "row" };
-	const _hoisted_2$i = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$h = /*#__PURE__*/createBaseVNode("div", {
+	const _hoisted_1$k = { class: "row" };
+	const _hoisted_2$j = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$i = /*#__PURE__*/createBaseVNode("div", {
 	  class: "alert alert-danger d-none",
 	  id: "alert-row-buttons",
 	  role: "alert"
 	}, null, -1 /* HOISTED */);
-	const _hoisted_4$h = { class: "card" };
-	const _hoisted_5$h = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
+	const _hoisted_4$i = { class: "card" };
+	const _hoisted_5$i = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
 	  /*#__PURE__*/createBaseVNode("div", { class: "text-center" }, [
 	    /*#__PURE__*/createBaseVNode("div", {
 	      class: "spinner-border text-primary mt-5",
@@ -26511,9 +26511,9 @@
 	    ])
 	  ])
 	], -1 /* HOISTED */);
-	const _hoisted_6$h = { class: "card-body" };
-	const _hoisted_7$g = { id: "periodicity-table" };
-	const _hoisted_8$f = { class: "card-footer" };
+	const _hoisted_6$i = { class: "card-body" };
+	const _hoisted_7$h = { id: "periodicity-table" };
+	const _hoisted_8$g = { class: "card-footer" };
 	const _hoisted_9$e = {
 	  key: 0,
 	  type: "button",
@@ -26531,13 +26531,13 @@
 	  const _component_modal_delete_confirm = resolveComponent("modal-delete-confirm");
 	  const _component_datatable = resolveComponent("datatable");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$j, [
-	    createBaseVNode("div", _hoisted_2$i, [
-	      _hoisted_3$h,
-	      createBaseVNode("div", _hoisted_4$h, [
-	        _hoisted_5$h,
-	        createBaseVNode("div", _hoisted_6$h, [
-	          createBaseVNode("div", _hoisted_7$g, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$k, [
+	    createBaseVNode("div", _hoisted_2$j, [
+	      _hoisted_3$i,
+	      createBaseVNode("div", _hoisted_4$i, [
+	        _hoisted_5$i,
+	        createBaseVNode("div", _hoisted_6$i, [
+	          createBaseVNode("div", _hoisted_7$h, [
 	            createVNode(_component_modal_delete_confirm, {
 	              ref: "modal_delete_all",
 	              title: $data.title_delete,
@@ -26557,7 +26557,7 @@
 	            }, null, 8 /* PROPS */, ["table_buttons", "columns_config", "data_url", "enable_search", "filter_buttons", "table_config", "base_url", "base_params"])
 	          ])
 	        ]),
-	        createBaseVNode("div", _hoisted_8$f, [
+	        createBaseVNode("div", _hoisted_8$g, [
 	          ($props.is_admin)
 	            ? (openBlock(), createElementBlock("button", _hoisted_9$e, [
 	                _hoisted_10$b,
@@ -26578,8 +26578,8 @@
 	  ]))
 	}
 
-	script$l.render = render$d;
-	script$l.__file = "http_src/vue/page-periodicity-table.vue";
+	script$m.render = render$d;
+	script$m.__file = "http_src/vue/page-periodicity-table.vue";
 
 	/**
 	    (C) 2022 - ntop.org    
@@ -26777,11 +26777,11 @@
 
 	const change_service_table_tab_event = "change_service_table_tab_event";
 
-	var script$k = {
+	var script$l = {
 	  components: {	  
-	    'datatable': script$r,
-	    'modal-delete-confirm': script$n,
-	    'tab-list': script$o,
+	    'datatable': script$s,
+	    'modal-delete-confirm': script$o,
+	    'tab-list': script$p,
 	  },
 	  props: {
 	    page_csrf: String,
@@ -27033,15 +27033,15 @@
 	  DatatableVue.config_devices_centrality = configDevices;
 	}
 
-	const _hoisted_1$i = { class: "row" };
-	const _hoisted_2$h = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$g = /*#__PURE__*/createBaseVNode("div", {
+	const _hoisted_1$j = { class: "row" };
+	const _hoisted_2$i = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$h = /*#__PURE__*/createBaseVNode("div", {
 	  class: "alert alert-danger d-none",
 	  id: "alert-row-buttons",
 	  role: "alert"
 	}, null, -1 /* HOISTED */);
-	const _hoisted_4$g = { class: "card" };
-	const _hoisted_5$g = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
+	const _hoisted_4$h = { class: "card" };
+	const _hoisted_5$h = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
 	  /*#__PURE__*/createBaseVNode("div", { class: "text-center" }, [
 	    /*#__PURE__*/createBaseVNode("div", {
 	      class: "spinner-border text-primary mt-5",
@@ -27051,9 +27051,9 @@
 	    ])
 	  ])
 	], -1 /* HOISTED */);
-	const _hoisted_6$g = { class: "card-body" };
-	const _hoisted_7$f = { id: "table_service" };
-	const _hoisted_8$e = { class: "card-footer" };
+	const _hoisted_6$h = { class: "card-body" };
+	const _hoisted_7$g = { id: "table_service" };
+	const _hoisted_8$f = { class: "card-footer" };
 	const _hoisted_9$d = {
 	  type: "button",
 	  id: "btn-delete-all",
@@ -27071,13 +27071,13 @@
 	  const _component_tab_list = resolveComponent("tab-list");
 	  const _component_datatable = resolveComponent("datatable");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$i, [
-	    createBaseVNode("div", _hoisted_2$h, [
-	      _hoisted_3$g,
-	      createBaseVNode("div", _hoisted_4$g, [
-	        _hoisted_5$g,
-	        createBaseVNode("div", _hoisted_6$g, [
-	          createBaseVNode("div", _hoisted_7$f, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$j, [
+	    createBaseVNode("div", _hoisted_2$i, [
+	      _hoisted_3$h,
+	      createBaseVNode("div", _hoisted_4$h, [
+	        _hoisted_5$h,
+	        createBaseVNode("div", _hoisted_6$h, [
+	          createBaseVNode("div", _hoisted_7$g, [
 	            createVNode(_component_modal_delete_confirm, {
 	              ref: "modal_delete_all",
 	              title: $data.title_delete,
@@ -27116,7 +27116,7 @@
 	              : createCommentVNode("v-if", true)
 	          ])
 	        ]),
-	        createBaseVNode("div", _hoisted_8$e, [
+	        createBaseVNode("div", _hoisted_8$f, [
 	          createCommentVNode("\n        {% if is_admin then %}\n          <form class=\"d-inline\" id='switch-state-form'>\n            <div class=\"form-group mb-3 d-inline\">\n              <label>{* i18n(\"map_page.set_state\", {label = \"<span class='count'></span>\"}) *}</label>\n              <select name=\"new_state\" class=\"form-select d-inline\" style=\"width: 16rem\" {{ ternary(map.services_num == 0, \"disabled='disabled'\", \"\") }}>\n              {% for _, status in pairsByField(map.filters.service_status_filters, label, asc_insensitive) do %}\n                <option value=\"{{ status.id }}\">{* status.label *}</option>\n              {% end %}\n              </select>\n              <button class=\"btn btn-secondary d-inline\" class=\"btn-switch-state\" {{ ternary(map.services_num == 0, \"disabled='disabled'\", \"\") }}>\n                <i class=\"fas fa-random\"></i> {{ i18n(\"set\") }}\n              </button>\n            </div>\n          </form>\n        {% end %}\n    "),
 	          createBaseVNode("button", _hoisted_9$d, [
 	            _hoisted_10$a,
@@ -27136,18 +27136,18 @@
 	  ]))
 	}
 
-	script$k.render = render$c;
-	script$k.__file = "http_src/vue/page-service-table.vue";
+	script$l.render = render$c;
+	script$l.__file = "http_src/vue/page-service-table.vue";
 
-	const _hoisted_1$h = {
+	const _hoisted_1$i = {
 	  id: "empty-map-message",
 	  class: "alert alert-info",
 	  hidden: ""
 	};
-	const _hoisted_2$g = ["id"];
+	const _hoisted_2$h = ["id"];
 
 
-	var script$j = {
+	var script$k = {
 	  __name: 'network-map',
 	  props: {
 	  empty_message: String,
@@ -27365,21 +27365,21 @@
 
 	return (_ctx, _cache) => {
 	  return (openBlock(), createElementBlock(Fragment, null, [
-	    createBaseVNode("div", _hoisted_1$h, toDisplayString(__props.empty_message), 1 /* TEXT */),
+	    createBaseVNode("div", _hoisted_1$i, toDisplayString(__props.empty_message), 1 /* TEXT */),
 	    createBaseVNode("div", {
 	      class: "d-flex justify-content-center align-items-center resizable-y-container",
 	      style: {"width":"100%","height":"60vh"},
 	      id: __props.map_id
-	    }, null, 8 /* PROPS */, _hoisted_2$g)
+	    }, null, 8 /* PROPS */, _hoisted_2$h)
 	  ], 64 /* STABLE_FRAGMENT */))
 	}
 	}
 
 	};
 
-	script$j.__file = "http_src/vue/network-map.vue";
+	script$k.__file = "http_src/vue/network-map.vue";
 
-	var script$i = {
+	var script$j = {
 	  __name: 'modal-autolayout-confirm',
 	  props: {
 	    body: String,
@@ -27418,7 +27418,7 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createBlock(script$x, {
+	  return (openBlock(), createBlock(script$y, {
 	    onShowed: _cache[0] || (_cache[0] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
@@ -27443,16 +27443,16 @@
 
 	};
 
-	script$i.__file = "http_src/vue/modal-autolayout-confirm.vue";
+	script$j.__file = "http_src/vue/modal-autolayout-confirm.vue";
 
 	const change_filter_event$2 = "change_filter_event";
 
-	var script$h = {
+	var script$i = {
 	  components: {	  
-	    'network-map': script$j,
-	    'modal-delete-confirm': script$n,
-	    'modal-autolayout-confirm': script$i,
-	    'select-search': script$z,
+	    'network-map': script$k,
+	    'modal-delete-confirm': script$o,
+	    'modal-autolayout-confirm': script$j,
+	    'select-search': script$A,
 	  },
 	  props: {
 	    page_csrf: String,
@@ -27617,10 +27617,10 @@
 	  NetworkMapVue.event_listeners = {};
 	}
 
-	const _hoisted_1$g = { class: "row" };
-	const _hoisted_2$f = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$f = { class: "card card-shadow" };
-	const _hoisted_4$f = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
+	const _hoisted_1$h = { class: "row" };
+	const _hoisted_2$g = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$g = { class: "card card-shadow" };
+	const _hoisted_4$g = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
 	  /*#__PURE__*/createBaseVNode("div", { class: "text-center" }, [
 	    /*#__PURE__*/createBaseVNode("div", {
 	      class: "spinner-border text-primary mt-5",
@@ -27630,10 +27630,10 @@
 	    ])
 	  ])
 	], -1 /* HOISTED */);
-	const _hoisted_5$f = { class: "card-body" };
-	const _hoisted_6$f = { id: "table_service" };
-	const _hoisted_7$e = { class: "d-flex align-items-center justify-content-end mb-2" };
-	const _hoisted_8$d = ["title"];
+	const _hoisted_5$g = { class: "card-body" };
+	const _hoisted_6$g = { id: "table_service" };
+	const _hoisted_7$f = { class: "d-flex align-items-center justify-content-end mb-2" };
+	const _hoisted_8$e = ["title"];
 	const _hoisted_9$c = /*#__PURE__*/createBaseVNode("i", { class: "text-danger fa-solid fa-triangle-exclamation" }, null, -1 /* HOISTED */);
 	const _hoisted_10$9 = [
 	  _hoisted_9$c
@@ -27673,13 +27673,13 @@
 	  const _component_modal_autolayout_confirm = resolveComponent("modal-autolayout-confirm");
 	  const _component_network_map = resolveComponent("network-map");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$g, [
-	    createBaseVNode("div", _hoisted_2$f, [
-	      createBaseVNode("div", _hoisted_3$f, [
-	        _hoisted_4$f,
-	        createBaseVNode("div", _hoisted_5$f, [
-	          createBaseVNode("div", _hoisted_6$f, [
-	            createBaseVNode("div", _hoisted_7$e, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$h, [
+	    createBaseVNode("div", _hoisted_2$g, [
+	      createBaseVNode("div", _hoisted_3$g, [
+	        _hoisted_4$g,
+	        createBaseVNode("div", _hoisted_5$g, [
+	          createBaseVNode("div", _hoisted_6$g, [
+	            createBaseVNode("div", _hoisted_7$f, [
 	              createBaseVNode("button", {
 	                id: "max-entries-reached",
 	                type: "button",
@@ -27687,7 +27687,7 @@
 	                title: $data.max_entry_title,
 	                disabled: "",
 	                hidden: ""
-	              }, _hoisted_10$9, 8 /* PROPS */, _hoisted_8$d),
+	              }, _hoisted_10$9, 8 /* PROPS */, _hoisted_8$e),
 	              createBaseVNode("div", _hoisted_11$9, [
 	                (openBlock(true), createElementBlock(Fragment, null, renderList($data.filter_list, (_, index) => {
 	                  return (openBlock(), createElementBlock("div", _hoisted_12$8, [
@@ -27745,17 +27745,17 @@
 	  ]))
 	}
 
-	script$h.render = render$b;
-	script$h.__file = "http_src/vue/page-service-map.vue";
+	script$i.render = render$b;
+	script$i.__file = "http_src/vue/page-service-map.vue";
 
 	const change_filter_event$1 = "change_filter_event";
 
-	var script$g = {
+	var script$h = {
 	  components: {	  
-	    'network-map': script$j,
-	    'modal-delete-confirm': script$n,
-	    'modal-autolayout-confirm': script$i,
-	    'select-search': script$z,
+	    'network-map': script$k,
+	    'modal-delete-confirm': script$o,
+	    'modal-autolayout-confirm': script$j,
+	    'select-search': script$A,
 	  },
 	  props: {
 	    page_csrf: String,
@@ -27921,10 +27921,10 @@
 	  NetworkMapVue.event_listeners = {};
 	}
 
-	const _hoisted_1$f = { class: "row" };
-	const _hoisted_2$e = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$e = { class: "card card-shadow" };
-	const _hoisted_4$e = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
+	const _hoisted_1$g = { class: "row" };
+	const _hoisted_2$f = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$f = { class: "card card-shadow" };
+	const _hoisted_4$f = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
 	  /*#__PURE__*/createBaseVNode("div", { class: "text-center" }, [
 	    /*#__PURE__*/createBaseVNode("div", {
 	      class: "spinner-border text-primary mt-5",
@@ -27934,10 +27934,10 @@
 	    ])
 	  ])
 	], -1 /* HOISTED */);
-	const _hoisted_5$e = { class: "card-body" };
-	const _hoisted_6$e = { id: "table_periodicity" };
-	const _hoisted_7$d = { class: "d-flex align-items-center justify-content-end mb-2" };
-	const _hoisted_8$c = ["title"];
+	const _hoisted_5$f = { class: "card-body" };
+	const _hoisted_6$f = { id: "table_periodicity" };
+	const _hoisted_7$e = { class: "d-flex align-items-center justify-content-end mb-2" };
+	const _hoisted_8$d = ["title"];
 	const _hoisted_9$b = /*#__PURE__*/createBaseVNode("i", { class: "text-danger fa-solid fa-triangle-exclamation" }, null, -1 /* HOISTED */);
 	const _hoisted_10$8 = [
 	  _hoisted_9$b
@@ -27977,13 +27977,13 @@
 	  const _component_modal_autolayout_confirm = resolveComponent("modal-autolayout-confirm");
 	  const _component_network_map = resolveComponent("network-map");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$f, [
-	    createBaseVNode("div", _hoisted_2$e, [
-	      createBaseVNode("div", _hoisted_3$e, [
-	        _hoisted_4$e,
-	        createBaseVNode("div", _hoisted_5$e, [
-	          createBaseVNode("div", _hoisted_6$e, [
-	            createBaseVNode("div", _hoisted_7$d, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$g, [
+	    createBaseVNode("div", _hoisted_2$f, [
+	      createBaseVNode("div", _hoisted_3$f, [
+	        _hoisted_4$f,
+	        createBaseVNode("div", _hoisted_5$f, [
+	          createBaseVNode("div", _hoisted_6$f, [
+	            createBaseVNode("div", _hoisted_7$e, [
 	              createBaseVNode("button", {
 	                id: "max-entries-reached",
 	                type: "button",
@@ -27991,7 +27991,7 @@
 	                title: $data.max_entry_title,
 	                disabled: "",
 	                hidden: ""
-	              }, _hoisted_10$8, 8 /* PROPS */, _hoisted_8$c),
+	              }, _hoisted_10$8, 8 /* PROPS */, _hoisted_8$d),
 	              createBaseVNode("div", _hoisted_11$8, [
 	                (openBlock(true), createElementBlock(Fragment, null, renderList($data.filter_list, (_, index) => {
 	                  return (openBlock(), createElementBlock("div", _hoisted_12$7, [
@@ -28049,17 +28049,17 @@
 	  ]))
 	}
 
-	script$g.render = render$a;
-	script$g.__file = "http_src/vue/page-periodicity-map.vue";
+	script$h.render = render$a;
+	script$h.__file = "http_src/vue/page-periodicity-map.vue";
 
 	const change_filter_event = "change_filter_event";
 
-	var script$f = {
+	var script$g = {
 	  components: {	  
-	    'network-map': script$j,
-	    'modal-delete-confirm': script$n,
-	    'modal-autolayout-confirm': script$i,
-	    'select-search': script$z,
+	    'network-map': script$k,
+	    'modal-delete-confirm': script$o,
+	    'modal-autolayout-confirm': script$j,
+	    'select-search': script$A,
 	  },
 	  props: {
 	    page_csrf: String,
@@ -28224,10 +28224,10 @@
 	  NetworkMapVue.event_listeners = {};
 	}
 
-	const _hoisted_1$e = { class: "row" };
-	const _hoisted_2$d = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$d = { class: "card card-shadow" };
-	const _hoisted_4$d = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
+	const _hoisted_1$f = { class: "row" };
+	const _hoisted_2$e = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$e = { class: "card card-shadow" };
+	const _hoisted_4$e = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
 	  /*#__PURE__*/createBaseVNode("div", { class: "text-center" }, [
 	    /*#__PURE__*/createBaseVNode("div", {
 	      class: "spinner-border text-primary mt-5",
@@ -28237,10 +28237,10 @@
 	    ])
 	  ])
 	], -1 /* HOISTED */);
-	const _hoisted_5$d = { class: "card-body" };
-	const _hoisted_6$d = { id: "table_asset" };
-	const _hoisted_7$c = { class: "d-flex align-items-center justify-content-end mb-2" };
-	const _hoisted_8$b = ["title"];
+	const _hoisted_5$e = { class: "card-body" };
+	const _hoisted_6$e = { id: "table_asset" };
+	const _hoisted_7$d = { class: "d-flex align-items-center justify-content-end mb-2" };
+	const _hoisted_8$c = ["title"];
 	const _hoisted_9$a = /*#__PURE__*/createBaseVNode("i", { class: "text-danger fa-solid fa-triangle-exclamation" }, null, -1 /* HOISTED */);
 	const _hoisted_10$7 = [
 	  _hoisted_9$a
@@ -28280,13 +28280,13 @@
 	  const _component_modal_autolayout_confirm = resolveComponent("modal-autolayout-confirm");
 	  const _component_network_map = resolveComponent("network-map");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$e, [
-	    createBaseVNode("div", _hoisted_2$d, [
-	      createBaseVNode("div", _hoisted_3$d, [
-	        _hoisted_4$d,
-	        createBaseVNode("div", _hoisted_5$d, [
-	          createBaseVNode("div", _hoisted_6$d, [
-	            createBaseVNode("div", _hoisted_7$c, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$f, [
+	    createBaseVNode("div", _hoisted_2$e, [
+	      createBaseVNode("div", _hoisted_3$e, [
+	        _hoisted_4$e,
+	        createBaseVNode("div", _hoisted_5$e, [
+	          createBaseVNode("div", _hoisted_6$e, [
+	            createBaseVNode("div", _hoisted_7$d, [
 	              createBaseVNode("button", {
 	                id: "max-entries-reached",
 	                type: "button",
@@ -28294,7 +28294,7 @@
 	                title: $data.max_entry_title,
 	                disabled: "",
 	                hidden: ""
-	              }, _hoisted_10$7, 8 /* PROPS */, _hoisted_8$b),
+	              }, _hoisted_10$7, 8 /* PROPS */, _hoisted_8$c),
 	              createBaseVNode("div", _hoisted_11$7, [
 	                (openBlock(true), createElementBlock(Fragment, null, renderList($data.filter_list, (_, index) => {
 	                  return (openBlock(), createElementBlock("div", _hoisted_12$6, [
@@ -28352,10 +28352,10 @@
 	  ]))
 	}
 
-	script$f.render = render$9;
-	script$f.__file = "http_src/vue/page-asset-map.vue";
+	script$g.render = render$9;
+	script$g.__file = "http_src/vue/page-asset-map.vue";
 
-	var script$e = defineComponent({
+	var script$f = defineComponent({
 	    components: {
 	    },
 	    props: {
@@ -28382,17 +28382,17 @@
 	    },
 	});
 
-	const _hoisted_1$d = { class: "navbar navbar-shadow navbar-expand-lg navbar-light bg-light px-2 mb-2" };
-	const _hoisted_2$c = {
+	const _hoisted_1$e = { class: "navbar navbar-shadow navbar-expand-lg navbar-light bg-light px-2 mb-2" };
+	const _hoisted_2$d = {
 	  class: "me-1 text-nowrap",
 	  style: {"font-size":"1.1rem"}
 	};
-	const _hoisted_3$c = ["href", "title"];
-	const _hoisted_4$c = ["title"];
-	const _hoisted_5$c = /*#__PURE__*/createTextVNode(" / ");
-	const _hoisted_6$c = ["href", "title"];
-	const _hoisted_7$b = ["title"];
-	const _hoisted_8$a = /*#__PURE__*/createBaseVNode("span", { class: "text-muted ms-1 d-none d-lg-inline d-md-none" }, "|", -1 /* HOISTED */);
+	const _hoisted_3$d = ["href", "title"];
+	const _hoisted_4$d = ["title"];
+	const _hoisted_5$d = /*#__PURE__*/createTextVNode(" / ");
+	const _hoisted_6$d = ["href", "title"];
+	const _hoisted_7$c = ["title"];
+	const _hoisted_8$b = /*#__PURE__*/createBaseVNode("span", { class: "text-muted ms-1 d-none d-lg-inline d-md-none" }, "|", -1 /* HOISTED */);
 	const _hoisted_9$9 = /*#__PURE__*/createBaseVNode("button", {
 	  class: "navbar-toggler",
 	  type: "button"
@@ -28430,8 +28430,8 @@
 	];
 
 	function render$8(_ctx, _cache, $props, $setup, $data, $options) {
-	  return (openBlock(), createElementBlock("nav", _hoisted_1$d, [
-	    createBaseVNode("span", _hoisted_2$c, [
+	  return (openBlock(), createElementBlock("nav", _hoisted_1$e, [
+	    createBaseVNode("span", _hoisted_2$d, [
 	      createBaseVNode("i", {
 	        class: normalizeClass(_ctx.main_title.icon)
 	      }, null, 2 /* CLASS */),
@@ -28440,28 +28440,28 @@
 	            key: 0,
 	            href: _ctx.main_title.href,
 	            title: _ctx.main_title.title
-	          }, toDisplayString(_ctx.main_title.label), 9 /* TEXT, PROPS */, _hoisted_3$c))
+	          }, toDisplayString(_ctx.main_title.label), 9 /* TEXT, PROPS */, _hoisted_3$d))
 	        : (openBlock(), createElementBlock("span", {
 	            key: 1,
 	            title: _ctx.main_title.title
-	          }, toDisplayString(_ctx.main_title.label), 9 /* TEXT, PROPS */, _hoisted_4$c)),
+	          }, toDisplayString(_ctx.main_title.label), 9 /* TEXT, PROPS */, _hoisted_4$d)),
 	      (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.secondary_title_list, (item) => {
 	        return (openBlock(), createElementBlock(Fragment, null, [
-	          _hoisted_5$c,
+	          _hoisted_5$d,
 	          (item.href)
 	            ? (openBlock(), createElementBlock("a", {
 	                key: 0,
 	                href: item.href,
 	                title: item.title
-	              }, toDisplayString(item.label), 9 /* TEXT, PROPS */, _hoisted_6$c))
+	              }, toDisplayString(item.label), 9 /* TEXT, PROPS */, _hoisted_6$d))
 	            : (openBlock(), createElementBlock("span", {
 	                key: 1,
 	                title: item.title
-	              }, toDisplayString(item.label), 9 /* TEXT, PROPS */, _hoisted_7$b))
+	              }, toDisplayString(item.label), 9 /* TEXT, PROPS */, _hoisted_7$c))
 	        ], 64 /* STABLE_FRAGMENT */))
 	      }), 256 /* UNKEYED_FRAGMENT */))
 	    ]),
-	    _hoisted_8$a,
+	    _hoisted_8$b,
 	    _hoisted_9$9,
 	    createBaseVNode("div", _hoisted_10$6, [
 	      createBaseVNode("ul", _hoisted_11$6, [
@@ -28512,20 +28512,20 @@
 	  ]))
 	}
 
-	script$e.render = render$8;
-	script$e.__file = "http_src/vue/page-navbar.vue";
+	script$f.render = render$8;
+	script$f.__file = "http_src/vue/page-navbar.vue";
 
-	const _hoisted_1$c = { class: "form-group mb-3 row" };
-	const _hoisted_2$b = { class: "col-form-label col-sm-4" };
-	const _hoisted_3$b = { class: "col-sm-7" };
-	const _hoisted_4$b = /*#__PURE__*/createBaseVNode("div", { class: "invalid-feedback" }, null, -1 /* HOISTED */);
-	const _hoisted_5$b = { class: "form-group mb-3 row" };
-	const _hoisted_6$b = { class: "col-form-label col-sm-4 pt-2" };
-	const _hoisted_7$a = { class: "form-switch col-sm-7 pt-2 ps-3" };
-	const _hoisted_8$9 = { class: "col-form-label" };
+	const _hoisted_1$d = { class: "form-group mb-3 row" };
+	const _hoisted_2$c = { class: "col-form-label col-sm-4" };
+	const _hoisted_3$c = { class: "col-sm-7" };
+	const _hoisted_4$c = /*#__PURE__*/createBaseVNode("div", { class: "invalid-feedback" }, null, -1 /* HOISTED */);
+	const _hoisted_5$c = { class: "form-group mb-3 row" };
+	const _hoisted_6$c = { class: "col-form-label col-sm-4 pt-2" };
+	const _hoisted_7$b = { class: "form-switch col-sm-7 pt-2 ps-3" };
+	const _hoisted_8$a = { class: "col-form-label" };
 
 
-	var script$d = {
+	var script$e = {
 	  __name: 'modal-add-device-exclusion',
 	  props: {
 	    body: String,
@@ -28570,7 +28570,7 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createBlock(script$x, {
+	  return (openBlock(), createBlock(script$y, {
 	    onShowed: _cache[2] || (_cache[2] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
@@ -28579,9 +28579,9 @@
 	      createTextVNode(toDisplayString(__props.title), 1 /* TEXT */)
 	    ]),
 	    body: withCtx(() => [
-	      createBaseVNode("div", _hoisted_1$c, [
-	        createBaseVNode("label", _hoisted_2$b, toDisplayString(__props.body), 1 /* TEXT */),
-	        createBaseVNode("div", _hoisted_3$b, [
+	      createBaseVNode("div", _hoisted_1$d, [
+	        createBaseVNode("label", _hoisted_2$c, toDisplayString(__props.body), 1 /* TEXT */),
+	        createBaseVNode("div", _hoisted_3$c, [
 	          withDirectives(createBaseVNode("textarea", {
 	            name: "items-list",
 	            id: "itemslist-textarea",
@@ -28592,12 +28592,12 @@
 	            [vModelText, input_mac_list.value]
 	          ]),
 	          createBaseVNode("small", null, toDisplayString(__props.list_notes), 1 /* TEXT */),
-	          _hoisted_4$b
+	          _hoisted_4$c
 	        ])
 	      ]),
-	      createBaseVNode("div", _hoisted_5$b, [
-	        createBaseVNode("label", _hoisted_6$b, toDisplayString(_i18n('edit_check.trigger_device_disconnected_alert')), 1 /* TEXT */),
-	        createBaseVNode("div", _hoisted_7$a, [
+	      createBaseVNode("div", _hoisted_5$c, [
+	        createBaseVNode("label", _hoisted_6$c, toDisplayString(_i18n('edit_check.trigger_device_disconnected_alert')), 1 /* TEXT */),
+	        createBaseVNode("div", _hoisted_7$b, [
 	          withDirectives(createBaseVNode("input", {
 	            type: "checkbox",
 	            class: "form-check-input ms-0",
@@ -28606,7 +28606,7 @@
 	            [vModelCheckbox, input_trigger_alerts.value]
 	          ])
 	        ]),
-	        createBaseVNode("small", _hoisted_8$9, toDisplayString(_i18n('edit_check.trigger_device_disconnected_alert_descr')), 1 /* TEXT */)
+	        createBaseVNode("small", _hoisted_8$a, toDisplayString(_i18n('edit_check.trigger_device_disconnected_alert_descr')), 1 /* TEXT */)
 	      ])
 	    ]),
 	    footer: withCtx(() => [
@@ -28624,23 +28624,23 @@
 
 	};
 
-	script$d.__file = "http_src/vue/modal-add-device-exclusion.vue";
+	script$e.__file = "http_src/vue/modal-add-device-exclusion.vue";
 
-	const _hoisted_1$b = { class: "form-group mb-3 row" };
-	const _hoisted_2$a = { class: "col-form-label col-sm-4" };
-	const _hoisted_3$a = { class: "col-sm-7" };
-	const _hoisted_4$a = { class: "form-group mb-3 row" };
-	const _hoisted_5$a = { class: "col-form-label col-sm-4" };
-	const _hoisted_6$a = { class: "col-sm-7" };
-	const _hoisted_7$9 = { value: "allowed" };
-	const _hoisted_8$8 = { value: "denied" };
+	const _hoisted_1$c = { class: "form-group mb-3 row" };
+	const _hoisted_2$b = { class: "col-form-label col-sm-4" };
+	const _hoisted_3$b = { class: "col-sm-7" };
+	const _hoisted_4$b = { class: "form-group mb-3 row" };
+	const _hoisted_5$b = { class: "col-form-label col-sm-4" };
+	const _hoisted_6$b = { class: "col-sm-7" };
+	const _hoisted_7$a = { value: "allowed" };
+	const _hoisted_8$9 = { value: "denied" };
 	const _hoisted_9$8 = { class: "form-group mb-3 row" };
 	const _hoisted_10$5 = { class: "col-form-label col-sm-4 pt-2" };
 	const _hoisted_11$5 = { class: "form-switch col-sm-7 pt-2 ps-3" };
 	const _hoisted_12$4 = { class: "col-form-label" };
 
 
-	var script$c = {
+	var script$d = {
 	  __name: 'modal-edit-device-exclusion',
 	  props: {
 	    title: String,
@@ -28685,7 +28685,7 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createBlock(script$x, {
+	  return (openBlock(), createBlock(script$y, {
 	    onShowed: _cache[3] || (_cache[3] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
@@ -28694,9 +28694,9 @@
 	      createTextVNode(toDisplayString(__props.title), 1 /* TEXT */)
 	    ]),
 	    body: withCtx(() => [
-	      createBaseVNode("div", _hoisted_1$b, [
-	        createBaseVNode("label", _hoisted_2$a, toDisplayString(_i18n('edit_check.device_alias')), 1 /* TEXT */),
-	        createBaseVNode("div", _hoisted_3$a, [
+	      createBaseVNode("div", _hoisted_1$c, [
+	        createBaseVNode("label", _hoisted_2$b, toDisplayString(_i18n('edit_check.device_alias')), 1 /* TEXT */),
+	        createBaseVNode("div", _hoisted_3$b, [
 	          withDirectives(createBaseVNode("input", {
 	            type: "text",
 	            name: "custom_name",
@@ -28708,16 +28708,16 @@
 	          ])
 	        ])
 	      ]),
-	      createBaseVNode("div", _hoisted_4$a, [
-	        createBaseVNode("label", _hoisted_5$a, toDisplayString(_i18n('edit_check.device_status')), 1 /* TEXT */),
-	        createBaseVNode("div", _hoisted_6$a, [
+	      createBaseVNode("div", _hoisted_4$b, [
+	        createBaseVNode("label", _hoisted_5$b, toDisplayString(_i18n('edit_check.device_status')), 1 /* TEXT */),
+	        createBaseVNode("div", _hoisted_6$b, [
 	          withDirectives(createBaseVNode("select", {
 	            name: "device_status",
 	            class: "form-select",
 	            "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => ((input_device_status).value = $event))
 	          }, [
-	            createBaseVNode("option", _hoisted_7$9, toDisplayString(_i18n('allowed')), 1 /* TEXT */),
-	            createBaseVNode("option", _hoisted_8$8, toDisplayString(_i18n('denied')), 1 /* TEXT */)
+	            createBaseVNode("option", _hoisted_7$a, toDisplayString(_i18n('allowed')), 1 /* TEXT */),
+	            createBaseVNode("option", _hoisted_8$9, toDisplayString(_i18n('denied')), 1 /* TEXT */)
 	          ], 512 /* NEED_PATCH */), [
 	            [vModelSelect, input_device_status.value]
 	          ])
@@ -28751,15 +28751,15 @@
 
 	};
 
-	script$c.__file = "http_src/vue/modal-edit-device-exclusion.vue";
+	script$d.__file = "http_src/vue/modal-edit-device-exclusion.vue";
 
-	var script$b = {
+	var script$c = {
 	    components: {	  
-	        'page-navbar': script$e,	      
-	        'datatable': script$r,
-	        'modal-delete-confirm': script$n,
-	        'modal-add-device-exclusion': script$d,
-	        'modal-edit-device-exclusion': script$c,
+	        'page-navbar': script$f,	      
+	        'datatable': script$s,
+	        'modal-delete-confirm': script$o,
+	        'modal-add-device-exclusion': script$e,
+	        'modal-edit-device-exclusion': script$d,
 	    },
 	    props: {
 		page_csrf: String,
@@ -29051,22 +29051,22 @@
 	    DatatableVue.config_devices = configDevices;
 	}
 
-	const _hoisted_1$a = { id: "navbar" };
-	const _hoisted_2$9 = { class: "row" };
-	const _hoisted_3$9 = { class: "col-md-12 col-lg-12" };
-	const _hoisted_4$9 = /*#__PURE__*/createBaseVNode("div", {
+	const _hoisted_1$b = { id: "navbar" };
+	const _hoisted_2$a = { class: "row" };
+	const _hoisted_3$a = { class: "col-md-12 col-lg-12" };
+	const _hoisted_4$a = /*#__PURE__*/createBaseVNode("div", {
 	  class: "alert alert-danger d-none",
 	  id: "alert-row-buttons",
 	  role: "alert"
 	}, null, -1 /* HOISTED */);
-	const _hoisted_5$9 = { class: "card" };
-	const _hoisted_6$9 = { class: "card-body" };
-	const _hoisted_7$8 = {
+	const _hoisted_5$a = { class: "card" };
+	const _hoisted_6$a = { class: "card-body" };
+	const _hoisted_7$9 = {
 	  id: "devices-learning-status",
 	  class: "alert alert-info",
 	  hidden: ""
 	};
-	const _hoisted_8$7 = { id: "table_devices_vue" };
+	const _hoisted_8$8 = { id: "table_devices_vue" };
 	const _hoisted_9$7 = { class: "card-footer" };
 	const _hoisted_10$4 = {
 	  type: "button",
@@ -29083,7 +29083,7 @@
 	  const _component_datatable = resolveComponent("datatable");
 
 	  return (openBlock(), createElementBlock(Fragment, null, [
-	    createBaseVNode("div", _hoisted_1$a, [
+	    createBaseVNode("div", _hoisted_1$b, [
 	      createVNode(_component_page_navbar, {
 	        id: "page_navbar",
 	        main_title: $data.navbar_context.main_title,
@@ -29093,13 +29093,13 @@
 	        onClick_item: _ctx.click_item
 	      }, null, 8 /* PROPS */, ["main_title", "base_url", "help_link", "items_table", "onClick_item"])
 	    ]),
-	    createBaseVNode("div", _hoisted_2$9, [
-	      createBaseVNode("div", _hoisted_3$9, [
-	        _hoisted_4$9,
-	        createBaseVNode("div", _hoisted_5$9, [
-	          createBaseVNode("div", _hoisted_6$9, [
-	            createBaseVNode("div", _hoisted_7$8, toDisplayString($data.learning_message), 1 /* TEXT */),
-	            createBaseVNode("div", _hoisted_8$7, [
+	    createBaseVNode("div", _hoisted_2$a, [
+	      createBaseVNode("div", _hoisted_3$a, [
+	        _hoisted_4$a,
+	        createBaseVNode("div", _hoisted_5$a, [
+	          createBaseVNode("div", _hoisted_6$a, [
+	            createBaseVNode("div", _hoisted_7$9, toDisplayString($data.learning_message), 1 /* TEXT */),
+	            createBaseVNode("div", _hoisted_8$8, [
 	              createVNode(_component_modal_delete_confirm, {
 	                ref: "modal_delete_confirm",
 	                title: $data.title_delete,
@@ -29146,12 +29146,12 @@
 	  ], 64 /* STABLE_FRAGMENT */))
 	}
 
-	script$b.render = render$7;
-	script$b.__file = "http_src/vue/page-device-exclusions.vue";
+	script$c.render = render$7;
+	script$c.__file = "http_src/vue/page-device-exclusions.vue";
 
-	var script$a = {
+	var script$b = {
 	  components: {	  
-	    'datatable': script$r,
+	    'datatable': script$s,
 	  },
 	  props: {
 	    page_csrf: String,
@@ -29232,27 +29232,27 @@
 	  DatatableVue.config_devices_standard = configDevices;
 	}
 
-	const _hoisted_1$9 = { class: "row" };
-	const _hoisted_2$8 = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$8 = /*#__PURE__*/createBaseVNode("div", {
+	const _hoisted_1$a = { class: "row" };
+	const _hoisted_2$9 = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$9 = /*#__PURE__*/createBaseVNode("div", {
 	  class: "alert alert-danger d-none",
 	  id: "alert-row-buttons",
 	  role: "alert"
 	}, null, -1 /* HOISTED */);
-	const _hoisted_4$8 = { class: "card" };
-	const _hoisted_5$8 = { class: "card-body" };
-	const _hoisted_6$8 = { id: "table_host_tls" };
-	const _hoisted_7$7 = { class: "card-footer" };
+	const _hoisted_4$9 = { class: "card" };
+	const _hoisted_5$9 = { class: "card-body" };
+	const _hoisted_6$9 = { id: "table_host_tls" };
+	const _hoisted_7$8 = { class: "card-footer" };
 
 	function render$6(_ctx, _cache, $props, $setup, $data, $options) {
 	  const _component_datatable = resolveComponent("datatable");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$9, [
-	    createBaseVNode("div", _hoisted_2$8, [
-	      _hoisted_3$8,
-	      createBaseVNode("div", _hoisted_4$8, [
-	        createBaseVNode("div", _hoisted_5$8, [
-	          createBaseVNode("div", _hoisted_6$8, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$a, [
+	    createBaseVNode("div", _hoisted_2$9, [
+	      _hoisted_3$9,
+	      createBaseVNode("div", _hoisted_4$9, [
+	        createBaseVNode("div", _hoisted_5$9, [
+	          createBaseVNode("div", _hoisted_6$9, [
 	            createVNode(_component_datatable, {
 	              ref: "table_fingerprint",
 	              table_buttons: $data.config_devices_standard.table_buttons,
@@ -29263,7 +29263,7 @@
 	            }, null, 8 /* PROPS */, ["table_buttons", "columns_config", "data_url", "enable_search", "table_config"])
 	          ])
 	        ]),
-	        createBaseVNode("div", _hoisted_7$7, [
+	        createBaseVNode("div", _hoisted_7$8, [
 	          createBaseVNode("b", null, toDisplayString($data.i18n('fingerprint_note')), 1 /* TEXT */)
 	        ])
 	      ])
@@ -29271,12 +29271,12 @@
 	  ]))
 	}
 
-	script$a.render = render$6;
-	script$a.__file = "http_src/vue/page-host-tls.vue";
+	script$b.render = render$6;
+	script$b.__file = "http_src/vue/page-host-tls.vue";
 
-	var script$9 = {
+	var script$a = {
 	  components: {	  
-	    'datatable': script$r,
+	    'datatable': script$s,
 	  },
 	  props: {
 	    page_csrf: String,
@@ -29357,26 +29357,26 @@
 	  DatatableVue.config_devices_standard = configDevices;
 	}
 
-	const _hoisted_1$8 = { class: "row" };
-	const _hoisted_2$7 = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$7 = /*#__PURE__*/createBaseVNode("div", {
+	const _hoisted_1$9 = { class: "row" };
+	const _hoisted_2$8 = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$8 = /*#__PURE__*/createBaseVNode("div", {
 	  class: "alert alert-danger d-none",
 	  id: "alert-row-buttons",
 	  role: "alert"
 	}, null, -1 /* HOISTED */);
-	const _hoisted_4$7 = { class: "card" };
-	const _hoisted_5$7 = { class: "card-body" };
-	const _hoisted_6$7 = { id: "table_host_ssh" };
+	const _hoisted_4$8 = { class: "card" };
+	const _hoisted_5$8 = { class: "card-body" };
+	const _hoisted_6$8 = { id: "table_host_ssh" };
 
 	function render$5(_ctx, _cache, $props, $setup, $data, $options) {
 	  const _component_datatable = resolveComponent("datatable");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$8, [
-	    createBaseVNode("div", _hoisted_2$7, [
-	      _hoisted_3$7,
-	      createBaseVNode("div", _hoisted_4$7, [
-	        createBaseVNode("div", _hoisted_5$7, [
-	          createBaseVNode("div", _hoisted_6$7, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$9, [
+	    createBaseVNode("div", _hoisted_2$8, [
+	      _hoisted_3$8,
+	      createBaseVNode("div", _hoisted_4$8, [
+	        createBaseVNode("div", _hoisted_5$8, [
+	          createBaseVNode("div", _hoisted_6$8, [
 	            createVNode(_component_datatable, {
 	              ref: "table_hassh",
 	              table_buttons: $data.config_devices_standard.table_buttons,
@@ -29392,20 +29392,20 @@
 	  ]))
 	}
 
-	script$9.render = render$5;
-	script$9.__file = "http_src/vue/page-host-ssh.vue";
+	script$a.render = render$5;
+	script$a.__file = "http_src/vue/page-host-ssh.vue";
 
 	const change_map_event = "change_map_event";
 
-	  var script$8 = {
+	  var script$9 = {
 	    components: {	  
-	      'page-periodicity-map': script$g,
-	      'page-periodicity-table': script$l,
-	      'page-asset-map': script$f,
-	      'page-asset-table': script$m,
-	      'page-service-map': script$h,
-	      'page-service-table': script$k,
-	      'page-navbar': script$e,
+	      'page-periodicity-map': script$h,
+	      'page-periodicity-table': script$m,
+	      'page-asset-map': script$g,
+	      'page-asset-table': script$n,
+	      'page-service-map': script$i,
+	      'page-service-table': script$l,
+	      'page-navbar': script$f,
 	    },
 	    props: {
 	      page_csrf: String,
@@ -29619,13 +29619,13 @@
 	  ], 64 /* STABLE_FRAGMENT */))
 	}
 
-	script$8.render = render$4;
-	script$8.__file = "http_src/vue/page-home-map.vue";
+	script$9.render = render$4;
+	script$9.__file = "http_src/vue/page-home-map.vue";
 
-	const _hoisted_1$7 = { id: "my_dataviz" };
+	const _hoisted_1$8 = { id: "my_dataviz" };
 
 
-	var script$7 = {
+	var script$8 = {
 	  __name: 'page-sankey',
 	  props: {
 	},
@@ -29767,7 +29767,7 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createElementBlock("div", _hoisted_1$7))
+	  return (openBlock(), createElementBlock("div", _hoisted_1$8))
 	}
 	}
 
@@ -29776,16 +29776,16 @@
 	var css_248z$4 = "\n.node rect {\n  fill-opacity: 0.9;\n  shape-rendering: crispEdges;\n}\n.node text {\n  pointer-events: none;\n  text-shadow: 0 1px 0 #fff;\n}\n.link {\n  fill: none;\n  stroke: #000;\n  stroke-opacity: 0.2;\n}\n.link:hover {\n  stroke-opacity: 0.5;\n}\n";
 	styleInject(css_248z$4);
 
-	script$7.__file = "http_src/vue/page-sankey.vue";
+	script$8.__file = "http_src/vue/page-sankey.vue";
 
 	const change_applications_tab_event = "change_applications_tab_event";
 
-	var script$6 = {
+	var script$7 = {
 	  components: {	  
-	    'chart': script$A,
-	    'datatable': script$r,
-	    'modal-delete-confirm': script$n,
-	    'tab-list': script$o,
+	    'chart': script$B,
+	    'datatable': script$s,
+	    'modal-delete-confirm': script$o,
+	    'tab-list': script$p,
 	  },
 	  props: {
 	    page_csrf: String,
@@ -30027,10 +30027,10 @@
 	  PageVue.config_devices_categories = categoriesConfig;
 	}
 
-	const _hoisted_1$6 = { class: "row" };
-	const _hoisted_2$6 = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$6 = { class: "card" };
-	const _hoisted_4$6 = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
+	const _hoisted_1$7 = { class: "row" };
+	const _hoisted_2$7 = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$7 = { class: "card" };
+	const _hoisted_4$7 = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
 	  /*#__PURE__*/createBaseVNode("div", { class: "text-center" }, [
 	    /*#__PURE__*/createBaseVNode("div", {
 	      class: "spinner-border text-primary mt-5",
@@ -30040,13 +30040,13 @@
 	    ])
 	  ])
 	], -1 /* HOISTED */);
-	const _hoisted_5$6 = { class: "card-body" };
-	const _hoisted_6$6 = { id: "host_details_applications" };
-	const _hoisted_7$6 = {
+	const _hoisted_5$7 = { class: "card-body" };
+	const _hoisted_6$7 = { id: "host_details_applications" };
+	const _hoisted_7$7 = {
 	  class: "row mb-4 mt-4",
 	  id: "host_details_applications"
 	};
-	const _hoisted_8$6 = { class: "col-6" };
+	const _hoisted_8$7 = { class: "col-6" };
 	const _hoisted_9$6 = {
 	  key: 0,
 	  class: "widget-name"
@@ -30057,21 +30057,21 @@
 	  const _component_chart = resolveComponent("chart");
 	  const _component_datatable = resolveComponent("datatable");
 
-	  return (openBlock(), createElementBlock("div", _hoisted_1$6, [
-	    createBaseVNode("div", _hoisted_2$6, [
-	      createBaseVNode("div", _hoisted_3$6, [
-	        _hoisted_4$6,
-	        createBaseVNode("div", _hoisted_5$6, [
-	          createBaseVNode("div", _hoisted_6$6, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$7, [
+	    createBaseVNode("div", _hoisted_2$7, [
+	      createBaseVNode("div", _hoisted_3$7, [
+	        _hoisted_4$7,
+	        createBaseVNode("div", _hoisted_5$7, [
+	          createBaseVNode("div", _hoisted_6$7, [
 	            createVNode(_component_tab_list, {
 	              ref: "host_details_applications_tab_list",
 	              id: "host_details_applications_tab_list",
 	              tab_list: $data.tab_list,
 	              onClick_item: $options.click_item
 	            }, null, 8 /* PROPS */, ["tab_list", "onClick_item"]),
-	            createBaseVNode("div", _hoisted_7$6, [
+	            createBaseVNode("div", _hoisted_7$7, [
 	              (openBlock(true), createElementBlock(Fragment, null, renderList($data.chart_options, (chart_option) => {
-	                return (openBlock(), createElementBlock("div", _hoisted_8$6, [
+	                return (openBlock(), createElementBlock("div", _hoisted_8$7, [
 	                  (chart_option.tab == $data.applications_tab)
 	                    ? (openBlock(), createElementBlock("h3", _hoisted_9$6, toDisplayString(chart_option.title), 1 /* TEXT */))
 	                    : createCommentVNode("v-if", true),
@@ -30116,13 +30116,13 @@
 	  ]))
 	}
 
-	script$6.render = render$3;
-	script$6.__file = "http_src/vue/page-host-details-applications.vue";
+	script$7.render = render$3;
+	script$7.__file = "http_src/vue/page-host-details-applications.vue";
 
-	const _hoisted_1$5 = { class: "row" };
-	const _hoisted_2$5 = { class: "col-md-12 col-lg-12" };
-	const _hoisted_3$5 = { class: "card" };
-	const _hoisted_4$5 = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
+	const _hoisted_1$6 = { class: "row" };
+	const _hoisted_2$6 = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$6 = { class: "card" };
+	const _hoisted_4$6 = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
 	  /*#__PURE__*/createBaseVNode("div", { class: "text-center" }, [
 	    /*#__PURE__*/createBaseVNode("div", {
 	      class: "spinner-border text-primary mt-5",
@@ -30132,17 +30132,17 @@
 	    ])
 	  ])
 	], -1 /* HOISTED */);
-	const _hoisted_5$5 = { class: "card-body" };
-	const _hoisted_6$5 = { id: "host_details_traffic" };
-	const _hoisted_7$5 = {
+	const _hoisted_5$6 = { class: "card-body" };
+	const _hoisted_6$6 = { id: "host_details_traffic" };
+	const _hoisted_7$6 = {
 	  class: "row mb-4 mt-4",
 	  id: "host_details_traffic"
 	};
-	const _hoisted_8$5 = { class: "col-4" };
+	const _hoisted_8$6 = { class: "col-4" };
 	const _hoisted_9$5 = { class: "widget-name" };
 
 
-	var script$5 = {
+	var script$6 = {
 	  __name: 'page-host-details-traffic',
 	  props: {
 	  page_csrf: String,
@@ -30259,17 +30259,17 @@
 	}
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createElementBlock("div", _hoisted_1$5, [
-	    createBaseVNode("div", _hoisted_2$5, [
-	      createBaseVNode("div", _hoisted_3$5, [
-	        _hoisted_4$5,
-	        createBaseVNode("div", _hoisted_5$5, [
-	          createBaseVNode("div", _hoisted_6$5, [
-	            createBaseVNode("div", _hoisted_7$5, [
+	  return (openBlock(), createElementBlock("div", _hoisted_1$6, [
+	    createBaseVNode("div", _hoisted_2$6, [
+	      createBaseVNode("div", _hoisted_3$6, [
+	        _hoisted_4$6,
+	        createBaseVNode("div", _hoisted_5$6, [
+	          createBaseVNode("div", _hoisted_6$6, [
+	            createBaseVNode("div", _hoisted_7$6, [
 	              (openBlock(), createElementBlock(Fragment, null, renderList(chart_options, (chart_option) => {
-	                return createBaseVNode("div", _hoisted_8$5, [
+	                return createBaseVNode("div", _hoisted_8$6, [
 	                  createBaseVNode("h3", _hoisted_9$5, toDisplayString(chart_option.title), 1 /* TEXT */),
-	                  createVNode(script$A, {
+	                  createVNode(script$B, {
 	                    id: chart_option.id,
 	                    chart_type: chart_option.type,
 	                    base_url_request: chart_option.url,
@@ -30278,7 +30278,7 @@
 	                ])
 	              }), 64 /* STABLE_FRAGMENT */))
 	            ]),
-	            createVNode(script$r, {
+	            createVNode(script$s, {
 	              ref_key: "traffic_table",
 	              ref: traffic_table,
 	              table_buttons: config_traffic_table.value.table_buttons,
@@ -30297,12 +30297,103 @@
 
 	};
 
-	script$5.__file = "http_src/vue/page-host-details-traffic.vue";
+	script$6.__file = "http_src/vue/page-host-details-traffic.vue";
+
+	const _hoisted_1$5 = { class: "row" };
+	const _hoisted_2$5 = { class: "col-md-12 col-lg-12" };
+	const _hoisted_3$5 = { class: "card" };
+	const _hoisted_4$5 = /*#__PURE__*/createBaseVNode("div", { class: "overlay justify-content-center align-items-center position-absolute h-100 w-100" }, [
+	  /*#__PURE__*/createBaseVNode("div", { class: "text-center" }, [
+	    /*#__PURE__*/createBaseVNode("div", {
+	      class: "spinner-border text-primary mt-5",
+	      role: "status"
+	    }, [
+	      /*#__PURE__*/createBaseVNode("span", { class: "sr-only position-absolute" }, "Loading...")
+	    ])
+	  ])
+	], -1 /* HOISTED */);
+	const _hoisted_5$5 = { class: "card-body" };
+	const _hoisted_6$5 = { class: "row" };
+	const _hoisted_7$5 = { class: "col-6 mb-4 mt-4" };
+	const _hoisted_8$5 = { class: "widget-name" };
+
+
+	var script$5 = {
+	  __name: 'page-host-details-packets',
+	  props: {
+	  page_csrf: String,
+	  url_params: Object,
+	},
+	  setup(__props) {
+	const chart_options = [
+	  {
+	    title: i18n('graphs.packets_sent'),
+	    type: ntopChartApex.typeChart.PIE,
+	    url: `${http_prefix}/lua/rest/v2/get/host/packets/sent_data.lua`,
+	    id: `packets_sent`,
+	  },
+	  {
+	    title: i18n('graphs.packets_rcvd'),
+	    type: ntopChartApex.typeChart.PIE,
+	    url: `${http_prefix}/lua/rest/v2/get/host/packets/rcvd_data.lua`,
+	    id: `packets_rcvd`,
+	  },
+	  {
+	    title: i18n('graphs.tcp_flags'),
+	    type: ntopChartApex.typeChart.PIE,
+	    url: `${http_prefix}/lua/rest/v2/get/host/packets/tcp_flags_data.lua`,
+	    id: `tcp_flags`,
+	  },
+	  {
+	    title: i18n('graphs.arp_distribution'),
+	    type: ntopChartApex.typeChart.PIE,
+	    url: `${http_prefix}/lua/rest/v2/get/host/packets/arp_data.lua`,
+	    id: `arp_requests`,
+	  },
+	];
+
+	function chart_done(data, tmp, tmp2) {
+	  NtopUtils$1.hideOverlays();
+	}
+
+	onMounted(() => {});
+
+
+	return (_ctx, _cache) => {
+	  return (openBlock(), createElementBlock("div", _hoisted_1$5, [
+	    createBaseVNode("div", _hoisted_2$5, [
+	      createBaseVNode("div", _hoisted_3$5, [
+	        _hoisted_4$5,
+	        createBaseVNode("div", _hoisted_5$5, [
+	          createBaseVNode("div", _hoisted_6$5, [
+	            (openBlock(), createElementBlock(Fragment, null, renderList(chart_options, (chart_option) => {
+	              return createBaseVNode("div", _hoisted_7$5, [
+	                createBaseVNode("h3", _hoisted_8$5, toDisplayString(chart_option.title), 1 /* TEXT */),
+	                createVNode(script$B, {
+	                  id: chart_option.id,
+	                  chart_type: chart_option.type,
+	                  base_url_request: chart_option.url,
+	                  register_on_status_change: false,
+	                  onChart_reloaded: chart_done
+	                }, null, 8 /* PROPS */, ["id", "chart_type", "base_url_request"])
+	              ])
+	            }), 64 /* STABLE_FRAGMENT */))
+	          ])
+	        ])
+	      ])
+	    ])
+	  ]))
+	}
+	}
+
+	};
+
+	script$5.__file = "http_src/vue/page-host-details-packets.vue";
 
 	var script$4 = {
 	    components: {
-		'modal': script$x,
-	  'select-search': script$z,
+		'modal': script$y,
+	  'select-search': script$A,
 	    }, 
 	    props: {
 		id: String,
@@ -30748,7 +30839,7 @@
 		id: String,
 	    },
 	    components: {	  
-	   	'data-time-range-picker': script$y,
+	   	'data-time-range-picker': script$z,
 		'modal-filters': script$4,
 	    },
 	    /**
@@ -31450,7 +31541,7 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createBlock(script$x, {
+	  return (openBlock(), createBlock(script$y, {
 	    onShowed: _cache[10] || (_cache[10] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
@@ -31885,7 +31976,7 @@
 
 
 	return (_ctx, _cache) => {
-	  return (openBlock(), createBlock(script$x, {
+	  return (openBlock(), createBlock(script$y, {
 	    onShowed: _cache[9] || (_cache[9] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
@@ -32065,47 +32156,50 @@
 
 	let ntopVue = {
 	    // pages
-	    PageStats: script$p,
-	    PageAssetTable: script$m,
-	    PagePeriodicityTable: script$l,
-	    PageServiceTable: script$k,
-	    PageServiceMap: script$h,
-	    PagePeriodicityMap: script$g,
-	    PageAssetMap: script$f,
-	    PageDeviceExclusions: script$b,
-	    PageHostTLS: script$a,
-	    PageHostSSH: script$9,
-	    PageHomeMap: script$8,
-	    PageSankey: script$7,
-	    PageHostDetailsApplications: script$6,
-	    PageHostDetailsTraffic: script$5,
+	    PageStats: script$q,
+	    PageAssetTable: script$n,
+	    PagePeriodicityTable: script$m,
+	    PageServiceTable: script$l,
+	    PageServiceMap: script$i,
+	    PagePeriodicityMap: script$h,
+	    PageAssetMap: script$g,
+	    PageDeviceExclusions: script$c,
+	    PageHostTLS: script$b,
+	    PageHostSSH: script$a,
+	    PageHomeMap: script$9,
+	    PageSankey: script$8,
+
+	    // Host details pages
+	    PageHostDetailsApplications: script$7,
+	    PageHostDetailsTraffic: script$6,
+	    PageHostDetailsPackets: script$5,
 
 	    // components
-	    AlertInfo: script$s,
-	    Chart: script$A,
-	    Datatable: script$r,
-	    DateTimeRangePicker: script$y,
-	    NetworkMap: script$j,
+	    AlertInfo: script$t,
+	    Chart: script$B,
+	    Datatable: script$s,
+	    DateTimeRangePicker: script$z,
+	    NetworkMap: script$k,
 	    RangePicker: script$3,
-	    PageNavbar: script$e,
+	    PageNavbar: script$f,
 	    SimpleTable: script$2,
-	    SelectSearch: script$z,
-	    TabList: script$o,
+	    SelectSearch: script$A,
+	    TabList: script$p,
 	    
 	    // list
-	    ListTimeseries: script$v,
+	    ListTimeseries: script$w,
 
 	    // modals
-	    Modal: script$x,
+	    Modal: script$y,
 	    ModalAddCheckExclusion: script$1,
 	    ModalAlertsFilter: script,
 	    ModalFilters: script$4,
-	    ModalTimeseries: script$u,
-	    ModalTrafficExtraction: script$t,
-	    ModalDeleteConfirm: script$n,
-	    ModalSnapshot: script$w,
-	    ModalAddDeviceExclusion: script$d,
-	    ModalEditDeviceExclusion: script$c,
+	    ModalTimeseries: script$v,
+	    ModalTrafficExtraction: script$u,
+	    ModalDeleteConfirm: script$o,
+	    ModalSnapshot: script$x,
+	    ModalAddDeviceExclusion: script$e,
+	    ModalEditDeviceExclusion: script$d,
 
 	    Vue: Vue,
 	};
