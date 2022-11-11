@@ -31982,17 +31982,17 @@
 	    ref: modal_id
 	  }, {
 	    title: withCtx(() => [
-	      createTextVNode(toDisplayString(_i18n('current_filter')) + ": ", 1 /* TEXT */),
+	      createTextVNode(toDisplayString(_i18n('exclude_check')) + ": ", 1 /* TEXT */),
 	      createBaseVNode("span", { innerHTML: unref(alert_name) }, null, 8 /* PROPS */, _hoisted_1)
 	    ]),
 	    body: withCtx(() => [
 	      createBaseVNode("div", _hoisted_2, [
 	        createBaseVNode("div", null, [
 	          createBaseVNode("label", null, [
-	            createTextVNode(toDisplayString(_i18n('current_filter')) + " \"", 1 /* TEXT */),
+	            createTextVNode(toDisplayString(_i18n('exclude_check')) + " \"", 1 /* TEXT */),
 	            createBaseVNode("b", { innerHTML: unref(alert_name) }, null, 8 /* PROPS */, _hoisted_3),
 	            _hoisted_4,
-	            createBaseVNode("span", _hoisted_5, toDisplayString(_i18n('current_filter_for')) + ":", 1 /* TEXT */)
+	            createBaseVNode("span", _hoisted_5, toDisplayString(_i18n('exclude_for')) + ":", 1 /* TEXT */)
 	          ]),
 	          createBaseVNode("div", _hoisted_6, [
 	            withDirectives(createBaseVNode("input", {
