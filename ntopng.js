@@ -22897,8 +22897,7 @@
 		    f_set_value_url: null, // overwrite value and value_url to set start value in url
 		    ui_type: ui_types$1.select,
 		}],
-	    },
-	    {
+	    }, {
 		id: "host",
 		regex_page_url: "lua\/host_details",
 		label: "Host",
@@ -22916,8 +22915,7 @@
 		    value: "host",
 		    ui_type: ui_types$1.input,
 		}],
-	    },
-	    {
+	    }, {
 		id: "mac",
 		regex_page_url: "lua\/mac_details",
 		label: "Mac",
@@ -22935,8 +22933,7 @@
 		    value_url: "host",
 		    ui_type: ui_types$1.input,
 		}],
-	    },
-	    {
+	    }, {
 		id: "network",
 		regex_page_url: "lua\/network_details",
 		label: "Network",
@@ -22953,8 +22950,7 @@
 		    value: "subnet",
 		    ui_type: ui_types$1.input,
 		}],	
-	    },
-	    {
+	    }, {
 		id: "as",
 		regex_page_url: "lua\/as_details",
 		label: "ASN",
@@ -22971,8 +22967,7 @@
 		    value: "asn",
 		    ui_type: ui_types$1.input,
 		}],
-	    },
-	    {
+	    }, {
 		id: "country",
 		regex_page_url: "lua\/country_details",
 		label: "Country",
@@ -22989,8 +22984,7 @@
 		    value: "country",
 		    ui_type: ui_types$1.input,
 		}],
-	    },
-	    {
+	    }, {
 		id: "os",
 		regex_page_url: "lua\/os_details",
 		label: "OS",
@@ -23007,8 +23001,7 @@
 		    value: "os",
 		    ui_type: ui_types$1.input,
 		}],
-	    },
-	    {
+	    }, {
 		id: "vlan",
 		regex_page_url: "lua\/vlan_details",
 		label: "VLAN",
@@ -23025,8 +23018,7 @@
 		    value: "vlan",
 		    ui_type: ui_types$1.input,
 		}],
-	    },
-	    {
+	    }, {
 		id: "pool",
 		regex_page_url: "lua\/pool_details",
 		label: "Host Pool",
@@ -23039,13 +23031,12 @@
 		}, {
 		    main_source_def: true,
 		    label: "Host Pool",
-		    regex_type: null,
 		    sources_url: "lua/rest/v2/get/host/pools.lua",
 		    value: "pool",
 		    ui_type: ui_types$1.select,
 		}],
-	    },
-	    {
+	    }, {
+		//todo_test
 		id: "observation",
 		regex_page_url: "lua\/pro\/enterprise\/observation_points",
 		label: "Observation",
@@ -23062,65 +23053,110 @@
 		    value: "observation_point",
 		    ui_type: ui_types$1.input,
 		}],
-	    },
-	    {
+	    }, {
+		//todo_test
 		id: "pod",
 		regex_page_url: "lua\/pod_details",
-		label: "Pod",
-		value: "pod",
-		regex_type: "text",
-		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
-		sub_value: "ifid",
-		sub_label: "Interface",
-		ui_type: ui_types$1.select_and_input,
+		label: "Pod",	
 		query: "pod",
-	  ts_query: "pod",
-	    },
-	    {
+		source_def_array: [{
+		    label: "Interface",
+		    sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		    value: "ifid", 
+		    ui_type: ui_types$1.select,
+		}, {
+		    main_source_def: true,
+		    label: "Pod",
+		    regex_type: "text",
+		    value: "pod",
+		    ui_type: ui_types$1.input,
+		}],
+	    }, {
+		//todo_test
 		id: "container",
 		regex_page_url: "lua\/container_details",
 		label: "Container",
-		value: "container",
-		regex_type: "text",
-		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
-		sub_value: "ifid",
-		sub_label: "Interface",
-		ui_type: ui_types$1.select_and_input,
 		query: "container",
-	    },
-	    {
+		source_def_array: [{
+		    label: "Interface",
+		    sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		    value: "ifid", 
+		    ui_type: ui_types$1.select,
+		}, {
+		    main_source_def: true,
+		    label: "Container",
+		    regex_type: "text",
+		    value: "container",
+		    ui_type: ui_types$1.input,
+		}],
+	    }, {
+		//todo_test
 		id: "hash",
 		regex_page_url: "lua\/hash_table_details",
 		label: "Hash Table",
-		value: "hash_table",
-		regex_type: "text",
-		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
-		sub_value: "ifid",
-		sub_label: "Interface",
-		ui_type: ui_types$1.select_and_input,
 		query: "ht",
-	    },
-	    {
+		source_def_array: [{
+		    label: "Interface",
+		    sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		    value: "ifid", 
+		    ui_type: ui_types$1.select,
+		}, {
+		    main_source_def: true,
+		    label: "Hash Table",
+		    regex_type: "text",
+		    value: "hash_table",
+		    ui_type: ui_types$1.input,
+		}],
+	    }, {
 		id: "system",
 		regex_page_url: "lua\/system_stats",
 		label: "System Stats",
-		value: "ifid",
-		sources_function: () => { return [{ label: "", value: -1 }] },
-		regex_type: "text",
-		ui_type: ui_types$1.hide,
 		query: "system",
-	    },
-	    {
+		source_def_array: [{
+		    label: "Interface",
+		    sources_function: () => { return [{ label: "", value: -1 }] },
+		    value: "ifid", 
+		    ui_type: ui_types$1.hide,
+		}],
+	    }, {
+		//todo_test
+		id: "snmp",
+		serie_id_field: "ext_label",
+		disable_stats: true,
+		regex_page_url: "lua\/pro\/enterprise\/snmp_device_details",
+		label: "SNMP",
+		query: "snmp",	
+		source_def_array: [{
+		    label: "Interface",
+		    sources_function: () => { return [{ label: "", value: -1 }] },
+		    value: "ifid", 
+		    ui_type: ui_types$1.hide,
+		}, {
+		    main_source_def: true,
+		    label: "Device",
+		    regex_type: "ip",
+		    value: "device",
+		    value_url: "host",
+		    ui_type: ui_types$1.input,
+		}],
+	    }, {
+		//todo_test
 		id: "profile",	
 		regex_page_url: "lua\/profile_details",
 		label: "Profile",
-		value: "profile",
-		regex_type: "text",
-		sources_sub_url: "lua/rest/v2/get/ntopng/interfaces.lua",
-		sub_value: "ifid",
-		sub_label: "Interface",
-		ui_type: ui_types$1.select_and_input,
 		query: "profile",
+		source_def_array: [{
+		    label: "Interface",
+		    sources_url: "lua/rest/v2/get/ntopng/interfaces.lua",
+		    value: "ifid", 
+		    ui_type: ui_types$1.select,
+		}, {
+		    main_source_def: true,
+		    label: "Profile",
+		    regex_type: "text",
+		    value: "profile",
+		    ui_type: ui_types$1.input,
+		}],
 	    },
 	    {
 		id: "n_edge_interface",
@@ -23159,6 +23195,7 @@
 		query: "am_host",
 		ts_query: "host",
 	    },
+
 	];
 
 	const metricsConsts = function() {
@@ -23541,7 +23578,10 @@
 	    //tsInterface.colors = ["#ff3231", "#ffc007"];
 	}
 
-	function getSerieId(serie) {
+	function getSerieId(serie, serie_id_field) {
+	    if (serie_id_field != null) {
+		return serie[serie_id_field];
+	    }
 	    return `${serie.label}`;
 	}
 
@@ -23582,7 +23622,7 @@
 	    let seriesKeys = Object.keys(tsGroup.metric.timeseries);
 	    if (tsOptions.series?.length != seriesKeys.length) {	
 		tsOptions.series = seriesKeys.map((sk, i) => {
-		    let serie = tsOptions.series.find((s) => getSerieId(s) == sk);
+		    let serie = tsOptions.series.find((s) => getSerieId(s, tsGroup.source_type.serie_id_field) == sk);
 		    if (serie != null) { return serie; }
 		    return {
 			label: sk,
@@ -24234,7 +24274,6 @@
 	    for (let i = 0; i < source_def_array.length; i += 1) {
 		sources_array.value[i] = await metricsManager.get_sources(http_prefix, selected_source_type.value.id, source_def_array[i]);
 	    }
-	    
 	    let default_source_array = await metricsManager.get_default_source_array(http_prefix, selected_source_type.value);
 	    selected_source_array.value = default_source_array;
 	    selected_source_text_array.value = default_source_array.map((s) => s.value);
@@ -25197,10 +25236,13 @@
 	const _hoisted_9$g = { class: "form-group ms-1 me-1 mt-1" };
 	const _hoisted_10$d = { class: "inline select2-size me-2 mt-2" };
 	const _hoisted_11$d = { class: "inline select2-size me-2 mt-2" };
-	const _hoisted_12$c = { class: "mt-4 card card-shadow" };
+	const _hoisted_12$c = {
+	  key: 0,
+	  class: "mt-4 card card-shadow"
+	};
 	const _hoisted_13$b = { class: "card-body" };
 	const _hoisted_14$8 = {
-	  key: 0,
+	  key: 1,
 	  class: "mt-4 card card-shadow"
 	};
 	const _hoisted_15$7 = { class: "card-body" };
@@ -25244,9 +25286,9 @@
 
 	const metrics = ref([]);
 	const selected_metric = ref({});
+	const source_type = metricsManager.get_current_page_source_type();    
 
 	const enable_table = function() {
-	    let source_type = metricsManager.get_current_page_source_type();    
 	    return source_type.table_value != null;
 	}();
 
@@ -25473,7 +25515,9 @@
 	    let charts_options = timeseriesUtils.tsArrayToApexOptionsArray(ts_charts_options, timeseries_groups, current_groups_options_mode.value, ts_compare);
 
 	    set_charts_options_items(charts_options);
-	    set_stats_rows(ts_charts_options, timeseries_groups, status);
+	    if (!source_type.disable_stats) {
+		set_stats_rows(ts_charts_options, timeseries_groups, status);
+	    }
 	    
 	    // set last_timeseries_groupd_loaded
 	    last_timeseries_groups_loaded = timeseries_groups;
@@ -25798,17 +25842,19 @@
 	          ]))
 	        }), 128 /* KEYED_FRAGMENT */))
 	      ]),
-	      createBaseVNode("div", _hoisted_12$c, [
-	        createBaseVNode("div", _hoisted_13$b, [
-	          createVNode(script$t, {
-	            id: "page_stats_bootstrap_table",
-	            columns: unref(stats_columns),
-	            rows: stats_rows.value,
-	            print_html_column: (col) => print_stats_column(col),
-	            print_html_row: (col, row) => print_stats_row(col, row)
-	          }, null, 8 /* PROPS */, ["columns", "rows", "print_html_column", "print_html_row"])
-	        ])
-	      ]),
+	      (!unref(source_type).disable_stats)
+	        ? (openBlock(), createElementBlock("div", _hoisted_12$c, [
+	            createBaseVNode("div", _hoisted_13$b, [
+	              createVNode(script$t, {
+	                id: "page_stats_bootstrap_table",
+	                columns: unref(stats_columns),
+	                rows: stats_rows.value,
+	                print_html_column: (col) => print_stats_column(col),
+	                print_html_row: (col, row) => print_stats_row(col, row)
+	              }, null, 8 /* PROPS */, ["columns", "rows", "print_html_column", "print_html_row"])
+	            ])
+	          ]))
+	        : createCommentVNode("v-if", true),
 	      (unref(enable_table) == true && __props.is_ntop_pro)
 	        ? (openBlock(), createElementBlock("div", _hoisted_14$8, [
 	            createBaseVNode("div", _hoisted_15$7, [
