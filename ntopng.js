@@ -357,7 +357,7 @@
 			if (typeof (value) === "undefined")
 				return "-";
 
-			return Math.round(value * 100) / 100 + "%";
+			return Math.round(value * 100) / 100 + " %";
 		}
 
 		static fdate(when) {
@@ -22431,13 +22431,13 @@
 	];
 	const _hoisted_28$3 = ["disabled", "title"];
 	const _hoisted_29$3 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-undo" }, null, -1 /* HOISTED */));
-	const _hoisted_30$2 = [
+	const _hoisted_30$3 = [
 	  _hoisted_29$3
 	];
-	const _hoisted_31$2 = ["disabled", "title"];
-	const _hoisted_32$1 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-sync" }, null, -1 /* HOISTED */));
-	const _hoisted_33$1 = [
-	  _hoisted_32$1
+	const _hoisted_31$3 = ["disabled", "title"];
+	const _hoisted_32$2 = /*#__PURE__*/ _withScopeId$8(() => /*#__PURE__*/createBaseVNode("i", { class: "fas fa-sync" }, null, -1 /* HOISTED */));
+	const _hoisted_33$2 = [
+	  _hoisted_32$2
 	];
 
 	function render$j(_ctx, _cache, $props, $setup, $data, $options) {
@@ -22507,13 +22507,13 @@
 	                onClick: _cache[7] || (_cache[7] = $event => ($options.apply_status_by_history())),
 	                class: "btn btn-sm btn-link",
 	                title: $data.i18n('date_time_range_picker.btn_undo')
-	              }, _hoisted_30$2, 8 /* PROPS */, _hoisted_28$3),
+	              }, _hoisted_30$3, 8 /* PROPS */, _hoisted_28$3),
 	              createBaseVNode("button", {
 	                disabled: $data.select_time_value == 'custom',
 	                onClick: _cache[8] || (_cache[8] = $event => ($options.change_select_time())),
 	                class: "btn btn-sm btn-link",
 	                title: $data.i18n('date_time_range_picker.btn_refresh')
-	              }, _hoisted_33$1, 8 /* PROPS */, _hoisted_31$2),
+	              }, _hoisted_33$2, 8 /* PROPS */, _hoisted_31$3),
 	              renderSlot(_ctx.$slots, "extra_buttons")
 	            ])
 	          ])
@@ -32714,8 +32714,8 @@
 	script$e.__file = "http_src/vue/note-list.vue";
 
 	const _hoisted_1$d = { class: "form-group ms-2 me-2 mt-3 row" };
-	const _hoisted_2$c = { class: "col-form-label col-sm-4" };
-	const _hoisted_3$b = { class: "col-sm-8" };
+	const _hoisted_2$c = { class: "col-form-label col-sm-2" };
+	const _hoisted_3$b = { class: "col-sm-10" };
 	const _hoisted_4$b = {
 	  class: "btn-group btn-group-toggle",
 	  "data-bs-toggle": "buttons"
@@ -32724,45 +32724,61 @@
 	  key: 0,
 	  class: "form-group ms-2 me-2 mt-3 row"
 	};
-	const _hoisted_6$b = { class: "col-form-label col-sm-4" };
-	const _hoisted_7$b = { class: "col-sm-8" };
+	const _hoisted_6$b = { class: "col-form-label col-sm-2" };
+	const _hoisted_7$b = { class: "col-sm-10" };
 	const _hoisted_8$a = ["placeholder"];
 	const _hoisted_9$8 = {
 	  key: 1,
 	  class: "form-group ms-2 me-2 mt-3 row"
 	};
-	const _hoisted_10$7 = { class: "col-form-label col-sm-4" };
-	const _hoisted_11$6 = { class: "col-8" };
+	const _hoisted_10$7 = { class: "col-form-label col-sm-2" };
+	const _hoisted_11$6 = { class: "col-10" };
 	const _hoisted_12$6 = {
 	  key: 2,
 	  class: "form-group ms-2 me-2 mt-3 row"
 	};
-	const _hoisted_13$5 = { class: "col-form-label col-sm-4" };
-	const _hoisted_14$4 = { class: "col-8" };
+	const _hoisted_13$5 = { class: "col-form-label col-sm-2" };
+	const _hoisted_14$4 = {
+	  key: 0,
+	  class: "col-10"
+	};
 	const _hoisted_15$2 = {
+	  key: 1,
+	  class: "col-10"
+	};
+	const _hoisted_16$2 = {
 	  key: 3,
 	  class: "form-group ms-2 me-2 mt-3 row"
 	};
-	const _hoisted_16$2 = { class: "col-form-label col-sm-4" };
-	const _hoisted_17$2 = { class: "col-8" };
-	const _hoisted_18$2 = { class: "form-group ms-2 me-2 mt-3 row" };
-	const _hoisted_19$2 = { class: "col-form-label col-sm-4" };
-	const _hoisted_20$2 = { class: "col-3" };
-	const _hoisted_21$2 = {
+	const _hoisted_17$2 = { class: "col-form-label col-sm-2" };
+	const _hoisted_18$2 = { class: "col-10" };
+	const _hoisted_19$2 = {
+	  class: "form-group ms-2 me-2 mt-3 row",
+	  style: {"margin-top":"3px"}
+	};
+	const _hoisted_20$2 = { class: "col-form-label col-sm-2" };
+	const _hoisted_21$2 = { class: "col-sm-3" };
+	const _hoisted_22$2 = {
 	  class: "btn-group float-end btn-group-toggle",
 	  "data-bs-toggle": "buttons"
 	};
-	const _hoisted_22$2 = ["value", "id"];
-	const _hoisted_23$2 = ["id", "for"];
-	const _hoisted_24$2 = ["value", "id"];
-	const _hoisted_25$2 = ["id", "for"];
-	const _hoisted_26$2 = ["value", "id"];
-	const _hoisted_27$2 = ["id", "for"];
-	const _hoisted_28$2 = {
-	  key: 1,
+	const _hoisted_23$2 = ["value", "id"];
+	const _hoisted_24$2 = ["id", "for"];
+	const _hoisted_25$2 = ["value", "id"];
+	const _hoisted_26$2 = ["id", "for"];
+	const _hoisted_27$2 = ["value", "id"];
+	const _hoisted_28$2 = ["id", "for"];
+	const _hoisted_29$2 = {
+	  class: "col-sm-2 btn-group float-end btn-group-toggle",
+	  "data-bs-toggle": "buttons"
+	};
+	const _hoisted_30$2 = ["value", "id"];
+	const _hoisted_31$2 = ["id", "for"];
+	const _hoisted_32$1 = {
+	  key: 4,
 	  class: "message alert alert-warning mt-3"
 	};
-	const _hoisted_29$2 = ["disabled"];
+	const _hoisted_33$1 = ["disabled"];
 
 
 	var script$d = {
@@ -32770,6 +32786,7 @@
 	  props: {
 	  metric_list: Array,
 	  ifid_list: Array,
+	  interface_metric_list: Array,
 	  frequency_list: Array,
 	},
 	  emits: ['add'],
@@ -32788,11 +32805,14 @@
 	const _i18n = (t) => i18n(t);
 	const metric_list = ref([]);
 	const ifid_list = ref([]);
+	const interface_metric_list = ref([]);
 	const frequency_list = ref([]);
 	const threshold_measure = ref(null);
+	const threshold_sign = ref(null);
 	const selected_metric = ref({});
 	const selected_frequency = ref({});
 	const selected_ifid = ref({});
+	const selected_interface_metric = ref({});
 	const disable_add = ref(true);
 	const metric_type = ref({});
 	const visible = ref(true);
@@ -32804,6 +32824,7 @@
 	  _i18n('if_stats_config.note_2'),
 	  _i18n('if_stats_config.note_3'),
 	  _i18n('if_stats_config.note_4'),
+	  _i18n('if_stats_config.note_5')
 	];
 
 	const metric_type_list = [
@@ -32812,21 +32833,25 @@
 	  { title: _i18n('percentage'), label: _i18n('percentage'), id: 'percentage', acrive: false },
 	];
 
-	const volume_threshold_list = [
+	const volume_threshold_list = ref([
 	  { title: _i18n('kb'), label: _i18n('kb'), id: 'kb', value: 1024, active: false },
 	  { title: _i18n('mb'), label: _i18n('mb'), id: 'mb', value: 1048576, active: false },
-	  { title: _i18n('gb'), label: _i18n('gb'), id: 'gb', value: 1073741824, active: true },
-	];
+	  { title: _i18n('gb'), label: _i18n('gb'), id: 'gb', value: 1073741824, active: true, default_active: true},
+	]);
 
-	const throughput_threshold_list = [
+	const throughput_threshold_list = ref([
 	  { title: _i18n('kbps'), label: _i18n('kbps'), id: 'kbps', value: 1000, active: false },
 	  { title: _i18n('mbps'), label: _i18n('mbps'), id: 'mbps', value: 1000000, active: false },
-	  { title: _i18n('gbps'), label: _i18n('gbps'), id: 'gbps', value: 1000000000, active: true },
-	];
+	  { title: _i18n('gbps'), label: _i18n('gbps'), id: 'gbps', value: 1000000000, active: true, default_active: true},
+	]);
+
+	const sign_threshold_list = ref([
+	  { title: "+", label: ">", id: 'plus', value: 1, active: false },
+	  { title: "-", label: "<", id: 'minus', value: -1, active: true, default_active: true },
+	]);
 
 	const percentage_threshold_list = [
-	  { title: "+", label: "+%", id: 'plus', value: 1, active: false },
-	  { title: "-", label: "-%", id: 'minus', value: -1, active: true },
+	  { title: "+", label: "%", id: 'plus', value: 1, active: true },
 	];
 
 
@@ -32837,30 +32862,30 @@
 
 
 
+	function reset_radio_selection(radio_array) {
+
+	  radio_array.forEach((item) => item.active = item.default_active == true );
+	}
+
 	function reset_modal_form() {
 	    host.value = "";
 	    selected_ifid.value = ifid_list.value[0];
 	    selected_metric.value = metric_list.value[0];
+	    selected_interface_metric.value = interface_metric_list.value[0];
 	    selected_frequency.value = frequency_list.value[0];
 	    metric_type.value = metric_type_list[0];
 
 	    // reset metric_type_list
 	    metric_type_list.forEach((t) => t.active = false);
 	    metric_type_list[0].active = true;
-	    
-	    // reset volume_threshold_list
-	    volume_threshold_list.forEach((t) => t.active = false);
-	    volume_threshold_list[volume_threshold_list.length - 1].active = true;
-	    
-	    // reset throughput_threshold_list 
-	    throughput_threshold_list.forEach((t) => t.active = false);
-	    throughput_threshold_list[throughput_threshold_list.length - 1].active = true;
 
-	    // reset percentage_threshold_list 
-	    percentage_threshold_list.forEach((t) => t.active = false);
-	    percentage_threshold_list[percentage_threshold_list.length - 1].active = true;
+	    reset_radio_selection(volume_threshold_list.value);
+	    reset_radio_selection(throughput_threshold_list.value);
+	    reset_radio_selection(sign_threshold_list.value);
 
 	    rule_type.value = "Host";
+
+	    disable_add.value = true;
 
 	    threshold.value.value = 1;
 	}
@@ -32878,42 +32903,41 @@
 	  (selected_metric.value.show_volume == true) ? visible.value = true : visible.value = false;
 	};
 
+	const change_interface_threshold = () => {
+	  (selected_interface_metric.value.show_volume == true) ? visible.value = true : visible.value = false;
+	};
+
 	const check_empty_host = () => {
 	  let regex = new RegExp(regexValidation.get_data_pattern('ip'));
 	  disable_add.value = !(regex.test(host.value) || host.value === '*');
+	};
+
+	const set_active_sign_radio = (selected_radio) => {
+	  const id = selected_radio.target.id;
+	  sign_threshold_list.value.forEach((measure) => {
+	    (measure.id === id) ? measure.active = true : measure.active = false;
+	  });
+
 	};
 
 	const set_active_radio = (selected_radio) => {
 	  const id = selected_radio.target.id;
 
 	  if(metric_type.value.id == 'throughput') {
-	    throughput_threshold_list.forEach((measure) => {
+	    throughput_threshold_list.value.forEach((measure) => {
 	      (measure.id === id) ? measure.active = true : measure.active = false;
 	    });
 	  } else if (metric_type.value.id == 'volume') {
-	    volume_threshold_list.forEach((measure) => {
+	    volume_threshold_list.value.forEach((measure) => {
 	      (measure.id === id) ? measure.active = true : measure.active = false;
 	    });
-	  } else {
+	  } else if (metric_type.value.id == 'percentage'){
 	    percentage_threshold_list.forEach((measure) => {
 	      (measure.id === id) ? measure.active = true : measure.active = false;
 	    });
-	  }
-
-	  Array.from(selected_radio.target.parentElement.children).forEach((element) => {
-	    /* Check if it's label */
-	    if(element.tagName == 'LABEL') {
-	      if(element.id == id) {
-	        element.classList.remove('btn-secondary');
-	        element.classList.add('btn-primary');
-	        element.classList.add('active');
-	      } else {
-	        element.classList.add('btn-secondary');
-	        element.classList.remove('btn-primary');
-	        element.classList.remove('active');
-	      }
-	    }
-	  });
+	  } 
+	  
+	  
 	};
 
 
@@ -32925,29 +32949,43 @@
 
 	  const tmp_frequency = selected_frequency.value.id;
 	  const tmp_metric = selected_metric.value.id;
+	  const tmp_interface_metric = selected_interface_metric.value.id;
 	  const tmp_rule_type = rule_type.value;
-	  const tmp_interface = selected_ifid.value.label;
+	  const tmp_interface = selected_ifid.value.id;
+	  const tmp_interface_name = selected_ifid.value.label;
 	  let tmp_metric_type = metric_type.value.id;
 	  let tmp_extra_metric = (selected_metric.value.extra_metric) ? selected_metric.value.extra_metric : null;
 	  let basic_value;
+	  let basic_sign_value;
 	  let tmp_threshold;
+	  let tmp_sign_value;
 
 	  if(visible.value === false) {
 	    tmp_metric_type = '';
 	    tmp_extra_metric = '';
 	    tmp_threshold = threshold.value.value;
 	  }
+	  
+
 	  if(tmp_metric_type == 'throughput') {
-	    throughput_threshold_list.forEach((measure) => { if(measure.active) basic_value = measure.value; });
+	    sign_threshold_list.value.forEach((measure) => { if(measure.active) basic_sign_value = measure.value; });
+	    tmp_sign_value = parseInt(basic_sign_value);
+	    throughput_threshold_list.value.forEach((measure) => { if(measure.active) basic_value = measure.value; });
 	    tmp_threshold = basic_value * parseInt(threshold.value.value) / 8;
 	    /* The throughput is in bit, the volume in Bytes!! */
 	  } else if(tmp_metric_type == 'volume') {
-	    volume_threshold_list.forEach((measure) => { if(measure.active) basic_value = measure.value; });
+	    sign_threshold_list.value.forEach((measure) => { if(measure.active) basic_sign_value = measure.value; });
+	    tmp_sign_value = parseInt(basic_sign_value);
+	    volume_threshold_list.value.forEach((measure) => { if(measure.active) basic_value = measure.value; });
 	    tmp_threshold = basic_value * parseInt(threshold.value.value);
 	  } else if(tmp_metric_type == 'percentage') {
-	    percentage_threshold_list.forEach((measure) => { if(measure.active) basic_value = measure.value; });
-	    tmp_threshold = basic_value * parseInt(threshold.value.value);
+	    sign_threshold_list.value.forEach((measure) => { if(measure.active) basic_sign_value = measure.value; });
+	    tmp_sign_value = parseInt(basic_sign_value);
+	    tmp_threshold = tmp_sign_value * parseInt(threshold.value.value);
+	  } else {
+	    tmp_sign_value = 1;
 	  }
+
 	  if (rule_type.value == 'Host')
 	    emit('add', { 
 	      host: tmp_host, 
@@ -32957,16 +32995,19 @@
 	      metric_type: tmp_metric_type,
 	      extra_metric: tmp_extra_metric,
 	      rule_type: tmp_rule_type,
+	      rule_threshold_sign: tmp_sign_value
 	    });
 	  else
 	    emit('add', { 
 	      frequency: tmp_frequency, 
-	      metric: tmp_metric,
+	      metric: tmp_interface_metric,
 	      threshold: tmp_threshold,
 	      metric_type: tmp_metric_type,
 	      extra_metric: tmp_extra_metric,
 	      rule_type: tmp_rule_type,
-	      interface: tmp_interface
+	      interface: tmp_interface,
+	      ifname: tmp_interface_name,
+	      rule_threshold_sign: tmp_sign_value
 	    });
 
 	  close();
@@ -32985,9 +33026,10 @@
 	  return _ifid_list
 	};
 
-	const metricsLoaded = (_metric_list, _ifid_list) => {
+	const metricsLoaded = (_metric_list, _ifid_list, _interface_metric_list) => {
 	  metrics_ready.value = true;
 	  metric_list.value = _metric_list;
+	  interface_metric_list.value = _interface_metric_list;
 	  ifid_list.value = format_ifid_list(_ifid_list);
 	  frequency_list.value = props.frequency_list;
 	  selected_frequency.value = frequency_list.value[0];
@@ -33006,7 +33048,7 @@
 
 	return (_ctx, _cache) => {
 	  return (openBlock(), createBlock(script$M, {
-	    onShowed: _cache[8] || (_cache[8] = $event => (showed())),
+	    onShowed: _cache[10] || (_cache[10] = $event => (showed())),
 	    ref_key: "modal_id",
 	    ref: modal_id
 	  }, {
@@ -33022,7 +33064,7 @@
 	        createBaseVNode("div", _hoisted_3$b, [
 	          createBaseVNode("div", _hoisted_4$b, [
 	            createBaseVNode("label", {
-	              class: normalizeClass([{'active': rule_type.value == 'hosts'}, "btn btn-secondary"])
+	              class: normalizeClass([{'active': rule_type.value == 'Host'}, "btn btn-secondary"])
 	            }, [
 	              createBaseVNode("input", {
 	                class: "btn-check",
@@ -33037,7 +33079,7 @@
 	              class: normalizeClass([{'active': rule_type.value == 'interface'}, "btn btn-secondary"])
 	            }, [
 	              createBaseVNode("input", {
-	                onClick: _cache[1] || (_cache[1] = $event => (set_rule_type('Interface'))),
+	                onClick: _cache[1] || (_cache[1] = $event => (set_rule_type('interface'))),
 	                class: "btn-check",
 	                type: "radio",
 	                name: "rule_type",
@@ -33067,7 +33109,7 @@
 	            ])
 	          ]))
 	        : createCommentVNode("v-if", true),
-	      (rule_type.value == 'Interface')
+	      (rule_type.value == 'interface')
 	        ? (openBlock(), createElementBlock("div", _hoisted_9$8, [
 	            createBaseVNode("label", _hoisted_10$7, [
 	              createBaseVNode("b", null, toDisplayString(_i18n("if_stats_config.target_interface")), 1 /* TEXT */)
@@ -33087,51 +33129,60 @@
 	            createBaseVNode("label", _hoisted_13$5, [
 	              createBaseVNode("b", null, toDisplayString(_i18n("if_stats_config.metric")), 1 /* TEXT */)
 	            ]),
-	            createBaseVNode("div", _hoisted_14$4, [
-	              createVNode(script$O, {
-	                selected_option: selected_metric.value,
-	                "onUpdate:selected_option": _cache[4] || (_cache[4] = $event => ((selected_metric).value = $event)),
-	                onSelect_option: _cache[5] || (_cache[5] = $event => (change_threshold())),
-	                options: metric_list.value
-	              }, null, 8 /* PROPS */, ["selected_option", "options"])
-	            ])
+	            (rule_type.value == 'Host')
+	              ? (openBlock(), createElementBlock("div", _hoisted_14$4, [
+	                  createVNode(script$O, {
+	                    selected_option: selected_metric.value,
+	                    "onUpdate:selected_option": _cache[4] || (_cache[4] = $event => ((selected_metric).value = $event)),
+	                    onSelect_option: _cache[5] || (_cache[5] = $event => (change_threshold())),
+	                    options: metric_list.value
+	                  }, null, 8 /* PROPS */, ["selected_option", "options"])
+	                ]))
+	              : (openBlock(), createElementBlock("div", _hoisted_15$2, [
+	                  createVNode(script$O, {
+	                    selected_option: selected_interface_metric.value,
+	                    "onUpdate:selected_option": _cache[6] || (_cache[6] = $event => ((selected_interface_metric).value = $event)),
+	                    onSelect_option: _cache[7] || (_cache[7] = $event => (change_interface_threshold())),
+	                    options: interface_metric_list.value
+	                  }, null, 8 /* PROPS */, ["selected_option", "options"])
+	                ]))
 	          ]))
 	        : createCommentVNode("v-if", true),
 	      createCommentVNode(" Frequency information, a frequency of 1 day, 5 minute or 1 hour for example "),
 	      (metrics_ready.value)
-	        ? (openBlock(), createElementBlock("div", _hoisted_15$2, [
-	            createBaseVNode("label", _hoisted_16$2, [
+	        ? (openBlock(), createElementBlock("div", _hoisted_16$2, [
+	            createBaseVNode("label", _hoisted_17$2, [
 	              createBaseVNode("b", null, toDisplayString(_i18n("if_stats_config.frequency")), 1 /* TEXT */)
 	            ]),
-	            createBaseVNode("div", _hoisted_17$2, [
+	            createBaseVNode("div", _hoisted_18$2, [
 	              createVNode(script$O, {
 	                selected_option: selected_frequency.value,
-	                "onUpdate:selected_option": _cache[6] || (_cache[6] = $event => ((selected_frequency).value = $event)),
+	                "onUpdate:selected_option": _cache[8] || (_cache[8] = $event => ((selected_frequency).value = $event)),
 	                options: frequency_list.value
 	              }, null, 8 /* PROPS */, ["selected_option", "options"])
 	            ])
 	          ]))
 	        : createCommentVNode("v-if", true),
 	      createCommentVNode(" Threshold information, maximum amount of bytes "),
-	      createBaseVNode("div", _hoisted_18$2, [
-	        createBaseVNode("label", _hoisted_19$2, [
+	      createBaseVNode("div", _hoisted_19$2, [
+	        createBaseVNode("label", _hoisted_20$2, [
 	          createBaseVNode("b", null, toDisplayString(_i18n("if_stats_config.threshold")), 1 /* TEXT */)
 	        ]),
 	        (visible.value)
 	          ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-	              createBaseVNode("div", _hoisted_20$2, [
+	              createBaseVNode("div", _hoisted_21$2, [
 	                createVNode(script$O, {
 	                  selected_option: metric_type.value,
-	                  "onUpdate:selected_option": _cache[7] || (_cache[7] = $event => ((metric_type).value = $event)),
+	                  "onUpdate:selected_option": _cache[9] || (_cache[9] = $event => ((metric_type).value = $event)),
 	                  options: metric_type_list
 	                }, null, 8 /* PROPS */, ["selected_option"])
 	              ]),
 	              createBaseVNode("div", {
 	                class: normalizeClass(["col-3", [ metric_type.value.id == 'throughput' ? 'p-0' : '']])
 	              }, [
-	                createBaseVNode("div", _hoisted_21$2, [
+	                createBaseVNode("div", _hoisted_22$2, [
 	                  (metric_type.value.id == 'throughput')
-	                    ? (openBlock(), createElementBlock(Fragment, { key: 0 }, renderList(throughput_threshold_list, (measure) => {
+	                    ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(throughput_threshold_list.value, (measure) => {
 	                        return (openBlock(), createElementBlock(Fragment, null, [
 	                          createBaseVNode("input", {
 	                            value: measure.value,
@@ -33143,15 +33194,15 @@
 	                            ref_key: "threshold_measure",
 	                            ref: threshold_measure,
 	                            name: "threshold_measure"
-	                          }, null, 8 /* PROPS */, _hoisted_22$2),
+	                          }, null, 8 /* PROPS */, _hoisted_23$2),
 	                          createBaseVNode("label", {
 	                            class: normalizeClass(["btn", [ measure.active ? 'btn-primary active' : 'btn-secondary' ]]),
 	                            id: measure.id,
 	                            onClick: set_active_radio,
 	                            for: measure.id
-	                          }, toDisplayString(measure.label), 11 /* TEXT, CLASS, PROPS */, _hoisted_23$2)
+	                          }, toDisplayString(measure.label), 11 /* TEXT, CLASS, PROPS */, _hoisted_24$2)
 	                        ], 64 /* STABLE_FRAGMENT */))
-	                      }), 64 /* STABLE_FRAGMENT */))
+	                      }), 256 /* UNKEYED_FRAGMENT */))
 	                    : createCommentVNode("v-if", true),
 	                  (metric_type.value.id == 'percentage')
 	                    ? (openBlock(), createElementBlock(Fragment, { key: 1 }, renderList(percentage_threshold_list, (measure) => {
@@ -33166,18 +33217,18 @@
 	                            ref_key: "threshold_measure",
 	                            ref: threshold_measure,
 	                            name: "threshold_measure"
-	                          }, null, 8 /* PROPS */, _hoisted_24$2),
+	                          }, null, 8 /* PROPS */, _hoisted_25$2),
 	                          createBaseVNode("label", {
 	                            class: normalizeClass(["btn", [ measure.active ? 'btn-primary active' : 'btn-secondary' ]]),
 	                            id: measure.id,
 	                            onClick: set_active_radio,
 	                            for: measure.id
-	                          }, toDisplayString(measure.label), 11 /* TEXT, CLASS, PROPS */, _hoisted_25$2)
+	                          }, toDisplayString(measure.label), 11 /* TEXT, CLASS, PROPS */, _hoisted_26$2)
 	                        ], 64 /* STABLE_FRAGMENT */))
 	                      }), 64 /* STABLE_FRAGMENT */))
 	                    : createCommentVNode("v-if", true),
 	                  (metric_type.value.id == 'volume')
-	                    ? (openBlock(), createElementBlock(Fragment, { key: 2 }, renderList(volume_threshold_list, (measure) => {
+	                    ? (openBlock(true), createElementBlock(Fragment, { key: 2 }, renderList(volume_threshold_list.value, (measure) => {
 	                        return (openBlock(), createElementBlock(Fragment, null, [
 	                          createBaseVNode("input", {
 	                            value: measure.value,
@@ -33189,22 +33240,45 @@
 	                            ref_key: "threshold_measure",
 	                            ref: threshold_measure,
 	                            name: "threshold_measure"
-	                          }, null, 8 /* PROPS */, _hoisted_26$2),
+	                          }, null, 8 /* PROPS */, _hoisted_27$2),
 	                          createBaseVNode("label", {
 	                            class: normalizeClass(["btn", [ measure.active ? 'btn-primary active' : 'btn-secondary' ]]),
 	                            id: measure.id,
 	                            onClick: set_active_radio,
 	                            for: measure.id
-	                          }, toDisplayString(measure.label), 11 /* TEXT, CLASS, PROPS */, _hoisted_27$2)
+	                          }, toDisplayString(measure.label), 11 /* TEXT, CLASS, PROPS */, _hoisted_28$2)
 	                        ], 64 /* STABLE_FRAGMENT */))
-	                      }), 64 /* STABLE_FRAGMENT */))
+	                      }), 256 /* UNKEYED_FRAGMENT */))
 	                    : createCommentVNode("v-if", true)
 	                ])
-	              ], 2 /* CLASS */)
+	              ], 2 /* CLASS */),
+	              createBaseVNode("div", _hoisted_29$2, [
+	                (openBlock(true), createElementBlock(Fragment, null, renderList(sign_threshold_list.value, (measure) => {
+	                  return (openBlock(), createElementBlock(Fragment, null, [
+	                    createBaseVNode("input", {
+	                      value: measure.value,
+	                      id: measure.id,
+	                      type: "radio",
+	                      class: "btn-check",
+	                      autocomplete: "off",
+	                      ref_for: true,
+	                      ref_key: "threshold_sign",
+	                      ref: threshold_sign,
+	                      name: "threshold_sign"
+	                    }, null, 8 /* PROPS */, _hoisted_30$2),
+	                    createBaseVNode("label", {
+	                      class: normalizeClass(["btn", [ measure.active ? 'btn-primary active' : 'btn-secondary' ]]),
+	                      id: measure.id,
+	                      onClick: set_active_sign_radio,
+	                      for: measure.id
+	                    }, toDisplayString(measure.label), 11 /* TEXT, CLASS, PROPS */, _hoisted_31$2)
+	                  ], 64 /* STABLE_FRAGMENT */))
+	                }), 256 /* UNKEYED_FRAGMENT */))
+	              ])
 	            ], 64 /* STABLE_FRAGMENT */))
 	          : createCommentVNode("v-if", true),
 	        createBaseVNode("div", {
-	          class: normalizeClass([ visible.value ? 'col-2' : 'col-8'])
+	          class: normalizeClass([visible.value ? 'col-sm-2' : 'col-sm-8'])
 	        }, [
 	          (metric_type.value.id == 'percentage')
 	            ? (openBlock(), createElementBlock("input", {
@@ -33231,11 +33305,11 @@
 	                min: "1",
 	                required: ""
 	              }, null, 512 /* NEED_PATCH */))
-	        ], 2 /* CLASS */),
-	        (metric_type.value.id == 'percentage')
-	          ? (openBlock(), createElementBlock("div", _hoisted_28$2, toDisplayString(_i18n("show_alerts.host_rules_percentage")), 1 /* TEXT */))
-	          : createCommentVNode("v-if", true)
-	      ])
+	        ], 2 /* CLASS */)
+	      ]),
+	      (metric_type.value.id == 'percentage')
+	        ? (openBlock(), createElementBlock("div", _hoisted_32$1, toDisplayString(_i18n("show_alerts.host_rules_percentage")), 1 /* TEXT */))
+	        : createCommentVNode("v-if", true)
 	    ]),
 	    footer: withCtx(() => [
 	      createVNode(script$e, { note_list: note_list }),
@@ -33244,7 +33318,7 @@
 	        onClick: add_,
 	        class: "btn btn-primary",
 	        disabled: disable_add.value && rule_type.value == 'Host'
-	      }, toDisplayString(_i18n('add')), 9 /* TEXT, PROPS */, _hoisted_29$2)
+	      }, toDisplayString(_i18n('add')), 9 /* TEXT, PROPS */, _hoisted_33$1)
 	    ]),
 	    _: 1 /* STABLE */
 	  }, 512 /* NEED_PATCH */))
@@ -33292,6 +33366,7 @@
 	const _i18n = (t) => i18n(t);
 	const row_to_delete = ref({});
 	const metric_url = `${http_prefix}/lua/pro/rest/v2/get/interface/host_rules/host_rules_metric.lua`;
+	const metric_ifname_url = `${http_prefix}/lua/pro/rest/v2/get/interface/host_rules/host_rules_metric.lua?is_ifname=true`;
 	const ifid_url = `${http_prefix}/lua/rest/v2/get/ntopng/interfaces.lua`;
 	const data_url = `${http_prefix}/lua/pro/rest/v2/get/interface/host_rules/host_rules_data.lua`;
 	const add_rule_url = `${http_prefix}/lua/pro/rest/v2/add/interface/host_rules/add_host_rule.lua`;
@@ -33312,6 +33387,7 @@
 	let title_delete = _i18n('if_stats_config.delete_host_rules_title');
 	let body_delete = _i18n('if_stats_config.delete_host_rules_description');
 	let metric_list = [];
+	let interface_metric_list = [];
 	let ifid_list = [];
 	const frequency_list = [
 	  { title: i18n('show_alerts.5_min'), label: i18n('show_alerts.5_min'), id: '5min' },
@@ -33337,7 +33413,8 @@
 	  const url = NtopUtils$1.buildURL(remove_rule_url, {
 	    ...rest_params,
 	    ...{
-	      rule_id: row.id
+	      rule_id: row.id,
+	      rule_type: row.rule_type
 	    }
 	  });
 	  
@@ -33372,7 +33449,8 @@
 
 	const format_metric = function(data, rowData) {
 	  let metric_label = data;  
-	  metric_list.forEach((metric) => {
+	  if (rowData.rule_type != 'interface') {
+	    metric_list.forEach((metric) => {
 	    if(metric.id == data) {
 	      if(rowData.extra_metric) {
 	        if(rowData.extra_metric == metric.extra_metric)
@@ -33380,8 +33458,21 @@
 	      } else {
 	        metric_label = metric.label;
 	      }
-	    }
-	  });
+	      }
+	    });
+	  } else {
+	    interface_metric_list.forEach((metric) => {
+	    if(metric.id == data) {
+	      if(rowData.extra_metric) {
+	        if(rowData.extra_metric == metric.extra_metric)
+	          metric_label = metric.label;
+	      } else {
+	        metric_label = metric.label;
+	      }
+	      }
+	    });
+	  }
+	  
 	  return metric_label
 	};
 
@@ -33397,17 +33488,44 @@
 
 	const format_threshold = function(data, rowData) {
 	  let formatted_data = parseInt(data);
+	  let threshold_sign = "> ";
+
+	  if((rowData.threshold_sign) && (rowData.threshold_sign == '-1'))
+	    threshold_sign = "< ";
+
 	  if((rowData.metric_type) && (rowData.metric_type == 'throughput')) {
-	    formatted_data = NtopUtils$1.bitsToSize(data * 8);
+	    formatted_data = threshold_sign + NtopUtils$1.bitsToSize(data * 8);
 	  } else if((rowData.metric_type) && (rowData.metric_type == 'volume')) {
-	    formatted_data = NtopUtils$1.bytesToSize(data);
+	    formatted_data = threshold_sign + NtopUtils$1.bytesToSize(data);
 	  } else if((rowData.metric_type) && (rowData.metric_type == 'percentage')){
-	    formatted_data = NtopUtils$1.fpercent(data);
+	    if (data < 0) {
+	      data = data * (-1);
+	    }
+	    formatted_data = threshold_sign + NtopUtils$1.fpercent(data);
 	  } else {
 	    formatted_data = data;
 	  }
-	  
+
 	  return formatted_data
+	};
+	const format_rule_type = function(data, rowData) {
+	  let formatted_data = '';
+	  if ((rowData.rule_type) && (rowData.rule_type == 'interface') ) {
+	    formatted_data = "<span class='badge bg-secondary'>Interface <i class='fas fa-ethernet'></i></span>";
+	  } else {
+	    formatted_data = "<span class='badge bg-secondary'>Host <i class='fas fa-laptop'></i></span>";
+	  }
+	  return formatted_data;
+	};
+
+	const format_target = function(data, rowData) {
+	  let formatted_data = '';
+	  if ((rowData.rule_type) && (rowData.rule_type == 'interface') ) {
+	    formatted_data = rowData.selected_iface;
+	  } else {
+	    formatted_data = rowData.target;
+	  }
+	  return formatted_data;
 	};
 
 	const get_metric_list = async function() {
@@ -33416,6 +33534,15 @@
 	  await $.get(url, function(rsp, status){
 	    metric_list = rsp.rsp;
 	  });
+	};
+
+	const get_interface_metric_list = async function() {
+	  const url = NtopUtils$1.buildURL(metric_ifname_url, rest_params);
+
+	  await $.get(url, function(rsp, status){
+	    interface_metric_list = rsp.rsp;
+	  });
+
 	};
 
 	const get_ifid_list = async function() {
@@ -33446,11 +33573,11 @@
 	  
 	  const columns = [
 	    { columnName: _i18n("id"), visible: false, targets: 0, name: 'id', data: 'id', className: 'text-nowrap', responsivePriority: 1 },
-	    { columnName: _i18n("if_stats_config.target"), targets: 1, width: '20', name: 'target', data: 'target', className: 'text-nowrap', responsivePriority: 1 },
-	    { columnName: _i18n("if_stats_config.rule_type"), targets: 2, width: '20', name: 'rule_type', data: 'rule_type', className: 'text-nowrap', responsivePriority: 1 },
-	    { columnName: _i18n("if_stats_config.metric"), targets: 3, width: '10', name: 'metric', data: 'metric', className: 'text-nowrap', responsivePriority: 1, render: function(data, _, rowData) { return format_metric(data, rowData) } },
-	    { columnName: _i18n("if_stats_config.frequency"), targets: 4, width: '10', name: 'frequency', data: 'frequency', className: 'text-nowrap', responsivePriority: 1, render: function(data) { return format_frequency(data) } },
-	    { columnName: _i18n("if_stats_config.threshold"), targets: 5, width: '10', name: 'threshold', data: 'threshold', className: 'text-nowrap', responsivePriority: 1, render: function(data, _, rowData) { return format_threshold(data, rowData) } },
+	    { columnName: _i18n("if_stats_config.target"), targets: 1, width: '20', name: 'target', data: 'target', className: 'text-nowrap', responsivePriority: 1, render: function(data, _, rowData) {return format_target(data, rowData) } },
+	    { columnName: _i18n("if_stats_config.rule_type"), targets: 2, width: '20', name: 'rule_type', data: 'rule_type', className: 'text-center', responsivePriority: 1, render: function(data, _, rowData) {return format_rule_type(data, rowData) } },
+	    { columnName: _i18n("if_stats_config.metric"), targets: 3, width: '10', name: 'metric', data: 'metric', className: 'text-center', responsivePriority: 1, render: function(data, _, rowData) { return format_metric(data, rowData) } },
+	    { columnName: _i18n("if_stats_config.frequency"), targets: 4, width: '10', name: 'frequency', data: 'frequency', className: 'text-center', responsivePriority: 1, render: function(data) { return format_frequency(data) } },
+	    { columnName: _i18n("if_stats_config.threshold"), targets: 5, width: '10', name: 'threshold', data: 'threshold', className: 'text-end', responsivePriority: 1, render: function(data, _, rowData) { return format_threshold(data, rowData) } },
 	    { columnName: _i18n("metric_type"), visible: false, targets: 6, name: 'metric_type', data: 'metric_type', className: 'text-nowrap', responsivePriority: 1 },
 	    { columnName: _i18n("actions"), width: '5%', name: 'actions', className: 'text-center', orderable: false, responsivePriority: 0, render: function (_, type, rowData) { return add_action_column(rowData) } }
 	  ];
@@ -33475,7 +33602,8 @@
 	  start_datatable();
 	  await get_metric_list();
 	  await get_ifid_list();
-	  modal_add_host_rule.value.metricsLoaded(metric_list, ifid_list);
+	  await get_interface_metric_list();
+	  modal_add_host_rule.value.metricsLoaded(metric_list, ifid_list, interface_metric_list);
 	});
 
 	onUnmounted(() => {
@@ -33489,7 +33617,7 @@
 	        _hoisted_4$a,
 	        createBaseVNode("div", _hoisted_5$a, [
 	          createBaseVNode("div", _hoisted_6$a, [
-	            createBaseVNode("h4", null, toDisplayString(_i18n('if_stats_config.host_rules')), 1 /* TEXT */)
+	            createBaseVNode("h4", null, toDisplayString(_i18n('if_stats_config.traffic_rules')), 1 /* TEXT */)
 	          ]),
 	          createBaseVNode("div", _hoisted_7$a, [
 	            createVNode(script$B, {
@@ -33503,9 +33631,10 @@
 	              ref_key: "modal_add_host_rule",
 	              ref: modal_add_host_rule,
 	              metric_list: unref(metric_list),
+	              interface_metric_list: unref(interface_metric_list),
 	              frequency_list: frequency_list,
 	              onAdd: add_host_rule
-	            }, null, 8 /* PROPS */, ["metric_list"]),
+	            }, null, 8 /* PROPS */, ["metric_list", "interface_metric_list"]),
 	            createVNode(script$F, {
 	              ref_key: "table_host_rules",
 	              ref: table_host_rules,
