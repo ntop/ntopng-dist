@@ -44,7 +44,7 @@
  */
 
 /*!
- * ApexCharts v3.37.1
+ * ApexCharts v3.37.0
  * (c) 2018-2023 ApexCharts
  * Released under the MIT License.
  */
@@ -78,14 +78,14 @@
  */
 
 /*!
- * Sizzle CSS Selector Engine v2.3.10
+ * Sizzle CSS Selector Engine v2.3.9
  * https://sizzlejs.com/
  *
  * Copyright JS Foundation and other contributors
  * Released under the MIT license
  * https://js.foundation/
  *
- * Date: 2023-02-14
+ * Date: 2022-12-19
  */
 
 /*!
@@ -100,7 +100,7 @@
  */
 
 /*!
- * jQuery JavaScript Library v3.6.4
+ * jQuery JavaScript Library v3.6.3
  * https://jquery.com/
  *
  * Includes Sizzle.js
@@ -110,7 +110,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2023-03-08T15:28Z
+ * Date: 2022-12-20T21:28Z
  */
 
 /*!
@@ -296,6 +296,21 @@
  2016 SpryMedia Ltd - datatables.net/license
 */
 
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
 /*! =========================================================
  * bootstrap-slider.js
  *
@@ -322,7 +337,7 @@
  * limitations under the License.
  * ========================================================= */
 
-/*! DataTables 1.13.4
+/*! DataTables 1.13.2
  * ©2008-2023 SpryMedia Ltd - datatables.net/license
  */
 
@@ -341,16 +356,14 @@
  * Copyright (c) hammerjs
  * Licensed under the MIT license */
 
-/*! Responsive 2.4.1
- * © SpryMedia Ltd - datatables.net/license
+/*! Responsive 2.4.0
+ * 2014-2022 SpryMedia Ltd - datatables.net/license
  */
 
 /*! jQuery UI - v1.12.1 - 2017-03-19
 * http://jqueryui.com
 * Includes: widget.js, position.js, data.js, disable-selection.js, focusable.js, form-reset-mixin.js, jquery-1-7.js, keycode.js, labels.js, scroll-parent.js, tabbable.js, unique-id.js, widgets/draggable.js, widgets/droppable.js, widgets/resizable.js, widgets/selectable.js, widgets/sortable.js, widgets/accordion.js, widgets/autocomplete.js, widgets/button.js, widgets/checkboxradio.js, widgets/controlgroup.js, widgets/datepicker.js, widgets/dialog.js, widgets/menu.js, widgets/mouse.js, widgets/progressbar.js, widgets/selectmenu.js, widgets/slider.js, widgets/spinner.js, widgets/tabs.js, widgets/tooltip.js, effect.js, effects/effect-blind.js, effects/effect-bounce.js, effects/effect-clip.js, effects/effect-drop.js, effects/effect-explode.js, effects/effect-fade.js, effects/effect-fold.js, effects/effect-highlight.js, effects/effect-puff.js, effects/effect-pulsate.js, effects/effect-scale.js, effects/effect-shake.js, effects/effect-size.js, effects/effect-slide.js, effects/effect-transfer.js
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
-
-/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
 
 /*! svg.draggable.js - v2.2.2 - 2019-01-08
 * https://github.com/svgdotjs/svg.draggable.js
@@ -363,6 +376,14 @@
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
  * Released under MIT license, http://github.com/requirejs/almond/LICENSE
+ */
+
+/**
+ * jquery-resizable-columns - Resizable table columns for jQuery
+ * @date Wed Apr 13 2022 15:41:44 GMT+0800 (中国标准时间)
+ * @version v0.2.3
+ * @link http://dobtco.github.io/jquery-resizable-columns/
+ * @license MIT
  */
 
 /*@preserve
@@ -383,4 +404,4 @@
 
 //! moment.js locale configuration
 
-//! version : 0.5.41
+//! version : 0.5.40
