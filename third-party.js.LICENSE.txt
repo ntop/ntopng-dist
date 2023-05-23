@@ -359,6 +359,42 @@ PERFORMANCE OF THIS SOFTWARE.
 * Copyright (c) 2016 Wout Fierens; Licensed MIT */
 
 /**
+ * @license
+ * Copyright 2006 Dan Vanderkam (danvdk@gmail.com)
+ * MIT-licenced: https://opensource.org/licenses/MIT
+ */
+
+/**
+ * @license
+ * Copyright 2011 Dan Vanderkam (danvdk@gmail.com)
+ * MIT-licenced: https://opensource.org/licenses/MIT
+ */
+
+/**
+ * @license
+ * Copyright 2011 Paul Felix (paul.eric.felix@gmail.com)
+ * MIT-licenced: https://opensource.org/licenses/MIT
+ */
+
+/**
+ * @license
+ * Copyright 2011 Robert Konigsberg (konigsberg@google.com)
+ * MIT-licenced: https://opensource.org/licenses/MIT
+ */
+
+/**
+ * @license
+ * Copyright 2012 Dan Vanderkam (danvdk@gmail.com)
+ * MIT-licenced: https://opensource.org/licenses/MIT
+ */
+
+/**
+ * @license
+ * Copyright 2013 David Eberlein (david.eberlein@ch.sauter-bc.com)
+ * MIT-licenced: https://opensource.org/licenses/MIT
+ */
+
+/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
  * Released under MIT license, http://github.com/requirejs/almond/LICENSE
  */
