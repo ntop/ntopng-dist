@@ -372,6 +372,12 @@ PERFORMANCE OF THIS SOFTWARE.
 
 /**
  * @license
+ * Copyright 2011 Juan Manuel Caicedo Carvajal (juan@cavorite.com)
+ * MIT-licensed (http://opensource.org/licenses/MIT)
+ */
+
+/**
+ * @license
  * Copyright 2011 Paul Felix (paul.eric.felix@gmail.com)
  * MIT-licenced: https://opensource.org/licenses/MIT
  */
