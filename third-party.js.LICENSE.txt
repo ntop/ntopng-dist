@@ -5,8 +5,8 @@
  *--------------------------------------------------------------------------*/
 
 /* @preserve
- * Leaflet 1.9.3, a JS library for interactive maps. https://leafletjs.com
- * (c) 2010-2022 Vladimir Agafonkin, (c) 2010-2011 CloudMade
+ * Leaflet 1.9.4, a JS library for interactive maps. https://leafletjs.com
+ * (c) 2010-2023 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
 /*!
@@ -35,7 +35,7 @@
  */
 
 /*!
- * ApexCharts v3.37.0
+ * ApexCharts v3.40.0
  * (c) 2018-2023 ApexCharts
  * Released under the MIT License.
  */
@@ -69,17 +69,6 @@
  */
 
 /*!
- * Sizzle CSS Selector Engine v2.3.9
- * https://sizzlejs.com/
- *
- * Copyright JS Foundation and other contributors
- * Released under the MIT license
- * https://js.foundation/
- *
- * Date: 2022-12-19
- */
-
-/*!
  * jQuery Color Animations v2.1.2
  * https://github.com/jquery/jquery-color
  *
@@ -91,17 +80,14 @@
  */
 
 /*!
- * jQuery JavaScript Library v3.6.3
+ * jQuery JavaScript Library v3.7.0
  * https://jquery.com/
- *
- * Includes Sizzle.js
- * https://sizzlejs.com/
  *
  * Copyright OpenJS Foundation and other contributors
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2022-12-20T21:28Z
+ * Date: 2023-05-11T18:29Z
  */
 
 /*!
@@ -313,7 +299,7 @@
  * limitations under the License.
  * ========================================================= */
 
-/*! DataTables 1.13.2
+/*! DataTables 1.13.4
  * ©2008-2023 SpryMedia Ltd - datatables.net/license
  */
 
@@ -332,8 +318,8 @@
  * Copyright (c) hammerjs
  * Licensed under the MIT license */
 
-/*! Responsive 2.4.0
- * 2014-2022 SpryMedia Ltd - datatables.net/license
+/*! Responsive 2.4.1
+ * © SpryMedia Ltd - datatables.net/license
  */
 
 /*! jQuery UI - v1.12.1 - 2017-03-19
@@ -404,6 +390,13 @@
  * @license MIT
  */
 
+/**!
+ * Sortable 1.15.1
+ * @author	RubaXa   <trash@rubaxa.org>
+ * @author	owenm    <owen23355@gmail.com>
+ * @license MIT
+ */
+
 /*@preserve
  * Tempus Dominus Bootstrap4 v5.1.2 (https://tempusdominus.github.io/bootstrap-4/)
  * Copyright 2016-2018 Jonathan Peterson
@@ -422,4 +415,4 @@
 
 //! moment.js locale configuration
 
-//! version : 0.5.40
+//! version : 0.5.43
